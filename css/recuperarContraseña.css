@@ -1,0 +1,46 @@
+header {
+    background-color: #30353B;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    padding-left: 15px;
+    width: 100px;
+}
+#userimg{
+    width: 50px;
+    height: auto;
+    padding-right: 15px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; 
+}
+
+#content {
+    margin: 0 auto; 
+    max-width: 800px;
+    padding: 20px;
+    background-color: #B9CFB9;
+}
+
+
+
+
+#30353B
+#B9CFB9
+#5D9367
+#7E9079
+#A0CCA6

@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recuperación de Contraseña</title>
+    <link rel="stylesheet" href="css/recuperarContraseña.css">
 </head>
+
 <body>
-    <div>
-        <p>Hola Mundo</p> 
+    <header>
+        <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logo">
+        <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
+    </header>
+    <div id="content">
+        <h1>Recuperación de Contraseña</h1>
+        <p>Por favor, ingrese su dirección de correo electrónico para recuperar su contraseña.</p>
+        <form action="recuperar-contrasena.php">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+            <br>
+            <button type="submit">Recuperar Contraseña</button>
+        </form>
     </div>
+    <footer>
+        <p>© 2023 Empresa. Todos los derechos reservados.</p>
+    </footer>
 </body>
+
+
 </html>

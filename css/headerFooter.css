@@ -1,0 +1,56 @@
+header {
+    background-color: #30353B;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+#logoHeader{
+    padding-left: 75px;
+    width: 100px;
+}
+#userimg{
+    width: 50px;
+    height: auto;
+    padding-right: 75px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+}
+#footerIzquierda {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    align-items: flex-start;
+}
+#footerDerecha {
+    padding-right: 75px;
+}
+
+#textoFooter{
+    margin: 0px;
+
+}
+footer li {
+    display: inline-block;
+    margin-right: 30px;
+}
+.icono
+{
+    width: 35px;
+    height: auto;
+}
+#logoFooter{
+    padding-left: px;
+    width: 100px;
+}

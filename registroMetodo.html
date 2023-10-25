@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Método de Pago</title>
+    <link rel="stylesheet" href="css/recuperarContraseña.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
+</head>
+
+<body>
+    <header>
+        <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logoHeader">
+        <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
+    </header>
+
+
+
+
+    <div id="registroFormulario">
+        <h1>Registro de Método de Pago</h1>
+        <form action="procesar_pago.php" method="post">
+            <label for="nombre_tarjeta">Nombre en la Tarjeta:</label>
+            <input type="text" id="nombre_tarjeta" name="nombre_tarjeta" required><br>
+    
+            <label for="numero_tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numero_tarjeta" name="numero_tarjeta" required><br>
+    
+            <label for="fecha_vencimiento">Fecha de Vencimiento:</label>
+            <input type="text" id="fecha_vencimiento" name="fecha_vencimiento" placeholder="MM/YY" required><br>
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br>
+    
+            <button type="submit">Registrar Método de Pago</button>
+        </form>
+    </div>
+
+
+
+
+    <footer>
+        <div id="footerIzquierda">
+            <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logoFooter">
+            <p id="textoFooter"><b>Telefono:</b> +5062252222</p>
+            <p id="textoFooter"><b>Whatsapp:</b> +5062252222</p>
+            <p></p>
+            <p id="textoFooter"><b>Correo Electrónico:</b> info@alphascript.com</p>
+            <p id="textoFooter"><b>Dirección:</b> 50 metros norte de Calle del Sufrimiento</p>
+        </div>
+        <div id="footerCentro">
+            <h1>Redes Sociales</h1>
+            <ul>
+                <li><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+                <li><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                <li><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+            </ul>  
+        </div>
+        <div id="footerDerecha">
+            <h1>Sitios de Interes</h1>
+            <li><a href="landingProducto.html">Inicio</a></li>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+
+</html>

@@ -25,8 +25,8 @@ footer {
     justify-content: space-between;
     width: 100%;
     margin: 0;
-    
 }
+
 #footerIzquierda {
     display: flex;
     flex-direction: column;
@@ -48,6 +48,6 @@ footer li {
     height: auto;
 }
 #logoFooter{
-    padding-left: px;
+    padding-left: 75px;
     width: 100px;
 }

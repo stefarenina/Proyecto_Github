@@ -3,11 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de Negocios</title>
+    <link rel="stylesheet" href="./css/registrarNegocio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
 </head>
 <body>
-    <div>
-        <p>Hola Mundo</p> 
-    </div>
+    <header>
+        <div class="h-container">
+            <div id="logo">
+                <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logoHeader">
+            </div>
+
+            <div class="user-Container">
+                <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
+                <button type="button" id="logButton">Log out</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="tblNegocio">
+        <div id="regNegocio">
+            <h1 class="txtTitulo1">Registro de Negocios</h1>
+            <form>
+                <div>
+                    <label for="txtEmpresa">Nombre del negocio</label>
+                    <input type="text" id="txtEmpresa">
+                </div>
+                <div>
+                    <label for="txtDescripcion">Descripcion del negocio</label>
+                    <textarea name="" id="txtDescripcion" ></textarea>
+                </div>
+                <div>
+                    <label> Seleccione una categoria</label>
+
+                    <label for="txtHospedaje">Hospedaje</label>
+                    <input type="radio" name="categorias" id="txtHospedaje">
+        
+                    <label for="txtRestaurante">Restaurante</label>
+                    <input type="radio" name="categorias" id="txtRestaurante">
+        
+                    <label for="txtEntretenimiento">Entretenimiento</label>
+                    <input type="radio" name="categorias" id="txtEntretenimiento">
+                </div>
+                <div>
+                    <label for="telNumber">Numero de contacto</label>
+                    <input type="tel" id="telNumber">
+                </div>
+                <div>
+                    <label for="imgNegocio">Subir Fotos del Negocio</label>
+                    <input type="file" id="imgNegocio">
+                </div>
+                <div>
+                    <label for="txtDireccion">Direccion del negocio</label>
+                    <textarea name="" id="txtDireccion" ></textarea>
+                </div>
+                <div id="btnRegistrar">
+                    <button type="button">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="f-container">
+            <div class="empresaInfo">
+                <ul>
+                    <h2>AlphaScript Technologies</h2>
+                    <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logoFooter">
+                    <p>Telefono: +5062252222</p>
+                    <p>Whatsapp: +5062252222</p>
+                    <p>Correo Electrónico: info@alphascript.com</p>
+                    <p>Dirección: 50 metros norte de Calle del Sufrimiento</p>
+                </ul>
+            </div>
+            
+            <div class="redesSociales">
+                <h2>Redes Sociales</h2>
+                <a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a>
+                <a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a>
+                <a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a>
+            </div>
+
+            <div class="others">
+                <h2>Sitios de interes</h2>
+                <ul>
+                    <li><a href="#" target="_blank">Inicio</a></li>
+                    <li><a href="#" target="_blank">Hazte socio</a></li>
+                    <li><a href="#" target="_blank">Resenas</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

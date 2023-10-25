@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    font-family: Open Sans;
+    width: auto;
+    height: auto;
+}
+
+header {
+    background-color: #30353B;
+    color: #fff;
+    width: 100%;
+}
+
+p{
+    font-size: 5px;
+}
+
+h1{
+    font-size: 15px;
+}
+
+h2{
+    font-size: 8px;
+}
+
+.h-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.user-Container{
+    padding-right: 40px;
+}
+
+#logo{
+    padding-left: 40px;
+}
+
+#logoHeader{
+    width: 40px;
+    margin: 10px;
+}
+
+#userimg{
+    width: 20px;
+    height: auto;
+    padding-right: 10px;
+}
+
+#logButton{
+    border-radius: 30px;
+    font-size: 8px;
+}
+
+.txtTitulo1{
+    text-align: center;
+    border: #30353B;
+
+    
+}
+
+#tblNegocio{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-color: black;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+#regNegocio{
+    border-style: solid;
+    font-size: xx-small;
+}
+
+#btnRegistrar{
+    text-align: center;
+    margin: 10px;
+}
+
+#btnRegistrar button{
+    font-size: 8px;
+}
+
+.f-container {
+    display: flex;
+    background-color: #30353B;
+    color: #fff;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+#logoFooter{
+    width: 30px;
+}
+
+.redesSociales{
+    text-align: center;
+}
+
+.icono{
+    width: 17px;
+    height: 17px;
+}
+
+.others {
+    padding-right: 40px;
+    text-align: end;
+}
+
+.f-container li {
+    text-align: end;
+    font-size: 8px;
+}
+
+.f-container ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+

@@ -25,13 +25,16 @@ footer {
     justify-content: space-between;
     width: 100%;
     margin: 0;
+    padding: 10px 0;
 }
-
 #footerIzquierda {
     display: flex;
     flex-direction: column;
     margin-left: 75px;
     align-items: flex-start;
+}
+#footerDerecha {
+    padding-right: 75px;
 }
 
 #textoFooter{
@@ -48,6 +51,6 @@ footer li {
     height: auto;
 }
 #logoFooter{
-    padding-left: 75px;
+    padding-left: px;
     width: 100px;
 }

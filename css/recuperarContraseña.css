@@ -18,5 +18,11 @@ body {
     margin-top: 10px;
 }
 
+#registroFormulario label {
+    margin-bottom: 10px; /* Agrega un margen de 10px en la parte inferior de las etiquetas */
+}
 
+#registroFormulario input {
+    margin-bottom: 15px; /* Agrega un margen de 15px en la parte inferior de los campos de entrada */
+}
 

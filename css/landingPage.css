@@ -1,0 +1,94 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0;
+}
+
+header {
+    background-color:black;
+    color: #D189F3;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #D189F3;
+}
+
+
+
+/* Estilos para la sección del titulo */
+#TituloPrincipal {
+    background-image: url('/Proyecto_Github/img/landingPageFondo.jpg');
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.TituloPrincipal-content {
+    max-width: 960px;
+    margin: 0 auto;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+
+/* Estilos para proyecto y about us */
+#about , #proyecto {
+    margin: 25px;
+    margin-bottom: 250px;
+}
+
+
+
+/* Estilos para footer*/
+footer {
+    background-color:black;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

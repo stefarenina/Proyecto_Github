@@ -32,10 +32,19 @@ nav ul {
 nav li {
     margin-right: 20px;
 }
+nav a:hover {
+    color:#9A44FC;
+}
 
 nav a {
     text-decoration: none;
     color: #D189F3;
+}
+
+/* Estilos del logo */
+#logoHeader{
+    padding-left: 75px;
+    width: 100px;
 }
 
 

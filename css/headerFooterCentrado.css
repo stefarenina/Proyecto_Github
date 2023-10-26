@@ -1,5 +1,13 @@
 
 /* Estilos para el header */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
 header {
     background-color: #30353B;
     color: #fff;
@@ -68,6 +76,21 @@ li {
     padding-left: 2px;
 }
 
+/* HTML DEL HEADER
+
+
+<header>
+<div class="h-container">
+    <div id="logo">
+        <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
+    </div>
+
+    <div class="user-Container">
+        <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
+        <button type="button" id="logButton">Log out</button>
+    </div>
+</div>
+</header> */
 
 /* HTML DEL FOOTER */
 

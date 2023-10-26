@@ -34,16 +34,26 @@
                     <textarea name="" id="txtDescripcion" ></textarea>
                 </div>
                 <div>
-                    <label> Seleccione una categoria</label>
+                    <fieldset id="txtCategoria">
 
-                    <label for="txtHospedaje">Hospedaje</label>
-                    <input type="radio" name="categorias" id="txtHospedaje">
-        
-                    <label for="txtRestaurante">Restaurante</label>
-                    <input type="radio" name="categorias" id="txtRestaurante">
-        
-                    <label for="txtEntretenimiento">Entretenimiento</label>
-                    <input type="radio" name="categorias" id="txtEntretenimiento">
+                        <legend id="lblCategoria">Seleccione una Categoria</legend>
+
+                        <label for="rbtHospedaje" class="container"> Hospedaje
+                            <input type="radio" id="rbtHospedaje" value="Hospedaje" name="rbtCategoria">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label for="rbtEntretenimiento" class="container"> Entretenimiento
+                            <input type="radio" id="rbtEntretenimiento" value="Entretenimiento" name="rbtCategoria">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label for="rbtRestaurante" class="container"> Restaurante
+                            <input type="radio" id="rbtRestaurante" value="Restaurante" name="rbtCategoria">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </fieldset>
                 </div>
                 <div>
                     <label for="telNumber">Numero de contacto</label>
@@ -58,7 +68,7 @@
                     <textarea name="" id="txtDireccion" ></textarea>
                 </div>
                 <div id="btnRegistrar">
-                    <button type="button">Registrar</button>
+                    <input type="button" id="btnRegistrar" value="Registrar">
                 </div>
             </form>
         </div>

@@ -13,20 +13,8 @@ body {
     justify-content: space-between; 
     background-color: #A0CCA6;
 }
-/* Esto es parte de la clase para que el codigo quede con un margen igual  */
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.header {
-    background-color: #30353B;
-    padding: 10px 0;
-}
-.menu-content{
-    display: flex;
-    justify-content: space-between;
-}
 
+/* Estilo formulario */
 #formularioRegistro{
     margin: 10px auto;
     max-width: 800px;
@@ -50,57 +38,3 @@ h1{
     background-color: #B9CFB9;
 }
 
-.footer{
-    padding: 75px 0;
-    background-color: black;
-}
-
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-}
-.link{
-    color: #F9FAFC;
-}
-
-.link h2{
-    font-size: 18px;
-    color:#F9FAFC;
-    margin-bottom: 15px;
-}
-
-.link a{
-    font-size: 16px;
-    display: block;
-    margin-bottom: 15px;
-}
-.icono
-{
-    width: 35px;
-    height: auto;
-}
-#logo{
-    padding-left: 75px;
-    width: 200px;
-}
-#userimg{
-    width: 75px;
-    padding-left: 2px;
-}
-/* .header{
-    background-color: #30353B;
-    color: #fff;
-    padding: 10px 0;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-}
-
-#logoHeader{
-    padding-left: 75px;
-    width: 100px;
-} */

@@ -1,60 +1,59 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    margin: 0px;
+}
+
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+
+/* Estilos header */
 header {
-    background-color:black;
-    color: #D189F3;
-    padding: 10px 0;
+    background-color: black;
+    padding: 15px 20px; 
+}
+.izquierda {
+    color: #9A44FC;
+    font-size: 26px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
 
-nav li {
-    margin-right: 20px;
-}
-nav a:hover {
-    color:#9A44FC;
-}
 
-nav a {
+
+/* menu del header */
+#navbar ul {
+    display: flex; 
+}
+#navbar ul li a {
+    color: white;
+    list-style-type: none;
     text-decoration: none;
-    color: #D189F3;
 }
+#navbar ul li a:hover {
+    color: #9A44FC;
+    cursor: pointer;
+}
+
+
 
 /* Estilos del logo */
-#logoHeader{
-    padding-left: 75px;
+#logoHeader {
     width: 100px;
 }
 
 
 
+
 /* Estilos para la sección del titulo */
 #TituloPrincipal {
-    background-image: url('/Proyecto_Github/img/landingPageFondo.jpg');
+    background-image: url('../img/landingPageFondo.jpg');
     background-size: cover;
     text-align: center;
-    color: #fff;
     padding: 100px 0;
 }
 
@@ -69,10 +68,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
+
 
 .cta-button {
     display: inline-block;
@@ -84,20 +80,161 @@ p {
     border-radius: 10px;
 }
 
-
-
-/* Estilos para proyecto y about us */
-#about , #proyecto {
+/* Estilos para el cuerpo */
+#servicios, #proyecto ,#about {
     margin: 25px;
-    margin-bottom: 250px;
+    margin-bottom: 70px;
+}
+#proyecto img{
+    height: 400px;
+    width: 400px;
+}
+#servicios, #proyecto ,#about {
+    text-align: center;
+    background-color: rgba(244, 244, 245, 0.7);
+    
+    border-radius: 10px;
+    padding: 45px;
+}
+h2{
+    font-size: 30px;
+    padding-bottom:50px;
+}
+h3{
+    padding-bottom:30px;
+    text-align: left;
+    margin-left: 40px;
+    margin-right:40px ;
+}
+ul li{
+    text-align: left;
+    margin-left: 40px;
+    margin-right:40px ;
+}
+#contacto p{
+    text-align: center;
+}
+
+#proyecto{
+    text-align: left;
+}
+#proyecto h2{
+    text-align: center;
+}
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+#servicios p{
+    text-align: left;
+}
+#about ul li{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Estilos zona de contactenos */
+#contacto {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f4f4f4;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Estilos para boton */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
 
+
+
 /* Estilos para footer*/
-footer {
-    background-color:black;
-    color: #fff;
+.footer{
+    padding: 75px;
+    background-color: black;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    text-align: left;
+}
+
+.link{
+    color: #F9FAFC;
+}
+
+.link h2{
+    font-size: 18px;
+    color:#F9FAFC;
+    margin-bottom: 15px;
+}
+
+.link a{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+.link ul li a {
+    text-decoration: none; 
+    color: white;
+}
+.link ul li p {
     text-align: center;
-    padding: 10px 0;
+}
+
+.link ul li{
+    margin-right: 10px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.icono
+{
+    width: 35px;
+    height: auto;
+}
+
+#logo{
+    padding-left: 75px;
+    width: 200px;
+}
+
+#userimg{
+    width: 75px;
+    padding-left: 2px;
+}
+
+.link ul li a:hover {
+    color:#9A44FC;
+    cursor: pointer;
 }

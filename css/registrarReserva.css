@@ -1,0 +1,119 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para el header*/
+header {
+    background-color: #30353B;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+#logoHeader{
+    padding-left: 75px;
+    width: 100px;
+}
+#userimg{
+    width: 50px;
+    height: auto;
+    padding-right: 200px;
+}
+/* Estilos para el cuerpo*/
+section.negocio {
+    background-color: #f5f5f5; /* Color de fondo */
+    padding: 20px; /* Espacio interno para contenido */
+    margin: 20px; /* Margen exterior */
+    border: 1px solid #ccc; /* Borde con color gris */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+
+/* Estilos para footer*/
+.footer{
+    padding: 75px;
+    background-color: #30353B;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    text-align: left;
+}
+
+.link{
+    color: #F9FAFC;
+}
+
+.link h2{
+    font-size: 18px;
+    color:#F9FAFC;
+    margin-bottom: 15px;
+}
+
+.link a{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+.link ul li a {
+    text-decoration: none; 
+    color: white;
+}
+.link ul li p {
+    text-align: center;
+}
+
+.link ul li{
+    margin-right: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.icono
+{
+    width: 35px;
+    height: auto;
+}
+
+#logo{
+    padding-left: 75px;
+    width: 200px;
+}
+
+#userimg{
+    width: 75px;
+    padding-left: 2px;
+}
+
+.link ul li a:hover {
+    color:black;
+    cursor: pointer;
+}
+
+.linkRedes ul li{
+    list-style-type: none;
+    text-decoration: none;
+}
+.linkRedes h2{
+    color: white;
+    text-decoration: none; 
+    font-size: 18px;
+}
+footer li {
+    display: inline-block;
+}

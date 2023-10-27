@@ -1,5 +1,5 @@
 /* Estilos generales */
-body {
+body, footer {
     font-family: Arial, sans-serif;
 }
 
@@ -80,7 +80,7 @@ section.negocio {
 
 .link ul li{
     margin-right: 10px;
-    list-style: none;
+    list-style-type: none;
     text-decoration: none;
 }
 
@@ -101,19 +101,17 @@ section.negocio {
 }
 
 .link ul li a:hover {
-    color:black;
+    color:#7E9079 ;
     cursor: pointer;
 }
 
-.linkRedes ul li{
-    list-style-type: none;
-    text-decoration: none;
-}
-.linkRedes h2{
+.footerCentro h2{
     color: white;
-    text-decoration: none; 
+    text-decoration: none;
     font-size: 18px;
 }
-footer li {
-    display: inline-block;
+.footerCentro ul li{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline;
 }

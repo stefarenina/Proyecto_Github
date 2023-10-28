@@ -57,7 +57,7 @@ footer {
 
 /* Estilos para boton */
 section button {
-    background-color: #5D9367;
+    background-color: #4CAF50;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -72,3 +72,63 @@ section button:hover {
 
 
 /* Estilos para el modal */
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, .55);
+}
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+#modal input, #modal label ,#modal select{
+    font-size: 20px;
+    margin: 30px; 
+    padding: 5px;
+}
+#modal input:hover{
+    cursor: pointer;
+}
+#modal form{
+    margin: 20px;
+}
+.swal2-container {
+    z-index: 1001; 
+}
+
+/* Estilos para botones */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    text-align: center;
+    margin: 10px 0; 
+}
+#modal button:hover{
+    background-color: #7e9079;
+}
+#modal button{
+    margin: 10px;
+    text-align: center;
+}
+
+/* Estilos para la X de salir modal */
+#modal p{
+    font-size: 20px;
+    color: #B9CFB9;
+    text-align: right;
+}
+#modal p:hover{
+    font-size: 20px;
+    text-align: right;
+    color: black;
+    cursor: pointer;
+}

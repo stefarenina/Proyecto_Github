@@ -24,30 +24,56 @@ const Contactarnos = () => {
     }
 }
 
-/*Funcion para abrir modal de realizar reserva*/
+/*Funcion para modal de realizar reserva*/
+const currentDate = new Date();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const openModalBtn = document.getElementById("openModalBtn");
-    const closeModalBtn = document.getElementById("closeModalBtn");
-    const modal = document.getElementById("modal");
+const abrirmodal = document.querySelector("#openModalBtn");
+const cerrarmodal = document.querySelector("#reservar");
+const modal = document.querySelector("#modal");
+const salir = document.getElementById("salir");
 
-    openModalBtn.addEventListener("click", function () {
-        modal.style.display = "block";
-    });
-
-    function closeModal() {
-        modal.style.display = "none";
-    }
-
-    window.submitForm = function () {
-        // Aquí puedes agregar el código para procesar el formulario antes de cerrar el modal
-        closeModal();
-        return false; // Evitar que el formulario se envíe de forma convencional
-    };
-
-    window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+abrirmodal.addEventListener("click", () => {
+    modal.showModal();
 });
+
+salir.addEventListener("click", () => {
+    modal.close();
+});
+
+cerrarmodal.addEventListener("click", () => {
+    const fechaIn = document.getElementById('fechaEntrada').value;
+    const fechaOut = document.getElementById('fechaSalida').value;
+    const cantiHuespedes = document.getElementById('huespedes').value;
+    const metPago = document.getElementById('metodoPago').value;
+    const codDesc = document.getElementById('codigoDesc').value;
+
+    if (
+        cantiHuespedes === '' || fechaIn === '' || fechaOut === '' || metPago === '' ||
+        fechaIn <= currentDate || fechaOut <= currentDate || fechaOut <= fechaIn
+    ) {
+        
+        swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Complete la información requerida o verifique las fechas.'
+        });
+        modal.close();
+    } else {
+        swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Se realizó la reserva con éxito.'
+        });
+        modal.close();
+    }
+});
+
+/*Funcion para redirigir al html de registrar nueva tarjeta*/
+function redirigir() {
+    var select = document.getElementById("metodoPago");
+    var selectedOption = select.options[select.selectedIndex].value;
+
+    if (selectedOption === "nuevoMetodo") {
+        window.location.href = "registroMetodo.html";
+    }
+}

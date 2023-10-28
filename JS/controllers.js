@@ -77,3 +77,44 @@ function redirigir() {
         window.location.href = "registroMetodo.html";
     }
 }
+
+/*Funcion MENU COMPARTIR*/
+var boton = document.getElementById("btnCompartir");
+var menu = document.getElementById("menuDesplegable");
+
+boton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    
+    if (menu.style.display === "none" || menu.style.display === "") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+});
+
+document.addEventListener("click", function (event) {
+    if (menu.style.display === "block" && event.target !== boton) {
+        menu.style.display = "none";
+    }
+});
+/*Funcion copiar link*/
+var copiarLink = document.querySelector("#menuDesplegable ul li:nth-child(3) a");
+
+copiarLink.addEventListener("click", function () {
+    var enlace = window.location.href;
+
+    var input = document.createElement("input");
+    input.value = enlace;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Enlace copiado al portapapeles',
+        showConfirmButton: false,
+        timer: 1500
+      })
+});

@@ -14,6 +14,7 @@ header {
     width: 100%;
 
 }
+
 .h-container{
     display: flex;
     justify-content: space-between;
@@ -23,6 +24,7 @@ header {
     max-width: 1200px;
     margin: auto;
 }
+
 
 
 /* estilos para el footer */
@@ -63,6 +65,10 @@ li {
 .link ul li a {
     text-decoration: none; 
     color: white;
+}
+.link ul li a:hover {
+    color:#5D9367;
+    cursor: pointer;
 }
 
 /* cree un id redes para hacer que se vean en la misma linea */

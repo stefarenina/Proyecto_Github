@@ -1,32 +1,35 @@
 /* Estilos generales */
-body, footer {
+body,
+footer {
     font-family: Arial, sans-serif;
     background-color: #B9CFB9;
 }
 
 /* Estilos para el cuerpo*/
-#negocio{
+#negocio {
     background-color: white;
-    padding: 20px; 
-    margin: 20px; 
-    margin-left: 400px; 
-    margin-right: 400px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
+    padding: 20px;
+    margin: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     text-align: center;
 }
-#negocio h2{
+
+#negocio h2 {
     text-align: left;
     margin: 30px;
     margin-top: 100px;
 }
 
 /* IMGs*/
-#negocio img{
+#negocio img {
     height: 200px;
     width: 200px;
 }
-#negocio li img{
+
+#negocio li img {
     height: 25px;
     width: 25px;
     margin-right: 10px;
@@ -36,7 +39,7 @@ body, footer {
 
 
 /* Estilos listas*/
-#negocio ul li{
+#negocio ul li {
     display: flex;
     justify-content: left;
 }
@@ -44,6 +47,7 @@ body, footer {
 .lista-logo {
     float: left;
 }
+
 .listaShareyStar {
     float: right;
     justify-content: right;
@@ -61,6 +65,10 @@ section button {
     cursor: pointer;
 }
 
-section button:hover{
+section button:hover {
     background-color: #7e9079;
 }
+
+
+
+/* Estilos para el modal */

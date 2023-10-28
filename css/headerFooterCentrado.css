@@ -57,6 +57,14 @@ li {
     margin-bottom: 15px;
     font-size: 16px;
 }
+.link ul li{
+    list-style-type: none;
+}
+.link ul li a {
+    text-decoration: none; 
+    color: white;
+}
+
 /* cree un id redes para hacer que se vean en la misma linea */
 
 #redes{

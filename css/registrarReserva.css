@@ -1,117 +1,66 @@
 /* Estilos generales */
 body, footer {
     font-family: Arial, sans-serif;
+    background-color: #B9CFB9;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Estilos para el header*/
-header {
-    background-color: #30353B;
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-}
-#logoHeader{
-    padding-left: 75px;
-    width: 100px;
-}
-#userimg{
-    width: 50px;
-    height: auto;
-    padding-right: 200px;
-}
 /* Estilos para el cuerpo*/
-section.negocio {
-    background-color: #f5f5f5; /* Color de fondo */
-    padding: 20px; /* Espacio interno para contenido */
-    margin: 20px; /* Margen exterior */
-    border: 1px solid #ccc; /* Borde con color gris */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
-  }
-
-/* Estilos para footer*/
-.footer{
-    padding: 75px;
-    background-color: #30353B;
-}
-
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-content p{
-    text-align: left;
-}
-
-.link{
-    color: #F9FAFC;
-}
-
-.link h2{
-    font-size: 18px;
-    color:#F9FAFC;
-    margin-bottom: 15px;
-}
-
-.link a{
-    font-size: 16px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-
-.link ul li a {
-    text-decoration: none; 
-    color: white;
-}
-.link ul li p {
+#negocio{
+    background-color: white;
+    padding: 20px; 
+    margin: 20px; 
+    margin-left: 400px; 
+    margin-right: 400px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
     text-align: center;
 }
-
-.link ul li{
-    margin-right: 10px;
-    list-style-type: none;
-    text-decoration: none;
+#negocio h2{
+    text-align: left;
+    margin: 30px;
+    margin-top: 100px;
 }
 
-.icono
-{
-    width: 35px;
-    height: auto;
-}
-
-#logo{
-    padding-left: 75px;
+/* IMGs*/
+#negocio img{
+    height: 200px;
     width: 200px;
 }
-
-#userimg{
-    width: 75px;
-    padding-left: 2px;
+#negocio li img{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 30px;
+    border-radius: 20px;
 }
 
-.link ul li a:hover {
-    color:#7E9079 ;
+
+/* Estilos listas*/
+#negocio ul li{
+    display: flex;
+    justify-content: left;
+}
+
+.lista-logo {
+    float: left;
+}
+.listaShareyStar {
+    float: right;
+    justify-content: right;
+}
+
+
+
+/* Estilos para boton */
+section button {
+    background-color: #5D9367;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.footerCentro h2{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-.footerCentro ul li{
-    list-style-type: none;
-    text-decoration: none;
-    display: inline;
+section button:hover{
+    background-color: #7e9079;
 }

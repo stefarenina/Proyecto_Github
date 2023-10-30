@@ -6,20 +6,21 @@
     <title>Registro de Negocios</title>
     <link rel="stylesheet" href="./css/registrarNegocio.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="./css/headerFooterCentrado.css">
 </head>
 <body>
     <header>
         <div class="h-container">
             <div id="logo">
-                <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logoHeader">
+                <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
             </div>
-
+        
             <div class="user-Container">
                 <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
                 <button type="button" id="logButton">Log out</button>
             </div>
         </div>
-    </header>
+        </header>
 
     <main id="tblNegocio">
         <div id="regNegocio">
@@ -39,17 +40,17 @@
                         <legend id="lblCategoria">Seleccione una Categoria</legend>
 
                         <label for="rbtHospedaje" class="container"> Hospedaje
-                            <input type="radio" id="rbtHospedaje" value="Hospedaje" name="rbtCategoria">
+                            <input type="radio" id="rbtHospedaje" value="Hospedaje" class="rbtCategoria" name="radios">
                             <span class="checkmark"></span>
                         </label>
 
                         <label for="rbtEntretenimiento" class="container"> Entretenimiento
-                            <input type="radio" id="rbtEntretenimiento" value="Entretenimiento" name="rbtCategoria">
+                            <input type="radio" id="rbtEntretenimiento" value="Entretenimiento" class="rbtCategoria" name="radios">
                             <span class="checkmark"></span>
                         </label>
 
                         <label for="rbtRestaurante" class="container"> Restaurante
-                            <input type="radio" id="rbtRestaurante" value="Restaurante" name="rbtCategoria">
+                            <input type="radio" id="rbtRestaurante" value="Restaurante" class="rbtCategoria" name="radios">
                             <span class="checkmark"></span>
                         </label>
 
@@ -74,35 +75,38 @@
         </div>
     </main>
 
-    <footer>
-        <div class="f-container">
-            <div class="empresaInfo">
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h2>AlphaScript Technologies</h2>
                 <ul>
-                    <h2>AlphaScript Technologies</h2>
-                    <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logoFooter">
-                    <p>Telefono: +5062252222</p>
-                    <p>Whatsapp: +5062252222</p>
-                    <p>Correo Electrónico: info@alphascript.com</p>
-                    <p>Dirección: 50 metros norte de Calle del Sufrimiento</p>
+                    <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
+                    <p id="textoFooter">Telefono: +5062252222</p>
+                    <p id="textoFooter">Whatsapp: +5062252222</p>
+                    <p></p>
+                    <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
+                    <p id="textoFooter">Dirección: 50 metros norte de Calle del Sufrimiento</p>
                 </ul>
             </div>
-            
-            <div class="redesSociales">
+            <div class="link listaRedes">
                 <h2>Redes Sociales</h2>
-                <a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a>
-                <a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a>
-                <a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a>
+                <ul>
+                    <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+                    <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+                </ul>
             </div>
-
-            <div class="others">
+            <div class="link">
                 <h2>Sitios de interes</h2>
                 <ul>
-                    <li><a href="#" target="_blank">Inicio</a></li>
-                    <li><a href="#" target="_blank">Hazte socio</a></li>
-                    <li><a href="#" target="_blank">Resenas</a></li>
+                    <li ><a href="#" target="_blank">Inicio</a></li>
+                    <li ><a href="#" target="_blank">Hazte socio</a></li>
+                    <li ><a href="#" target="_blank">Resenas</a></li>
                 </ul>
             </div>
         </div>
-    </footer>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./JS/controllers/validacionRegistrarNegocio.js"></script>
 </body>
 </html>

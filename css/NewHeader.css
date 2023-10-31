@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    background-color: #30353B;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.104);
+    padding: 10px 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 120px;
+}
+
+header nav div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cuentaCarrito{
+    background-color: #ee6130;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+
+}
+
+#logoICT{
+    height: 60px;
+}
+
+header nav img{
+    height: 25px;
+}
+
+#logButton{
+    background-color: transparent;
+    border: none;
+}
+
+#logButton:hover{
+    cursor: pointer;
+    color: cadetblue;
+}
+
+/*AQUI TERMINA EL CSS DEL HEADER
+
+CODIGO HTML:
+
+    <header>
+        <nav>
+            <a href="./landingProducto.html"><img src="./img/ict-logo-2.png" id="logoICT" alt="Logo"></a>
+            <div>
+                <a href="#"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
+                <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
+                <a href="#"><button type="button" id="logButton">Log out</button></a>
+            </div>
+        </nav>
+    </header>
+
+*/
+

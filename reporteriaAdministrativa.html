@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recuperación de Contraseña</title>
+    <link rel="stylesheet" href="css/reporteriaAdminsitrativa.css">
+    <link rel="stylesheet" href="css/headerFooterAdmin.css">
+</head>
+
+<body>
+    <header>
+        <div class="h-container">
+            <div id="logo">
+                <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
+            </div>
+            <nav>
+                <button>Gestión de Usuarios</button>
+                <button>Gestión de Solicitudes</button>
+            </nav>
+            
+            <div class="user-Container">
+                <button type="button" id="logButton">Log out</button>
+            </div>
+        </div>
+        </header>
+
+
+        <section id="barra">
+            <nav>
+                <div id="primeraSeccion">
+                <button>Lista de Usuarios</button>
+                <button>Lista de Negocios</button>
+                </div>
+                <div id="segundaSeccion">
+                <button>Generar Reporte</button>
+                </div>
+            </nav>
+        </section>
+
+        <section id="gestionUsuarios">
+        <h1>Gestión de Usuarios</h1>
+        <br>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Correo</th>
+                    <th>Cédula</th>
+                    <th>Acción</th> 
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>01/01/1990</td>
+                    <td>john@example.com</td>
+                    <td>123456789</td>
+                    <td><button class="eliminarBoton">Eliminar</button></td> 
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>15/05/1985</td>
+                    <td>jane@example.com</td>
+                    <td>987654321</td>
+                    <td><button class="eliminarBoton">Eliminar</button></td> 
+                </tr>
+            </table>
+        </section>
+
+
+
+   
+   
+   
+   
+        <dialog id="ventana">
+                <div>
+                <p1>¿Desea eliminar este usuario?</p2>
+                </div>
+                <div id="botones"> 
+                <button id="afirmativoEliminar">Sí</button>
+                <button id="negativoEliminar">No</button>
+                </div> 
+
+        </dialog>
+
+        <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h2>AlphaScript Technologies</h2>
+                <ul>
+                    <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
+                    <p id="textoFooter">Telefono: +5062252222</p>
+                    <p id="textoFooter">Whatsapp: +5062252222</p>
+                    <p></p>
+                    <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
+                    <p id="textoFooter">Dirección: 50 metros norte de Calle del Sufrimiento</p>
+                </ul>
+            </div>
+            <div class="link listaRedes">
+                <h2>Redes Sociales</h2>
+                <ul>
+                    <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+                    <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+                </ul>
+            </div>
+
+        
+        </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./JS/controllers/admins.js"></script>
+</body>
+
+
+</html>

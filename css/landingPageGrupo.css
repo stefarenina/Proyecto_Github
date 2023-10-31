@@ -79,15 +79,15 @@ h1 {
 
 
 /* Estilos para el cuerpo */
-#servicios, #proyecto ,#about {
+#servicios, #proyecto ,#about ,#preguntas{
     margin: 25px;
     margin-bottom: 70px;
 }
 #proyecto img{
-    height: 400px;
-    width: 400px;
+    height: 100px;
+    width: auto;
 }
-#servicios, #proyecto ,#about {
+#servicios, #proyecto ,#about ,#preguntas{
     text-align: center;
     background-color: rgba(244, 244, 245, 0.7);
     

@@ -26,7 +26,6 @@ const Contactarnos = () => {
 
 /*Funcion para modal de realizar reserva*/
 const currentDate = new Date();
-console.log(currentDate);
 
 const abrirmodal = document.querySelector("#openModalBtn");
 const cerrarmodal = document.querySelector("#reservar");
@@ -45,12 +44,12 @@ cerrarmodal.addEventListener("click", () => {
     const fechaIn = document.getElementById('fechaEntrada').value;
     const fechaOut = document.getElementById('fechaSalida').value;
     const cantiHuespedes = document.getElementById('huespedes').value;
-    const metPago = document.getElementById('metodoPago').value;
-    const codDesc = document.getElementById('codigoDesc').value;
+    const fechadateIN=new Date(fechaIn);
+    const fechadateOUT=new Date(fechaOut);
 
     if (
-        cantiHuespedes === '' || fechaIn === '' || fechaOut === '' || metPago === '' ||
-        fechaIn <= currentDate || fechaOut <= currentDate || fechaOut <= fechaIn
+        cantiHuespedes === '' || fechaIn === '' || fechaOut === '' ||
+        fechadateIN < currentDate || fechadateOUT < currentDate || fechadateOUT < fechadateIN
     ) {
         
         swal.fire({
@@ -68,16 +67,6 @@ cerrarmodal.addEventListener("click", () => {
         modal.close();
     }
 });
-
-/*Funcion para redirigir al html de registrar nueva tarjeta*/
-function redirigir() {
-    let select = document.getElementById("metodoPago");
-    let selectedOption = select.options[select.selectedIndex].value;
-
-    if (selectedOption === "nuevoMetodo") {
-        window.location.href = "registroMetodo.html";
-    }
-}
 
 /*Funcion MENU COMPARTIR*/
 let boton = document.getElementById("btnCompartir");

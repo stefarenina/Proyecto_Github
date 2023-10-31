@@ -5,13 +5,64 @@
     text-decoration: none;
     list-style: none;
 }
-body {
-    font-family: Arial, sans-serif;
+
+body{
+    margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between; 
-    background-color: #A0CCA6;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    background-color: #30353B;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.104);
+    padding: 10px 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+
+header nav div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cuentaCarrito{
+    background-color: #ee6130;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+
+}
+
+#logoICT{
+    height: 60px;
+}
+
+header nav img{
+    height: 25px;
+}
+
+#logButton{
+    background-color: transparent;
+    border: none;
+}
+
+#logButton:hover{
+    cursor: pointer;
+    color: cadetblue;
 }
 
 body form {
@@ -65,11 +116,6 @@ h1{
     text-align: center;
 }
 
-#logButton:hover{
-    cursor: pointer;
-
-}
-
 #tblNegocio{
     display: flex;
     flex-direction: row;
@@ -90,6 +136,55 @@ h1{
     text-align: center;
 }
 
+footer{
+    margin-top: auto;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.104);
+    background-color: rgb(20, 20, 20);
+}
+
+#logoFooter{
+    height: 60px
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+
+
+.link{
+    color: #F9FAFC;
+}
+
+.link h2{
+    font-size: 18px;
+    color:#F9FAFC;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.link ul li{
+    list-style-type: none;
+}
+.link ul li a {
+    text-decoration: none; 
+    color: white;
+}
+.link ul li a:hover {
+    color:#5D9367;
+    cursor: pointer;
+}
+
+.icono{
+    width: 35px;
+    height: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
 
 
 

@@ -84,8 +84,8 @@ h1 {
     margin-bottom: 70px;
 }
 #proyecto img{
-    height: 400px;
-    width: 400px;
+    height: 80px;
+    width: auto;
 }
 #servicios, #proyecto ,#about {
     text-align: center;

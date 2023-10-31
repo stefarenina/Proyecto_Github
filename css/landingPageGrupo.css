@@ -78,17 +78,6 @@ h1 {
 }
 
 
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
 /* Estilos para el cuerpo */
 #servicios, #proyecto ,#about {
     margin: 25px;
@@ -167,7 +156,7 @@ textarea {
 }
 
 
-/* Estilos para boton */
+/* Estilos para boton enviar*/
 button {
     background-color: #007BFF;
     color: #fff;
@@ -175,6 +164,23 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+button:hover{
+    background-color: #02448b;
+}
+
+/* Boton de mas informacion*/
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.cta-button:hover {
+    background-color: #02448b;
 }
 
 
@@ -216,13 +222,15 @@ button {
 .link ul li a {
     text-decoration: none; 
     color: white;
+    text-align: left;
 }
+
+
 .link ul li p {
     text-align: center;
 }
 
 .link ul li{
-    margin-right: 10px;
     list-style-type: none;
     text-decoration: none;
 }

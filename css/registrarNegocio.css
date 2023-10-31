@@ -1,11 +1,26 @@
-body{
+* {
     margin: 0;
-    font-family: Open Sans;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; 
+    background-color: #A0CCA6;
 }
 
 body form {
-    width: fit-content;
-    margin: auto;
+    margin: 10px auto;
+    max-width: 800px;
+    padding: 15px;
+    background-color: #B9CFB9;
+    border-radius: 20px;
+    text-align: left;
 }
 
 
@@ -41,67 +56,18 @@ input[type=button]:hover {
     background-color: #45a049;
 }
 
-header {
-    background-color: #30353B;
-    color: #fff;
-    width: 100%;
-}
-
 p{
     font-size: 5px;
 }
 
 h1{
     font-size: 15px;
-}
-
-h2{
-    font-size: 8px;
-}
-
-.h-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
-}
-
-.user-Container{
-    padding-right: 40px;
-}
-
-#logo{
-    padding-left: 40px;
-}
-
-#logoHeader{
-    width: 40px;
-    margin: 10px;
-}
-
-#userimg{
-    width: 20px;
-    height: auto;
-    padding-right: 10px;
-}
-
-#logButton{
-    border-radius: 30px;
-    font-size: 8px;
+    text-align: center;
 }
 
 #logButton:hover{
     cursor: pointer;
 
-}
-
-
-.txtTitulo1{
-    text-align: center;
-    border: #30353B;
-
-    
 }
 
 #tblNegocio{
@@ -117,53 +83,15 @@ h2{
 }
 
 #regNegocio{
-    border-style: solid;
     font-size: xx-small;
 }
 
 #btnRegistrar{
     text-align: center;
-    
 }
 
-#btnRegistrar button{
-    font-size: 8px;
-}
 
-.f-container {
-    display: flex;
-    background-color: #30353B;
-    color: #fff;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-}
 
-#logoFooter{
-    width: 30px;
-}
 
-.redesSociales{
-    text-align: center;
-}
 
-.icono{
-    width: 17px;
-    height: 17px;
-}
-
-.others {
-    padding-right: 40px;
-    text-align: end;
-}
-
-.f-container li {
-    text-align: end;
-    font-size: 8px;
-}
-
-.f-container ul {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
 

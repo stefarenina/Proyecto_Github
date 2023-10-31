@@ -5,30 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/registrarReserva.css">
+    <link rel="stylesheet" href="./css/headerFooterCentrado.css">
     <title>Registrar reserva</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="menu container">
-            <div>
-                <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logo">
+    <header>
+        <div class="h-container">
+            <div id="logo">
+                <img src="./img/ict-logo-2.png" alt="Logo de la empresa" id="logo">
+            </div>
+
+            <div class="user-Container">
                 <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
+                <button type="button" id="logButton">Log out</button>
             </div>
         </div>
     </header>
-
-    <section class="negocio">
+    <section id="negocio">
         <h1>Nombre del negocio</h1>
-        <img src="imagen-del-negocio.jpg" alt="Imagen de negocio" id="imgNegocio">
-        <h2>Servicios incluidos</h2>
-        <ul>
-            <li>Wifi</li>
-            <li>Estacionamiento</li>
-            <li>Aire acondicionado</li>
-        </ul>
-        <button type="submit">Reservar</button>
+        <img src="./img/imgEjemplo.png" alt="Imagen de negocio" id="imgNegocio">
+        <div class="contenido">
+            <h2>Servicios incluidos</h2>
+            <ul class="lista-logo">
+                <li>
+                    <img src="./img/logoWifi.jpg" alt="Logo servicio 1">
+                    Wifi
+                </li>
+                <li>
+                    <img src="./img/logoParking.png" alt="Logo servicio 2">
+                    Estacionamiento
+                </li>
+                <li>
+                    <img src="./img/logoAC.png" alt="Logo servicio 3">
+                    Aire acondicionado
+                </li>
+            </ul>
+        </div>
+        <div class="contenido">
+            <ul class="listaShareyStar">
+                <li>
+                    <img src="./img/logoEstrella.jpg" alt="Logo servicio 1">
+                    Reseñas
+                </li>
+                <li>
+                    <img src="./img/logoCompartir.jpg" alt="Logo servicio 1">
+                    <button type="button" id="btnCompartir">Compartir</button>
+                    <div id="menuDesplegable">
+                        <ul>
+                            <li><a href="https://api.Whatsapp.com/send?text=http://127.0.0.1:5500/Proyecto_Github/registrarReserva.html#" target="_blank" class="Whatsapp">Whatsapp</a></li>
+                            <li><a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:5500/Proyecto_Github/registrarReserva.html#" target="_blank" class="Facebook">Facebook</a></li>
+                            <li><a href="#" class="Copiar">Copiar link</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Dirección</h2>
+        <hr><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62879.678875204845!2d-84.15454469082667!3d9.935627677824831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2zU2FuIEpvc8Op!5e0!3m2!1ses!2scr!4v1698458701510!5m2!1ses!2scr"
+            width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+            <br>
+            <button type="submit" id="openModalBtn" onclick="AbrirModal()">Reservar</button>
+        </div>
     </section>
+
+    <dialog id="modal">
+        <form" method="dialog">
+            <p id="salir">X</p>
+            <label for="fechaEntrada">Fecha de Entrada:</label>
+            <input type="date" id="fechaEntrada" placeholder="DD/MM/YYYY"><br>
+
+            <label for="fechaSalida">Fecha de Salida:</label>
+            <input type="date" id="fechaSalida" placeholder="DD/MM/YYYY"><br>
+
+            <label for="huespedes">Cantidad de Huespedes:</label>
+            <input type="number" id="huespedes"><br>
+
+            <label for="metodoPago">Método de Pago:</label>
+            <select name="metodoPago" id="metodoPago" form="pagoform" onchange="redirigir()">
+                <option value="existente">Método existente</option>
+                <option value="nuevoMetodo">Agregar nuevo método</option>
+            </select>
+            <br>
+            <label for="codigoDesc">Código de Descuento:</label>
+            <input type="number" id="codigoDesc" placeholder="1234"><br>
+
+            <button type="submit" id="reservar" onclick="CerrarModal()">Guardar Reserva</button>
+            </form>
+    </dialog>
+
+
 
 
 
@@ -39,33 +112,37 @@
             <div class="link">
                 <h2>AlphaScript Technologies</h2>
                 <ul>
-                    <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logo">
+                    <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
                     <p id="textoFooter">Telefono: +5062252222</p>
                     <p id="textoFooter">Whatsapp: +5062252222</p>
+                    <p></p>
                     <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
                     <p id="textoFooter">Dirección: 50 metros norte de Calle del Sufrimiento</p>
                 </ul>
             </div>
-            <div class="footerCentro">
+            <div class="link listaRedes">
                 <h2>Redes Sociales</h2>
                 <ul>
-                    <li><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
-                    <li><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/"
+                            target="_blank"><img src="./img/facebookIcon.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw"
+                            target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img
+                                src="./img/instagramIcon.png" class="icono"></a></li>
                 </ul>
             </div>
-
             <div class="link">
-                <h2>Sitios de interés</h2>
+                <h2>Sitios de interes</h2>
                 <ul>
-                    <li><a href="./landingProducto.html" >Inicio</a></li>
-                    <li><a href="./registrarNegocio.html" >Hazte socio</a></li>
-                    <li><a href="#" >Reseñas</a></li>
+                    <li><a href="./landingProducto.html">Inicio</a></li>
+                    <li><a href="./registrarNegocio.html">Hazte socio</a></li>
+                    <li><a href="#">Reseñas</a></li>
                 </ul>
             </div>
-
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/controllers/controllers.js"></script>
 </body>
 
 </html>

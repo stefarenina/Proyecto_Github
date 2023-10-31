@@ -12,8 +12,8 @@
 <body>
     <header>
         <nav id="navbar">
-            <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logoHeader">
-            <div class="izquierda">AlphaScript Technologies</div>
+            <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logoHeader">
+            <div class="tituloHeader">AlphaScript Technologies</div>
             <ul>
                 <li><a href="#servicios">Nuestros servicios</a></li>
                 <li><a href="#proyecto">Proyectos</a></li>
@@ -110,10 +110,10 @@
         <h2>Contacto</h2>
         <p>¡Contáctanos para obtener más información sobre nuestros servicios!</p>
         <form>
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit">Enviar</button>
+            <input type="text" placeholder="Nombre" id="Nombre">
+            <input type="email" placeholder="Correo Electrónico" id="Correo">
+            <textarea placeholder="Mensaje" id="Mensaje"></textarea>
+            <button type="submit" onclick="Contactarnos()">Enviar</button>
         </form>
     </section>
 
@@ -123,7 +123,7 @@
             <div class="link">
                 <h2>AlphaScript Technologies</h2>
                 <ul>
-                    <img src="./img/logoAlphascript.png" alt="Logo de la empresa" id="logo">
+                    <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
                     <p id="textoFooter">Telefono: +5062252222</p>
                     <p id="textoFooter">Whatsapp: +5062252222</p>
                     <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
@@ -132,7 +132,7 @@
             </div>
 
             <div class="link">
-                <h2>Sitios de interés</h2>
+                <h2><span>Sitios de interés</span></h2>
                 <ul>
                     <li><a href="#logoHeader">Inicio</a></li>
                     <li><a href="#servicios">Nuestros servicios</a></li>
@@ -141,10 +141,11 @@
                     <li><a href="#contacto">Contáctanos</a></li>
                 </ul>
             </div>
-
         </div>
         <p>&copy; 2023 AlphaScript Technologies</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/controllers/controllers.js"></script>
 </body>
 
 </html>

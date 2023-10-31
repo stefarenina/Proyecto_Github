@@ -88,7 +88,7 @@ section button:hover {
 }
 #modal input, #modal label ,#modal select{
     font-size: 20px;
-    margin: 30px; 
+    margin: 25px; 
     padding: 5px;
 }
 #modal input:hover{
@@ -99,6 +99,18 @@ section button:hover {
 }
 .swal2-container {
     z-index: 1001; 
+}
+#modal p2{
+    font-size: 30px;
+    margin: 20px;
+    padding: 5px;
+    color: black;
+}
+#modal p3{
+    font-size: 20px;
+    margin: 20px; 
+    padding: 5px;
+    color: black;
 }
 
 /* Estilos para botones */

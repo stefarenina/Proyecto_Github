@@ -26,6 +26,7 @@ const Contactarnos = () => {
 
 /*Funcion para modal de realizar reserva*/
 const currentDate = new Date();
+console.log(currentDate);
 
 const abrirmodal = document.querySelector("#openModalBtn");
 const cerrarmodal = document.querySelector("#reservar");
@@ -70,8 +71,8 @@ cerrarmodal.addEventListener("click", () => {
 
 /*Funcion para redirigir al html de registrar nueva tarjeta*/
 function redirigir() {
-    var select = document.getElementById("metodoPago");
-    var selectedOption = select.options[select.selectedIndex].value;
+    let select = document.getElementById("metodoPago");
+    let selectedOption = select.options[select.selectedIndex].value;
 
     if (selectedOption === "nuevoMetodo") {
         window.location.href = "registroMetodo.html";
@@ -79,8 +80,8 @@ function redirigir() {
 }
 
 /*Funcion MENU COMPARTIR*/
-var boton = document.getElementById("btnCompartir");
-var menu = document.getElementById("menuDesplegable");
+let boton = document.getElementById("btnCompartir");
+let menu = document.getElementById("menuDesplegable");
 
 boton.addEventListener("click", function (event) {
     event.stopPropagation();
@@ -98,12 +99,12 @@ document.addEventListener("click", function (event) {
     }
 });
 /*Funcion copiar link*/
-var copiarLink = document.querySelector("#menuDesplegable ul li:nth-child(3) a");
+let copiarLink = document.querySelector("#menuDesplegable ul li:nth-child(3) a");
 
 copiarLink.addEventListener("click", function () {
-    var enlace = window.location.href;
+    let enlace = window.location.href;
 
-    var input = document.createElement("input");
+    let input = document.createElement("input");
     input.value = enlace;
     document.body.appendChild(input);
     input.select();

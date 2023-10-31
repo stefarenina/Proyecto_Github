@@ -1,0 +1,177 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    background-color: #30353B;
+    color: #fff;
+    width: 100%;
+
+}
+
+.h-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header nav button {
+    width: 210px; 
+    height: 35px; 
+    font-size: 20px; 
+    color: white;
+    background-color:#9BABB8;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+}
+header button:hover {
+    background-color: #9E9FA5;
+}
+
+.user-Container button
+{
+    
+        width: 100px; 
+        height: 35px; 
+        font-size: 20px; 
+        color: white;
+        background-color:#545B77;
+        margin-left: 350px;
+        border: none;
+        border-radius: 5px;
+  
+}
+.user-Container button:hover
+
+{
+ background-color: #374259;
+
+}
+/* estilos para el footer */
+.footer{
+    padding: 50px 0;
+    background-color: rgb(20, 20, 20);
+    padding-bottom: 0%;
+
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+/* Esto es parte de la clase para que el codigo quede con un margen igual --Solo lo use en el footer de momento */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logButton:hover{
+    cursor: pointer;
+}
+
+.link{
+    color: #F9FAFC;
+}
+
+.link h2{
+    font-size: 18px;
+    color:#F9FAFC;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.link ul li{
+    list-style-type: none;
+}
+.link ul li a {
+    text-decoration: none; 
+    color: white;
+}
+.link ul li a:hover {
+    color:#5D9367;
+    cursor: pointer;
+}
+
+/* cree un id redes para hacer que se vean en la misma linea */
+
+#redes{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.icono{
+    width: 35px;
+    height: auto;
+}
+#logo{
+    width: 75px;
+}
+#userimg{
+    width: 50px;
+    padding-left: 2px;
+}
+
+/* HTML DEL HEADER
+
+
+<header>
+<div class="h-container">
+    <div id="logo">
+        <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
+    </div>
+
+    <div class="user-Container">
+        <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
+        <button type="button" id="logButton">Log out</button>
+    </div>
+</div>
+</header> */
+
+/* HTML DEL FOOTER */
+
+/* 
+<footer class="footer">
+<div class="footer-content container">
+    <div class="link">
+        <h2>AlphaScript Technologies</h2>
+        <ul>
+            <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
+            <p id="textoFooter">Telefono: +5062252222</p>
+            <p id="textoFooter">Whatsapp: +5062252222</p>
+            <p></p>
+            <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
+            <p id="textoFooter">Dirección: 50 metros norte de Calle del Sufrimiento</p>
+        </ul>
+    </div>
+    <div class="link listaRedes">
+        <h2>Redes Sociales</h2>
+        <ul>
+            <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+            <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+            <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+        </ul>
+    </div>
+    <div class="link">
+        <h2>Sitios de interes</h2>
+        <ul>
+            <li ><a href="#" target="_blank">Inicio</a></li>
+            <li ><a href="#" target="_blank">Hazte socio</a></li>
+            <li ><a href="#" target="_blank">Resenas</a></li>
+        </ul>
+    </div>
+
+</div>
+</footer> */

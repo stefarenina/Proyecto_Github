@@ -1,5 +1,4 @@
 
-/* Estilos para el header */
 * {
     margin: 0;
     padding: 0;
@@ -25,8 +24,39 @@ header {
     margin: auto;
 }
 
+header nav button {
+    width: 210px; 
+    height: 35px; 
+    font-size: 20px; 
+    color: white;
+    background-color:#9BABB8;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+}
+header button:hover {
+    background-color: #9E9FA5;
+}
 
+.user-Container button
+{
+    
+        width: 100px; 
+        height: 35px; 
+        font-size: 20px; 
+        color: white;
+        background-color:#545B77;
+        margin-left: 350px;
+        border: none;
+        border-radius: 5px;
+  
+}
+.user-Container button:hover
 
+{
+ background-color: #374259;
+
+}
 /* estilos para el footer */
 .footer{
     padding: 50px 0;

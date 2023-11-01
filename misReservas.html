@@ -52,6 +52,7 @@
                             <td>Reserva de Entretenimiento</td>
                             <td> <input type="button" class="btnCancelar" value="Cancelar" onclick="CancelarReserva()"> </td>
                         </tr>
+                    </tbody>    
                 </table>
             </div>
         </section>
@@ -59,7 +60,7 @@
         <section>
             <h2>Información de Cancelación</h2>
             <div id="info-container">
-                <p>Para aumentar/quitar dias de reservas o aumentar servicios ya reservados se debera de cancelar por completo la reserva hecha, al cancelarla le llegara un vale con el monto total de la reserva, que puedes usar a futuro en proximas reservas.</p>
+                <p>Para aumentar/quitar dias de reservas o aumentar servicios ya contratados se debera de cancelar por completo la reserva hecha, al cancelarla le llegara un vale con el monto total de la reserva, que puedes usar a futuro en proximas reservas.</p>
             </div>
         </section>
 
@@ -80,38 +81,37 @@
         </dialog>
 
 
-        <footer>
-            <div class="footer-content">
+        <footer class="footer">
+            <div class="footer-content container">
                 <div class="link">
-                    <h2>AlphaScript Technologies</h2>
+                    <h2>Instituto Costarricense de Turismo</h2>
                     <ul>
-                        <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logoFooter">
-                        <p id="textoFooter">Telefono: +5062252222</p>
-                        <p id="textoFooter">Whatsapp: +5062252222</p>
+                        <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
+                        <p id="textoFooter">Telefono: +506 2299-5800</p>
+                        <p id="textoFooter">Horario: Lunes a Viernes de 8:00 a.m. a 4:00 p.m.</p>
                         <p></p>
-                        <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
-                        <p id="textoFooter">Dirección: 50 metros norte de Calle del Sufrimiento</p>
+                        <p id="textoFooter">Correo Electrónico: info@visitcostarica.com</p>
+                        <p id="textoFooter">Edificio ICT, Saturno, San José, Uruca, 10107</p>
                     </ul>
                 </div>
                 <div class="link listaRedes">
                     <h2>Redes Sociales</h2>
                     <ul>
-                        <li><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
-                        <li><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+                        <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+                        <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                        <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
                     </ul>
                 </div>
                 <div class="link">
                     <h2>Sitios de interes</h2>
                     <ul>
-                        <li><a href="#" target="_blank">Inicio</a></li>
-                        <li><a href="#" target="_blank">Hazte socio</a></li>
-                        <li><a href="#" target="_blank">Resenas</a></li>
+                        <li ><a href="#" target="_blank">Inicio</a></li>
+                        <li ><a href="#" target="_blank">Hazte socio</a></li>
                     </ul>
                 </div>
-            
+    
             </div>
-            </footer>
+        </footer>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="./JS/controllers/misReservasCancelar.js"></script>
 </body>

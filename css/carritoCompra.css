@@ -1,50 +1,47 @@
-footer{
-    margin-top: auto;
-    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.104);
-    background-color: rgb(20, 20, 20);
-}
-
-#logoFooter{
-    height: 60px
-}
-
-.footer-content{
+#carritoCompras{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin: 0 60px;
+    text-align: center;
+    margin: 20px 150px;
 }
 
-
-.link{
-    color: #F9FAFC;
+h3{
+    margin-left: 150px;
 }
 
-.link h2{
-    font-size: 18px;
-    color:#F9FAFC;
-    margin-bottom: 15px;
+.imagen{
+    width: 160px;
 }
 
-li {
-    margin-bottom: 15px;
-    font-size: 16px;
+th{
+    border: black;
+    border-style: groove;
+    
 }
-.link ul li{
-    list-style-type: none;
+
+td{
+    padding: 15px;
 }
-.link ul li a {
-    text-decoration: none; 
+
+table{
+    width: 100%;
+}
+
+.impuesto{
+    border-top: solid #5D9367;
+    text-align: end;
+    width: auto;
+}
+
+#btnPagar{
+    width: 10%;
+    background-color: #4CAF50;
     color: white;
-}
-.link ul li a:hover {
-    color:#5D9367;
+    padding: 14px 20px;
+    margin: 8px 25px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    float: right;
 }
-
-.icono{
-    width: 35px;
-    height: auto;
-    display: inline-block;
-    margin-right: 10px;
-}
-

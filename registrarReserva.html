@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="./css/registrarReserva.css">
-    <link rel="stylesheet" href="./css/headerFooterCentrado.css">
+    <link rel="stylesheet" href="./css/NewHeader.css">
     <title>Registrar reserva</title>
 </head>
 
 <body>
     <header>
-        <div class="h-container">
-            <div id="logo">
-                <img src="./img/ict-logo-2.png" alt="Logo de la empresa" id="logo">
+        <nav>
+            <a href="./landingProducto.html"><img src="./img/ict-logo-2.png" id="logoICT" alt="Logo"></a>
+            <div>
+                <a href="#"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
+                <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
+                <a href="#"><button type="button" id="logButton">Log out</button></a>
             </div>
-
-            <div class="user-Container">
-                <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
-                <button type="button" id="logButton">Log out</button>
-            </div>
-        </div>
+        </nav>
     </header>
+
     <section id="negocio">
         <h1>Nombre del negocio</h1>
         <img src="./img/imgEjemplo.png" alt="Imagen de negocio" id="imgNegocio">
@@ -104,34 +103,32 @@
     <footer class="footer">
         <div class="footer-content container">
             <div class="link">
-                <h2>AlphaScript Technologies</h2>
+                <h2>Instituto Costarricense de Turismo</h2>
                 <ul>
-                    <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
-                    <p id="textoFooter">Telefono: +5062252222</p>
-                    <p id="textoFooter">Whatsapp: +5062252222</p>
+                    <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
+                    <p id="textoFooter">Telefono: +506 2299-5800</p>
+                    <p id="textoFooter">Horario: Lunes a Viernes de 8:00 a.m. a 4:00 p.m.</p>
                     <p></p>
-                    <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
-                    <p id="textoFooter">Dirección: 50 metros norte de Calle del Sufrimiento</p>
+                    <p id="textoFooter">Correo Electrónico: info@visitcostarica.com</p>
+                    <p id="textoFooter">Edificio ICT, Saturno, San José, Uruca, 10107</p>
                 </ul>
             </div>
             <div class="link listaRedes">
                 <h2>Redes Sociales</h2>
                 <ul>
-                    <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/"
-                            target="_blank"><img src="./img/facebookIcon.png" class="icono"></a></li>
-                    <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw"
-                            target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
-                    <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img
-                                src="./img/instagramIcon.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+                    <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
                 </ul>
             </div>
             <div class="link">
                 <h2>Sitios de interes</h2>
                 <ul>
-                    <li><a href="./landingProducto.html">Inicio</a></li>
-                    <li><a href="./registrarNegocio.html">Hazte socio</a></li>
+                    <li ><a href="#" target="_blank">Inicio</a></li>
+                    <li ><a href="#" target="_blank">Hazte socio</a></li>
                 </ul>
             </div>
+
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

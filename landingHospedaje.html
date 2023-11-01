@@ -1,173 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto Costarricense de Turismo Oficial</title>
-    <link rel="stylesheet" href="./css/headerFooterCentrado.css">
-    <link rel="stylesheet" href="./css/landingProducto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/NewHeader.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="./css/landingProducto.css">
 </head>
 <body>
-    <header>
-        <div class="h-container">
-            <div id="logo">
-                <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
-            </div>
+  <header>
+    <nav>
+      <a href="./landingProducto.html"><img src="./img/ict-logo-2.png" id="logoICT" alt="Logo"></a>
+      <div>
+        <a href="#"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
+        <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
+        <a href="#"><button type="button" id="logButton">Log in</button></a>
+      </div>
+    </nav>
+  </header>
 
-            <div class="user-Container">
-                <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
-                <button type="button" id="logButton">Log in</button>
-            </div>
-        </div>
-    </header>
-    <!-- Hospedaje -->
-    <div id="firstRow">
-        <button type="button" class="firstRowButton"><a href="./landingProducto.html">MENÚ PRINCIPAL</a></button>
-        <button type="button" class="firstRowButton"><a href="./landingHospedaje.html">HOSPEDAJE</a></button>
-        <button type="button" class="firstRowButton"><a href="./landingRestaurantes.html">RESTAURANTES</a></button>
-        <button type="button" class="firstRowButton"><a href="./landingEntretenimiento.html">ENTRETENIMIENTO</a></button>
+  <section id="buscador">
+    <div class="topnav">
+      <a id="borderNavigator" href="./landingProducto.html">MENÚ PRINCIPAL</a>
+      <a id="borderNavigator" href="./landingHospedaje.html">HOSPEDAJE</a>
+      <a id="borderNavigator" href="./landingRestaurantes.html">RESTAURANTES</a>
+      <a id="borderNavigator" href="./landingEntretenimiento.html">ENTRETENIMIENTO</a>
+      <input type="text" placeholder="Buscar..">
+    </div>
+  </section>
 
+  <section id="tituloPrincipalHospedaje">
+    <div class="tituloPrincipalContentHospedaje">
+        <h1>Conoce más sobre Costa Rica y sus destinos favoritos</h1>
+        <p id="p1">San Carlos, La Fortuna.</p>
     </div>
-    <br>
-<div class="row">
-    <h2>Hospedaje</h2>
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="./img/conchalWestin.jpg" alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        The Westin Reserva Conchal, an All-Inclusive Golf Resort & Spa, Guanacaste.
-      </p>
-      </div>
-    </div>
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="img/granoDeOro.jpg"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Hotel Grano De Oro, San José.
-      </p>
-      </div>
-    </div>
-  </div>
-  <a class="verMas" href="./landingHospedaje.html">ver mas...</a>
-  <!-- Restaurantes -->
-  <div class="row">
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="./img/leCameleonBoutiqueHotel.jpg"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Le Cameleon Boutique Hotel, Puerto Viejo, Limón.
-      </p>
-      </div>
-    </div>
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="./img/hotelCibelesResort.jpg"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Hotel Cibeles Resort, Heredia.
-      </p>
-      </div>
-    </div>
-  </div>
-  <a class="verMas" href="./landingRestaurantes.html">ver mas...</a>
-  
-  <!-- Entretenimiento -->
-  <div class="row">
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="./img/baldi1.jpeg"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Baldi Hot Springs Hotel & Spa, La Fortuna, San Carlos.
-      </p>
-      </div>
-    </div>
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="./img/puertoAzulResortClubNautico.jpg"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Puerto Azul Resort & Club Nautico, Punta Arenas.
-      </p>
-      </div>
-    </div>
-    <div class="column">
-        <img class="imagenesPaginaPrincipal" src="./img/grandpasHotel.jpg"  alt="Example image"/> 
+  </section>
+  <h1 id="titulosOpciones">HOSPEDAJE</h1>
+  <section>
+    <div class="container">
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="./img/conchalWestin.jpg"  alt="Example image"/> 
+        <span>
         <div class="rate">
           <input type="radio" id="star5" name="rate" value="5" />
           <label for="star5" title="text">5 stars</label>
@@ -180,16 +54,155 @@
           <input type="radio" id="star1" name="rate" value="1" />
           <label for="star1" title="text">1 star</label>
         </div>
-        <br class="descripcion"> 
-        <div class="textStyle">
-        <p>
-            Grandpas Hotel & Restaurante, Cartago.
-        </p>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Hotel Westin Reserva Conchal, Guanacaste.
+          </p>
         </div>
+        </span>
       </div>
-  </div>
-  <a class="verMas" href="./landingEntretenimiento.html">ver mas...</a>
-    <footer class="footer">
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="img/granoDeOro.jpg"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Hotel Grano De Oro, San José.
+          </p>
+        </div>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <h1 id="titulosOpciones">NATURALEZA</h1>
+
+  <section>
+    <div class="container">
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="./img/grandpasHotel.jpg"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Grandpas Hotel, Cartago.
+          </p>
+        </div>
+        </span> 
+      </div>
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="./img/baldi1.jpeg"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Baldi Hot Springs Hotel & Spa, San Carlos.
+          </p>
+        </div>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <h1 id="titulosOpciones">CERCA DE LA GAM</h1>
+  <section>
+    <div class="container">
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="./img/hotelCibelesResort.jpg"  alt="Example image"/>
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>  
+        <div id="descripcion">
+          <p>
+            Hotel Cibeles Resort, Heredia.
+          </p>
+        </div>
+        </span>
+      </div>
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="./img/puertoAzulResortClubNautico.jpg"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Puerto AzulBoutique Resort & Marina, Puntarenas.
+          </p>
+        </div>
+        </span>
+      </div>
+    </div>
+  </section>
+
+    <a id="verMas" href="./landingEntretenimiento.html">ver mas...</a>
+    <!-- <footer class="footer">
         <div class="footer-content container">
             <div class="link">
                 <h2>Instituto Costarricense de Turismo</h2>
@@ -220,6 +233,6 @@
             </div>
 
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>

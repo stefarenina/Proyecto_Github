@@ -1,127 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto Costarricense de Turismo Oficial</title>
-    <link rel="stylesheet" href="./css/headerFooterCentrado.css">
-    <link rel="stylesheet" href="./css/landingProducto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/NewHeader.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="./css/landingProducto.css">
 </head>
 <body>
-    <header>
-        <div class="h-container">
-            <div id="logo">
-                <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
-            </div>
+  <header>
+    <nav>
+      <a href="./landingProducto.html"><img src="./img/ict-logo-2.png" id="logoICT" alt="Logo"></a>
+      <div>
+        <a href="#"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
+        <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
+        <a href="#"><button type="button" id="logButton">Log in</button></a>
+      </div>
+    </nav>
+  </header>
 
-            <div class="user-Container">
-                <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
-                <button type="button" id="logButton">Log in</button>
-            </div>
+  <section id="buscador">
+    <div class="topnav">
+      <a id="borderNavigator" href="./landingProducto.html">MENÚ PRINCIPAL</a>
+      <a id="borderNavigator" href="./landingHospedaje.html">HOSPEDAJE</a>
+      <a id="borderNavigator" href="./landingRestaurantes.html">RESTAURANTES</a>
+      <a id="borderNavigator" href="./landingEntretenimiento.html">ENTRETENIMIENTO</a>
+      <input type="text" placeholder="Buscar..">
+    </div>
+  </section>
+
+  <section id="tituloPrincipalRestaurantes">
+    <div class="tituloPrincipalRestaurantesContent">
+        <h1>La mejor gastronomía </h1>
+        <p id="p1">Garantizamos el turismo de manera segura y eficaz.</p>
+    </div>
+  </section>
+
+  <h1 id="titulosOpciones">RESTAURANTES</h1>
+
+  <section>
+    <div class="container">
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="img/lenoYCarbon.png"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
         </div>
-    </header>
-    <!-- Hospedaje -->
-    <div id="firstRow">
-        <button type="button" class="firstRowButton"><a href="./landingProducto.html">MENÚ PRINCIPAL</a></button>
-        <button type="button" class="firstRowButton"><a href="./landingHospedaje.html">HOSPEDAJE</a></button>
-        <button type="button" class="firstRowButton"><a href="./landingRestaurantes.html">RESTAURANTES</a></button>
-        <button type="button" class="firstRowButton"><a href="./landingEntretenimiento.html">ENTRETENIMIENTO</a></button>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Restaurante Leño y Carbón, Heredia.
+          </p>
+        </div>
+        </span> 
+      </div>
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="img/nonosPizzeria.png"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Nonno's Pizzeria, San Jose.
+          </p>
+        </div>
+        </span>
+      </div>
+    </div>
+  </section>
 
-    </div>
-    <br>
-<div class="row">
-    <h2>Restaurantes</h2>
-  <!-- Restaurantes -->
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="img/lenoYCarbon.png"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
+
+  <h1 id="titulosOpciones">RECOMENDADO PARA USTED</h1>
+  <section>
+    <div class="container">
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="./img/laCasonaMexicana.png"  alt="Example image"/>
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>  
+        <div id="descripcion">
+          <p>
+            La Casona Mexicana, Cartago.
+          </p>
+        </div>
+        </span>
       </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Restaurante Leño y Carbón, Heredia.
-      </p>
-      </div>
-    </div>
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="img/nonosPizzeria.png"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Nonno's Pizzeria, San Jose.
-      </p>
-      </div>
-    </div>
-  </div>
-  <a class="verMas" href="./landingRestaurantes.html">ver mas...</a>
-  <div class="row">
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="./img/laCasonaMexicana.png"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Restaurante La Casona Mexicana, Cartago.
-      </p>
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="./img/restauranteElMirador.png"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Resraurante El Mirador, Alajuela.
+          </p>
+        </div>
+        </span>
       </div>
     </div>
-    <div class="column">
-      <img class="imagenesPaginaPrincipal" src="./img/restauranteElMirador.png"  alt="Example image"/> 
-      <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
-      </div>
-      <br class="descripcion"> 
-      <div class="textStyle">
-      <p>
-        Restaurante El Mirador, Alajuela.
-      </p>
-      </div>
-    </div>
-  </div>
-  <a class="verMas" href="./landingEntretenimiento.html">ver mas...</a>
-    <footer class="footer">
+  </section>
+
+    <!-- <footer class="footer">
         <div class="footer-content container">
             <div class="link">
                 <h2>Instituto Costarricense de Turismo</h2>
@@ -152,6 +178,7 @@
             </div>
 
         </div>
-    </footer>
+    </footer> -->
+
 </body>
 </html>

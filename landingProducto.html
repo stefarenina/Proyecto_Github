@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/NewHeader.css">
+  <link rel="stylesheet" href="./css/headerFooterLandingPage.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="./css/landingProducto.css">
 </head>
@@ -15,52 +15,34 @@
       <div>
         <a href="#"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
         <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
-        <a href="#"><button type="button" id="logButton">Log out</button></a>
+        <a href="#"><button type="button" id="logButton">Log in</button></a>
       </div>
     </nav>
   </header>
 
   <section id="buscador">
     <div class="topnav">
-      <a href="./landingProducto.html">MENÚ PRINCIPAL</a>
-      <a href="./landingHospedaje.html">HOSPEDAJE</a>
-      <a href="./landingRestaurantes.html">RESTAURANTES</a>
-      <a href="./landingEntretenimiento.html">ENTRETENIMIENTO</a>
+      <a id="borderNavigator" href="./landingProducto.html">MENÚ PRINCIPAL</a>
+      <a id="borderNavigator" href="./landingHospedaje.html">HOSPEDAJE</a>
+      <a id="borderNavigator" href="./landingRestaurantes.html">RESTAURANTES</a>
+      <a id="borderNavigator" href="./landingEntretenimiento.html">ENTRETENIMIENTO</a>
       <input type="text" placeholder="Buscar..">
     </div>
   </section>
 
   <section id="tituloPrincipal">
     <div class="tituloPrincipalContent">
-        <h1>Bienvenido al sitio de turismo en Costa Rica</h1>
+        <h1>Bienvenido al sitio de turismo oficial en Costa Rica</h1>
         <p id="p1">Garantizamos el turismo de manera segura y eficaz.</p>
     </div>
   </section>
+
   <h1 id="titulosOpciones">HOSPEDAJE</h1>
   <section>
     <div class="container">
       <div class="opcionesHotel">
-        <img class="imagenesPaginaPrincipal" src="./img/conchalWestin.jpg" alt="Example image"/> 
-        <div class="rate">
-          <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
-        </div> 
-        <div id="descripcion">
-          <p>
-            The Westin Reserva Conchal, an All-Inclusive Golf Resort & Spa, Guanacaste.
-          </p>
-        </div>
-      </div>
-      <div class="opcionesHotel">
-        <img class="imagenesPaginaPrincipal" src="img/granoDeOro.jpg"  alt="Example image"/> 
+        <img id="imagenesPaginaPrincipal" src="./img/conchalWestin.jpg"  alt="Example image"/> 
+        <span>
         <div class="rate">
           <input type="radio" id="star5" name="rate" value="5" />
           <label for="star5" title="text">5 stars</label>
@@ -73,20 +55,51 @@
           <input type="radio" id="star1" name="rate" value="1" />
           <label for="star1" title="text">1 star</label>
         </div>
+        </span>
+        <span>
+        <div id="descripcion">
+          <p>
+            Hotel Westin Reserva Conchal, Guanacaste.
+          </p>
+        </div>
+        </span>
+      </div>
+      <div class="opcionesHotel">
+        <img id="imagenesPaginaPrincipal" src="img/granoDeOro.jpg"  alt="Example image"/> 
+        <span>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        </span>
+        <span>
         <div id="descripcion">
           <p>
             Hotel Grano De Oro, San José.
           </p>
-          <!-- <a id="verMas" href="./landingHospedaje.html">ver mas...</a> -->
         </div>
+        </span>
       </div>
     </div>
   </section>
+
+  <a class="verMas" href="./landingHospedaje.html">ver mas...</a>
+
   <h1 id="titulosOpciones">RESTAURANTES</h1>
+
   <section>
     <div class="container">
       <div class="opcionesHotel">
-        <img class="imagenesPaginaPrincipal" src="img/lenoYCarbon.png"  alt="Example image"/> 
+        <img id="imagenesPaginaPrincipal" src="img/lenoYCarbon.png"  alt="Example image"/> 
+        <span>
         <div class="rate">
           <input type="radio" id="star5" name="rate" value="5" />
             <label for="star5" title="text">5 stars</label>
@@ -98,15 +111,19 @@
             <label for="star2" title="text">2 stars</label>
             <input type="radio" id="star1" name="rate" value="1" />
             <label for="star1" title="text">1 star</label>
-        </div> 
+        </div>
+        </span>
+        <span>
         <div id="descripcion">
           <p>
             Restaurante Leño y Carbón, Heredia.
           </p>
         </div>
+        </span> 
       </div>
       <div class="opcionesHotel">
-        <img class="imagenesPaginaPrincipal" src="img/nonosPizzeria.png"  alt="Example image"/> 
+        <img id="imagenesPaginaPrincipal" src="img/nonosPizzeria.png"  alt="Example image"/> 
+        <span>
         <div class="rate">
           <input type="radio" id="star5" name="rate" value="5" />
           <label for="star5" title="text">5 stars</label>
@@ -119,21 +136,26 @@
           <input type="radio" id="star1" name="rate" value="1" />
           <label for="star1" title="text">1 star</label>
         </div>
+        </span>
+        <span>
         <div id="descripcion">
           <p>
             Nonno's Pizzeria, San Jose.
           </p>
-          <!-- <a id="verMas" href="./landingRestaurantes.html">ver mas...</a> -->
         </div>
+        </span>
       </div>
     </div>
   </section>
+
+  <a class="verMas" href="./landingRestaurantes.html">ver mas...</a>
 
   <h1 id="titulosOpciones">ENTRETENIMIENTO</h1>
   <section>
     <div class="container">
       <div class="opcionesHotel">
-        <img class="imagenesPaginaPrincipal" src="https://www.golakehavasu.com/media/media-14208.jpg"  alt="Example image"/> 
+        <img id="imagenesPaginaPrincipal" src="https://www.golakehavasu.com/media/media-14208.jpg"  alt="Example image"/>
+        <span>
         <div class="rate">
           <input type="radio" id="star5" name="rate" value="5" />
             <label for="star5" title="text">5 stars</label>
@@ -145,15 +167,19 @@
             <label for="star2" title="text">2 stars</label>
             <input type="radio" id="star1" name="rate" value="1" />
             <label for="star1" title="text">1 star</label>
-        </div> 
+        </div>
+        </span>
+        <span>  
         <div id="descripcion">
           <p>
             Cinépolis, LinconIn, San José.
           </p>
         </div>
+        </span>
       </div>
       <div class="opcionesHotel">
-        <img class="imagenesPaginaPrincipal" src="./img/bolosHeredia.png"  alt="Example image"/> 
+        <img id="imagenesPaginaPrincipal" src="./img/bolosHeredia.png"  alt="Example image"/> 
+        <span>
         <div class="rate">
           <input type="radio" id="star5" name="rate" value="5" />
           <label for="star5" title="text">5 stars</label>
@@ -166,15 +192,52 @@
           <input type="radio" id="star1" name="rate" value="1" />
           <label for="star1" title="text">1 star</label>
         </div>
+        </span>
+        <span>
         <div id="descripcion">
           <p>
             Bol Cariari, Heredia.
           </p>
-          <!-- <a id="verMas" href="./landingEntretenimiento.html">ver mas...</a> -->
         </div>
+        </span>
       </div>
     </div>
   </section>
+
+  <a class="verMas" href="./landingEntretenimiento.html">ver mas...</a>
+
+  <!-- <footer class="footer">
+    <div class="footer-content container">
+        <div class="link">
+            <h2>Instituto Costarricense de Turismo</h2>
+            <ul>
+                <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
+                <p id="textoFooter">Telefono: +506 2299-5800</p>
+                <p id="textoFooter">Horario: Lunes a Viernes de 8:00 a.m. a 4:00 p.m.</p>
+                <p></p>
+                <p id="textoFooter">Correo Electrónico: info@visitcostarica.com</p>
+                <p id="textoFooter">Edificio ICT, Saturno, San José, Uruca, 10107</p>
+            </ul>
+        </div>
+        <div class="link listaRedes">
+            <h2>Redes Sociales</h2>
+            <ul>
+                <li id="redes"><a id="a" href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+                <li id="redes"><a id="a" href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                <li id="redes"><a id="a" href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+            </ul>
+        </div>
+        <div class="link">
+            <h2>Sitios de interes</h2>
+            <ul>
+                <li ><a id="a" href="#" target="_blank">Inicio</a></li>
+                <li ><a id="a" href="#" target="_blank">Hazte socio</a></li>
+            </ul>
+        </div>
+
+    </div>
+  </footer> -->
+
   
 </body>
 </html>

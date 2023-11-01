@@ -23,12 +23,13 @@ body {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: white;
 }
 
 .tituloPrincipalContent {
   max-width: 1100px;
   margin: 0 auto;
-  color: black;
+  color: white;
 }
 
 h1 {
@@ -47,8 +48,12 @@ h1 {
   background-color: #a0cca6;
 }
 
+#borderNavigator{
+  border: 1px solid black;
+}
+
 /* Estilos dentro del search bar */
-.topnav a {
+.topnav #borderNavigator {
   float: left;
   display: flex;
   color: black;
@@ -60,9 +65,8 @@ h1 {
   background-color: #4CAF50;
 }
 
-.topnav a:hover {
+.topnav #borderNavigator:hover {
   background-color: #7e9079;
-  color: black;
 }
 
 .topnav input[type=text] {
@@ -74,8 +78,11 @@ h1 {
   font-size: 17px;
 }
 
+span {
+  display:inline-block !important;
+}
 @media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
+  .topnav #borderNavigator, .topnav input[type=text] {
     float: none;
     display: block;
     text-align: left;
@@ -85,6 +92,9 @@ h1 {
   }
   .topnav input[type=text] {
     border: 1px solid black;
+  }
+  .container1{
+    display: block !important;
   }
 }
 
@@ -102,20 +112,21 @@ h1 {
 .container div {
   flex: 50%; 
   margin-bottom: 10px;
-  background-color: white;
 }
 
-img {
-  width: 80%; /* takes the 100 % width of its container (.box div)*/
-  height: 80%; /* takes the 100 % height of its container (.box div)*/
+.opcionesHotel #imagenesPaginaPrincipal{
+  width: 80%; 
+  height: 80%; 
 }
-.imagenesPaginaPrincipal {
+
+#imagenesPaginaPrincipal {
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   border-radius: 5px;
+   
 }
 .rate {
   float: left;
@@ -155,7 +166,7 @@ img {
     color: #c59b08;
 }
 
-#verMas {
+.verMas {
   font-size: 20px;
   font-weight: bold;
   text-align: right;
@@ -168,4 +179,47 @@ img {
   flex-wrap: wrap;
   margin-top:10px;
   font-size: 20px;
+}
+
+/* Estilo pagina hospedaje */
+
+#tituloPrincipalHospedaje {
+  background-image: url('../img/fotoHospedaje.png');
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.tituloPrincipalContentHospedaje {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Estilo Pagina Restauantes */
+
+#tituloPrincipalRestaurantes {
+  background-image: url('../img/fotoRestaurantes.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.tituloPrincipalRestaurantesContent{
+  max-width: 1100px;
+  margin: 0 auto;
+  color: transparent;
+}
+
+#tituloPrincipalEntretenimiento {
+  background-image: url('../img/fotoEntrenimiento.png');
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.tituloPrincipaEntretenimeintolContent{
+  max-width: 1100px;
+  margin: 0 auto;
+  color: transparent;
 }

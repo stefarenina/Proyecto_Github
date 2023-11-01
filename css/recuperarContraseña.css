@@ -1,33 +1,36 @@
 body {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
     background-color: #A0CCA6;
-    
+    margin: 0;
 }
-    #restaurarFormulario {
-        margin: 0 auto;
-        max-width: 800px;
-        padding: 20px;
-        background-color: #B9CFB9;
-        border-radius: 20px;
-        text-align: center; 
-    }
-#subirRecuperar{
+
+
+#restaurarFormulario {
+    margin: 20px auto; 
+    max-width: 800px;
+    padding: 20px;
+    background-color: #B9CFB9;
+    border-radius: 20px;
+    text-align: center; 
+}
+
+#restaurarFormulario label {
+    margin-bottom: 10px; 
     margin-top: 10px;
 }
 
-#registroFormulario label {
-    margin-bottom: 10px; 
+#restaurarFormulario input {
+    margin-bottom: 15px; 
     margin-top: 10px; 
 }
 
-#registroFormulario input {
-    margin-bottom: 15px; 
-    margin-top: 10px; 
-} 
-.email {
-    margin-bottom: 15px; 
-    margin-top: 10px;   
+#subirRecuperar {
+    margin-top: 10px;
 }
 
+footer {
+    margin-top: 20px; 
+}

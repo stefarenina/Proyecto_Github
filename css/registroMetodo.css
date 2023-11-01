@@ -1,27 +1,30 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #A0CCA6;
+    margin: 0;
 }
+
+
 #registroFormulario {
-    margin: 0 auto;
+    margin: 20px auto; 
     max-width: 800px;
     padding: 20px;
     background-color: #B9CFB9;
     border-radius: 20px;
-    text-align: center; /* Centra el contenido del formulario horizontalmente */
-    }
-#subirRecuperar{
-    margin-top: 10px;
+    text-align: center; 
 }
 
 #registroFormulario label {
-    margin-bottom: 5px; /* Agrega un margen de 10px en la parte inferior de las etiquetas */
+    margin-bottom: 5px;
 }
 
 #registroFormulario input {
-    margin-bottom: 5px; /* Agrega un margen de 15px en la parte inferior de los campos de entrada */
+    margin-bottom: 15px; 
 }
 
+footer {
+    margin-top: 20px;
+}

@@ -1,3 +1,51 @@
+#carritoCompras{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 20px 150px;
+}
+
+h3{
+    margin-left: 150px;
+}
+
+.imagen{
+    width: 160px;
+}
+
+th{
+    border: black;
+    border-style: groove;
+    
+}
+
+td{
+    padding: 15px;
+}
+
+table{
+    width: 100%;
+}
+
+.impuesto{
+    border-top: solid #5D9367;
+    text-align: end;
+    width: auto;
+}
+
+#btnPagar{
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
 footer{
     margin-top: auto;
     box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.104);

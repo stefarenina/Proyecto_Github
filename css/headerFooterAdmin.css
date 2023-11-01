@@ -61,7 +61,10 @@ header button:hover {
 .footer{
     padding: 50px 0;
     background-color: rgb(20, 20, 20);
-    padding-bottom: 0%;
+    padding-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
 }
 
@@ -72,7 +75,7 @@ header button:hover {
 /* Esto es parte de la clase para que el codigo quede con un margen igual --Solo lo use en el footer de momento */
 .container{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 #logButton:hover{
@@ -92,9 +95,6 @@ header button:hover {
 li {
     margin-bottom: 15px;
     font-size: 16px;
-}
-.link ul li{
-    list-style-type: none;
 }
 .link ul li a {
     text-decoration: none; 
@@ -117,12 +117,13 @@ li {
     height: auto;
 }
 #logo{
-    width: 75px;
+    height: 60px;
 }
 #userimg{
-    width: 50px;
+    height: 35px;
     padding-left: 2px;
 }
+
 
 /* HTML DEL HEADER
 

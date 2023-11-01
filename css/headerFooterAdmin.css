@@ -1,10 +1,10 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -58,14 +58,11 @@ header button:hover {
 
 }
 /* estilos para el footer */
-.footer{
+.footer {
     padding: 50px 0;
     background-color: rgb(20, 20, 20);
-    padding-bottom: 1%;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-
+    color: #F9FAFC;
 }
 
 .footer-content{
@@ -124,55 +121,12 @@ li {
     padding-left: 2px;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-/* HTML DEL HEADER
-
-
-<header>
-<div class="h-container">
-    <div id="logo">
-        <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
-    </div>
-
-    <div class="user-Container">
-        <img src="./img/userPlaceholder.png" alt="Imagen de encabezado" id="userimg">
-        <button type="button" id="logButton">Log out</button>
-    </div>
-</div>
-</header> */
-
-/* HTML DEL FOOTER */
-
-/* 
-<footer class="footer">
-<div class="footer-content container">
-    <div class="link">
-        <h2>AlphaScript Technologies</h2>
-        <ul>
-            <img src="./img/AST PNG_Blanco.png" alt="Logo de la empresa" id="logo">
-            <p id="textoFooter">Telefono: +5062252222</p>
-            <p id="textoFooter">Whatsapp: +5062252222</p>
-            <p></p>
-            <p id="textoFooter">Correo Electrónico: info@alphascript.com</p>
-            <p id="textoFooter">Dirección: 50 metros norte de Calle del Sufrimiento</p>
-        </ul>
-    </div>
-    <div class="link listaRedes">
-        <h2>Redes Sociales</h2>
-        <ul>
-            <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
-            <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
-            <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
-        </ul>
-    </div>
-    <div class="link">
-        <h2>Sitios de interes</h2>
-        <ul>
-            <li ><a href="#" target="_blank">Inicio</a></li>
-            <li ><a href="#" target="_blank">Hazte socio</a></li>
-            <li ><a href="#" target="_blank">Resenas</a></li>
-        </ul>
-    </div>
-
-</div>
-</footer> */
+table th, table td {
+    border: 1px solid #30353B;
+    padding: 10px;
+}

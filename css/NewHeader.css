@@ -23,12 +23,14 @@ header{
     background-color: #30353B;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.104);
     padding: 10px 0;
+    
 }
 
 header nav{
     display: flex;
     justify-content: space-between;
-    margin: 0 120px;
+    max-width: 1200px;
+    margin: auto
 }
 
 header nav div{
@@ -82,3 +84,106 @@ CODIGO HTML:
     </header>
 
 */
+.footer{
+    padding: 50px 0;
+    background-color: rgb(20, 20, 20);
+    padding-bottom: 1%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+/* Esto es parte de la clase para que el codigo quede con un margen igual --Solo lo use en el footer de momento */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+#logButton:hover{
+    cursor: pointer;
+}
+
+.link{
+    color: #F9FAFC;
+}
+
+.link h2{
+    font-size: 18px;
+    color:#F9FAFC;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.link ul li a {
+    text-decoration: none; 
+    color: white;
+}
+.link ul li a:hover {
+    color:#5D9367;
+    cursor: pointer;
+}
+
+/* cree un id redes para hacer que se vean en la misma linea */
+
+#redes{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.icono{
+    width: 35px;
+    height: auto;
+}
+#logo{
+    height: 60px;
+}
+#userimg{
+    height: 35px;
+    padding-left: 2px;
+<<<<<<< HEAD
+}
+
+/*HTML del footer 
+
+<footer class="footer">
+<div class="footer-content container">
+    <div class="link">
+        <h2>Instituto Costarricense de Turismo</h2>
+        <ul>
+            <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
+            <p id="textoFooter">Telefono: +506 2299-5800</p>
+            <p id="textoFooter">Horario: Lunes a Viernes de 8:00 a.m. a 4:00 p.m.</p>
+            <p></p>
+            <p id="textoFooter">Correo Electrónico: info@visitcostarica.com</p>
+            <p id="textoFooter">Edificio ICT, Saturno, San José, Uruca, 10107</p>
+        </ul>
+    </div>
+    <div class="link listaRedes">
+        <h2>Redes Sociales</h2>
+        <ul>
+            <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+            <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+            <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+        </ul>
+    </div>
+    <div class="link">
+        <h2>Sitios de interes</h2>
+        <ul>
+            <li ><a href="#" target="_blank">Inicio</a></li>
+            <li ><a href="#" target="_blank">Hazte socio</a></li>
+        </ul>
+    </div>
+
+</div>
+</footer>*/
+=======
+}
+>>>>>>> c0561df95a76ccc2d85362d82d4b3d1a22469e35

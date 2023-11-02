@@ -9,7 +9,7 @@ let foto = document.getElementById('myphoto');
 let contrasena = document.getElementById('txtPass');
 let contrasena2 = document.getElementById('txtPass2');
 let direccion = document.getElementById('imgNegocio');
-
+let buttonSubmit = document.getElementById('btn-registro');
 
 
 const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
@@ -35,22 +35,11 @@ const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
     if (fotoperf == '' || fotoperf == null || imfotoperfNegocio == undefined){
         ImprimirMensajeError('Debe de incluir su foto de perfil.');
     }
-
-    radio.forEach(element => {
-        if (element.checked == true) {
-            contadorRadio++;
-        } 
-    });
-
-    if (contadorRadio < 1) {
-        ImprimirMensajeError('Debera elegir al menos 1 opcion');
-    }
 };
 
 
 buttonSubmit.addEventListener('click', ValidarFormulario);
 
-//Aqui estamo generando una funcion que va a generar las alertas, modulamos esta funcion con las demas.
 const ImprimirMensajeError = (texto) => {
     Swal.fire({
         icon: 'error',

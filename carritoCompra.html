@@ -55,16 +55,45 @@
                             <tr>
                                 <td> </td>
                                 <td> </td>
+                                <td class="impuesto">Metodo de pago</td>
+                                <td> <select id="select1">
+                                    <option> -- Seleccionar --</option>
+                                    <option value="anadirTarjeta" id="anadirTarjeta">Tarjeta Credito/Debito</option>
+                                    <option value="opcion2">Anadir metodo de pago</option>
+                                    <option value="opcion3">Tarjeta 1</option>
+                                    </select> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
                                 <td class="impuesto">Total a pagar</td>  
                                 <td>$90400</td>
                             </tr>
                         </tbody> 
-                        
                 </table>
-                <button type="button" id="btnPagar">Pagar</button>
+                <button type="button" id="btnPagar" onclick="pagar()">Proceder con pago</button>
             </div>
         </div>
     </main>
+
+
+    <dialog id="modal">
+        <form>
+            <div id="modal-content">
+                <label for="cardNumber">Numero de tarjeta</label>
+                <input type="number" placeholder="Digite su numero de tarjeta" id="cardNumber">
+
+                <label for="fechaExipracion">Fecha de Expiracion</label>
+                <input type="number" placeholder="MM/AA" id="fechaExipracion">
+
+                <label for="cvv">CVV</label>
+                <input type="number" placeholder="Digite su CVV" id="cvv">
+
+                <input type="button" value="Confirmar" id="btnConfirmar">
+            </div>
+        </form>
+    </dialog>
 
     <footer class="footer">
         <div class="footer-content container">
@@ -97,6 +126,8 @@
 
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/controllers/carritoCompras.js"></script>
     
 </body>
 </html>

@@ -96,6 +96,12 @@ span {
   .container1{
     display: block !important;
   }
+  p{
+    text-align: center;
+  }
+  .footer-content{  
+    display: inline-block;
+  }
 }
 
 /* Estilo opciones */
@@ -104,12 +110,12 @@ span {
   width: 100%;
 }
 
-.container {
+.container1 {
   display: flex;
   flex-wrap: wrap;
 }
 
-.container div {
+.container1 div {
   flex: 50%; 
   margin-bottom: 10px;
 }
@@ -222,4 +228,9 @@ span {
   max-width: 1100px;
   margin: 0 auto;
   color: transparent;
+}
+
+.container1{
+  max-width: 1200px;
+  margin: auto;
 }

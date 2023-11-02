@@ -45,3 +45,6 @@ table{
     cursor: pointer;
     float: right;
 }
+.footer{
+    position: absolute;
+}

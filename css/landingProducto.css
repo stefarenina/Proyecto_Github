@@ -43,6 +43,11 @@ h1 {
 }
 
 /* Estilos search bar principal  */
+ #buscador{
+  display: flex;
+  justify-content: center;
+ }
+
 .topnav {
   overflow: hidden;
   background-color: #a0cca6;
@@ -50,6 +55,7 @@ h1 {
 
 #borderNavigator{
   border: 1px solid black;
+  margin: 3px;
 }
 
 /* Estilos dentro del search bar */
@@ -63,6 +69,7 @@ h1 {
   text-decoration: none;
   font-size: 17px;
   background-color: #4CAF50;
+  border-radius: 2px;
 }
 
 .topnav #borderNavigator:hover {
@@ -70,12 +77,15 @@ h1 {
 }
 
 .topnav input[type=text] {
+  
   float: right;
   padding: 6px;
   border: none;
   margin-top: 8px;
   margin-right: 16px;
+  margin-left: 5px;
   font-size: 17px;
+  border: 1px solid black;
 }
 
 span {
@@ -96,6 +106,12 @@ span {
   .container1{
     display: block !important;
   }
+  p{
+    text-align: center;
+  }
+  .footer-content{  
+    display: inline-block;
+  }
 }
 
 /* Estilo opciones */
@@ -104,12 +120,12 @@ span {
   width: 100%;
 }
 
-.container {
+.container1 {
   display: flex;
   flex-wrap: wrap;
 }
 
-.container div {
+.container1 div {
   flex: 50%; 
   margin-bottom: 10px;
 }
@@ -223,3 +239,47 @@ span {
   margin: 0 auto;
   color: transparent;
 }
+
+.container1{
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Estilo para contacto  */
+
+/* Estilos zona de contactenos */
+
+#contacto {
+  text-align: center;
+  padding: 100px 0;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#Nombre,
+#Correo {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Estilos para boton enviar*/
+#btnContacto {
+  background-color: #4CAF50;
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#btnContacto:hover{
+  background-color: #7e9079;
+}
+

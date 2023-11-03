@@ -89,6 +89,7 @@ CODIGO HTML:
     background-color: rgb(20, 20, 20);
     padding-bottom: 1%;
     position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
 

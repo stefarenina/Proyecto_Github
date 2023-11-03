@@ -13,7 +13,9 @@ body {
     background-color: #B9CFB9;
     border-radius: 20px;
     margin-bottom: 80px; 
+
     overflow: hidden; 
+    overflow-y: auto;
     
 }
 
@@ -48,10 +50,13 @@ input[type=password] {
     box-sizing: border-box;
 }
 
+.lista-content {
+    margin: 15px;
+}
 
 .column{
     float: left;
-    padding: 5px;
+    padding: 10px;
 }
 
 #imgNegocio{

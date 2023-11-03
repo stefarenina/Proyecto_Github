@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activar o Denegar Solicitudes </title>
-    
+    <title>Gestion de Solicitudes</title>
     <link rel="stylesheet" href="./css/activarDenegarNegocios.css">
     <link rel="stylesheet" href="css/headerFooterAdmin.css">
 </head>
@@ -20,145 +19,153 @@
                 </a>
                 <a href="./activarDenegarNegocios.html" >
                     <button class="button">Gestión de Solicitudes</button>
-
+                </a>
             </nav>
-            
             <div class="user-Container">
                 <button type="button" id="logButton">Log out</button>
             </div>
         </div>
-        </header>
+    </header>
 
-        <div class="gestionSolicitudes">
-            
-            <div class="gestion-content">
-                <h2>Gestion de Solicitudes</h2>
-                <ul class="lista-solicitudes">
-                    <li>
+    <div class="gestionSolicitudes">
+    
+        <div class="gestion-content">
+            <h2>Gestion de Solicitudes</h2>
+            <ul class="lista-solicitudes">
+                <li class="lista-content">
                     <div class="row">
                         <div class="column">
                             <div>
                                 <label for="txtNegocio"> Nombre del negocio: </label>
-                                <input type="text" id="txtNegocio">
+                                <p>Hotel Grano De Oro, San José.</p>
                             </div>
                             <div>
                                 <label for="txtDescripcion"> Descripcion General: </label>
-                                <input type="text" id="txtDescripcion">
+                                <p>Hotel Grano de Oro Ubicado en San José especial para toda la familia </p>
                             </div>
                             <div>
                                 <label for="txtCategoria"> Categoria </label>
-                                <input type="text" id="txtCategoria">
+                                <p>Hospedaje</p>
                             </div>
                         </div>
                         <div class="column">
                             <div>
                                 <label for="txtDireccion">Dirección: </label>
-                                <textarea id="txtDireccion" cols="20" rows="5"></textarea>
+                                <p>Calle 30, San Bosco, San José, 10101</p>
                             </div>
                             <div>
                                 <label for="imgNegocio"> Fotos: </label>
-                                <img src="./img/baldi1.jpeg" id="imgNegocio">
-            
+                                <img src="./img/granoDeOro.jpg" id="imgNegocio">
+                            </div>
+                            <input type="button" class="btnCancelar" value="Cancelar" onclick="CancelarSolicitud()">
+                            <input type="button" class="btnAceptar" value="Aprobar" onclick="AceptarSolicitud()">
+                        </div>
+                    </div>
+                </li>
+                <li class="lista-content">
+                    <div class="row">
+                        <div class="column">
+                            <div>
+                                <label for="txtNegocio"> Nombre del negocio: </label>
+                                <p>Bol Cariari.</p>
+                            </div>
+                            <div>
+                                <label for="txtDescripcion"> Descripcion General: </label>
+                                <p>Tenemos a su disposición 20 pistas con sistema de anotación automático,</p>
+                                <p>salón para eventos y restaurante. Además con parqueo gratuito.</p>
+                            </div>
+                            <div>
+                                <label for="txtCategoria"> Categoria </label>
+                                <p>Entretenimiento</p>
                             </div>
                         </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="column">
-                                    <div>
-                                        <label for="txtNegocio"> Nombre del negocio: </label>
-                                        <input type="text" id="txtNegocio">
-                                    </div>
-                                    <div>
-                                        <label for="txtDescripcion"> Descripcion General: </label>
-                                        <input type="text" id="txtDescripcion">
-                                    </div>
-                                    <div>
-                                        <label for="txtCategoria"> Categoria </label>
-                                        <input type="text" id="txtCategoria">
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div>
-                                        <label for="txtDireccion">Dirección: </label>
-                                        <textarea id="txtDireccion" cols="20" rows="5"></textarea>
-                                    </div>
-                                    <div>
-                                        <label for="imgNegocio"> Fotos: </label>
-                                        <img src="./img/baldi1.jpeg" id="imgNegocio">
-                    
-                                    </div>
-                                </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="column">
-                                    <div>
-                                        <label for="txtNegocio"> Nombre del negocio: </label>
-                                        <input type="text" id="txtNegocio">
-                                    </div>
-                                    <div>
-                                        <label for="txtDescripcion"> Descripcion General: </label>
-                                        <input type="text" id="txtDescripcion">
-                                    </div>
-                                    <div>
-                                        <label for="txtCategoria"> Categoria </label>
-                                        <input type="text" id="txtCategoria">
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div>
-                                        <label for="txtDireccion">Dirección: </label>
-                                        <textarea id="txtDireccion" cols="20" rows="5"></textarea>
-                                    </div>
-                                    <div>
-                                        <label for="imgNegocio"> Fotos: </label>
-                                        <img src="./img/baldi1.jpeg" id="imgNegocio">
-                    
-                                    </div>
-                                </div>
-                        </li>
+                        <div class="column">
+                            <div>
+                                <label for="txtDireccion">Dirección: </label>
+                                <p>General Cañas Cruce de San Antonio de Belén,</p>
+                                <p> continuo al Real Cariari, San José.</p>
+                            </div>
+                            <div>
+                                <label for="imgNegocio"> Fotos: </label>
+                                <img src="./img/bolosHeredia.png" id="imgNegocio">
+    
+                            </div>
+                            <input type="button" class="btnCancelar" value="Cancelar" onclick="CancelarSolicitud()">
+                            <input type="button" class="btnAceptar" value="Aprobar" onclick="AceptarSolicitud()">
+                        </div>
+                    </div>
+                </li>
+                <li class="lista-content">
+                    <div class="row">
+                        <div class="column">
+                            <div>
+                                <label for="txtNegocio"> Nombre del negocio: </label>
+                                <p>La Casona Mexicana.</p>
+                            </div>
+                            <div>
+                                <label for="txtDescripcion"> Descripcion General: </label>
+                                <p>Restaurante Mexicano & Parrilla en Cartago, le ofrecemos la auténtica</p>
+                                <p></p> gastronomía mexicana.</p>
+                            </div>
+                            <div>
+                                <label for="txtCategoria"> Categoria </label>
+                                <p>Restaurantes</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="txtDireccion">Dirección: </label>
+                                <p>300m Este del Puente Bailey, </p>
+                                <p>carretera al Volcán Irazú, Vía 219, Provincia de Cartago.</p>
+                            </div>
+                            <div>
+                                <label for="imgNegocio"> Fotos: </label>
+                                <img src="./img/laCasonaMexicana.png" id="imgNegocio">
+    
+                            </div>
+                            <input type="button" class="btnCancelar" value="Cancelar" onclick="CancelarSolicitud()">
+                            <input type="button" class="btnAceptar" value="Aprobar" onclick="AceptarSolicitud()">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h2>Instituto Costarricense de Turismo</h2>
+                <ul>
+                    <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
+                    <p id="textoFooter">Telefono: +506 2299-5800</p>
+                    <p id="textoFooter">Horario: Lunes a Viernes de 8:00 a.m. a 4:00 p.m.</p>
+                    <p></p>
+                    <p id="textoFooter">Correo Electrónico: info@visitcostarica.com</p>
+                    <p id="textoFooter">Edificio ICT, Saturno, San José, Uruca, 10107</p>
                 </ul>
             </div>
-            
-            
-            
+            <div class="link listaRedes">
+                <h2>Redes Sociales</h2>
+                <ul>
+                    <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/"
+                            target="_blank"><img src="./img/facebookIcon.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img
+                                src="./img/youtubeIcono.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img
+                                src="./img/instagramIcon.png" class="icono"></a></li>
+                </ul>
             </div>
-
-            
-        
-        </div>
-
-        <footer class="footer">
-            <div class="footer-content container">
-                <div class="link">
-                    <h2>Instituto Costarricense de Turismo</h2>
-                    <ul>
-                        <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
-                        <p id="textoFooter">Telefono: +506 2299-5800</p>
-                        <p id="textoFooter">Horario: Lunes a Viernes de 8:00 a.m. a 4:00 p.m.</p>
-                        <p></p>
-                        <p id="textoFooter">Correo Electrónico: info@visitcostarica.com</p>
-                        <p id="textoFooter">Edificio ICT, Saturno, San José, Uruca, 10107</p>
-                    </ul>
-                </div>
-                <div class="link listaRedes">
-                    <h2>Redes Sociales</h2>
-                    <ul>
-                        <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
-                        <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
-                        <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
-                    </ul>
-                </div>
-                <div class="link">
-                    <h2>Sitios de interes</h2>
-                    <ul>
-                        <li ><a href="./landingProducto.html">Inicio</a></li>
-                        <li ><a href="./registrarNegocio.html">Hazte socio</a></li>
-                    </ul>
-                </div>
+            <div class="link">
+                <h2>Sitios de interes</h2>
+                <ul>
+                    <li><a href="./landingProducto.html">Inicio</a></li>
+                    <li><a href="./registrarNegocio.html">Hazte socio</a></li>
+                </ul>
+            </div>
     
-            </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 </html>

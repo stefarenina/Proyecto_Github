@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Inicio</title>
   <link rel="stylesheet" href="./css/headerFooterLandingPage.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="./css/landingProducto.css">
@@ -15,7 +15,7 @@
       <div>
         <a href="./inicioSesion.html"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
         <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
-        <a href="./inicioSesion.html"><button type="button" id="logButton">Log in</button></a>
+        <input type="button" id="logButton" onclick="AbrirModalInicio()" value="Log in">
       </div>
     </nav>
   </header>
@@ -261,10 +261,31 @@
         </div>
 
     </div>
+
+    <div id="modalInicio" class="modal">
+      <div class="modal-content">
+          <span class="close" id="close">X</span>
+          <form class="formInicio">
+              <h2>Iniciar Sesión</h2>
+              <div>
+                  <label for="txtEmail" id="lblEmail">Correo Electrónico</label>
+                  <input type="text" id="txtEmail" placeholder="Email">
+              </div>
+              <div>
+                  <label for="txtPass" id="lblPass">Contraseña</label>
+                  <input type="password" id="txtPass" placeholder="contraseña">
+              </div>
+              <a href="#">Olvidé mi contraseña?
+                  <a href="./registroUsuario.html">Registrarse</a>
+                  <input type="button" id="btnIniciar" value="Iniciar Sesión">
+          </form>
+      </div>
+  </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./JS/controllers/landing_and_registrarReservas.js"></script>
+  <script src="./JS/controllers/inicioSessionController.js"></script>
   
 </body>
 </html>

@@ -18,3 +18,7 @@ body {
 .formInicio label{
     margin-bottom: 5px;
 }
+
+.footer{
+    position: absolute;
+}

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let correo = document.getElementById('txtEmail');
 let password = document.getElementById('txtPass');

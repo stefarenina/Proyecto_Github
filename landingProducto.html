@@ -13,9 +13,9 @@
     <nav>
       <a href="./landingProducto.html"><img src="./img/ict-logo-2.png" id="logoICT" alt="Logo"></a>
       <div>
-        <a href="#"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
+        <a href="./inicioSesion.html"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
         <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
-        <a href="#"><button type="button" id="logButton">Log in</button></a>
+        <a href="./inicioSesion.html"><button type="button" id="logButton">Log in</button></a>
       </div>
     </nav>
   </header>
@@ -41,7 +41,9 @@
   <section>
     <div class="container1">
       <div class="opcionesHotel">
+        <a href="./registrarReserva.html">
         <img id="imagenesPaginaPrincipal" src="./img/conchalWestin.jpg"  alt="Example image"/> 
+        </a>
         <span>
         <div class="rate">
           <input type="radio" id="hotel1star5" name="rate" value="5" />
@@ -65,7 +67,9 @@
         </span>
       </div>
       <div class="opcionesHotel">
+        <a href="./registrarReserva.html">
         <img id="imagenesPaginaPrincipal" src="img/granoDeOro.jpg"  alt="Example image"/> 
+        </a>
         <span>
         <div class="rate">
           <input type="radio" id="hotel2star5" name="rate" value="5" />
@@ -98,7 +102,9 @@
   <section>
     <div class="container1">
       <div class="opcionesHotel">
+        <a href="./registrarReserva.html">
         <img id="imagenesPaginaPrincipal" src="img/lenoYCarbon.png"  alt="Example image"/> 
+        </a>
         <span>
         <div class="rate">
           <input type="radio" id="restaurante1star5" name="rate" value="5" />
@@ -122,7 +128,9 @@
         </span> 
       </div>
       <div class="opcionesHotel">
+        <a href="./registrarReserva.html">
         <img id="imagenesPaginaPrincipal" src="img/nonosPizzeria.png"  alt="Example image"/> 
+        </a>
         <span>
         <div class="rate">
           <input type="radio" id="restaurante2star5" name="rate" value="5" />
@@ -154,7 +162,9 @@
   <section>
     <div class="container1">
       <div class="opcionesHotel">
+        <a href="./registrarReserva.html">
         <img id="imagenesPaginaPrincipal" src="https://www.golakehavasu.com/media/media-14208.jpg"  alt="Example image"/>
+        </a>
         <span>
         <div class="rate">
           <input type="radio" id="entretenimiento1star5" name="rate" value="5" />
@@ -178,7 +188,9 @@
         </span>
       </div>
       <div class="opcionesHotel">
+        <a href="./registrarReserva.html">
         <img id="imagenesPaginaPrincipal" src="./img/bolosHeredia.png"  alt="Example image"/> 
+        </a>
         <span>
         <div class="rate">
           <input type="radio" id="entretenimiento2star5" name="rate" value="5" />
@@ -211,7 +223,7 @@
     <h2>Contacto</h2>
     <p>¡Contáctanos para obtener más información sobre nuestros servicios!</p>
     <form>
-        <input type="text" placeholder="Nombre" id="Nombre">
+        <input type="text" placeholder="Nombre y apellido" id="Nombre">
         <input type="email" placeholder="Correo Electrónico" id="Correo">
         <textarea placeholder="Mensaje" id="Mensaje"></textarea>
     </form>
@@ -242,14 +254,17 @@
         <div class="link">
             <h2>Sitios de interes</h2>
             <ul>
-                <li ><a id="a" href="#" target="_blank">Inicio</a></li>
-                <li ><a id="a" href="#" target="_blank">Hazte socio</a></li>
+                <li ><a id="a" href="./landingProducto.html" target="_blank">Inicio</a></li>
+                <li ><a id="a" href="./registroUsuario.html" target="_blank">Registrate</a></li>
+                <li ><a id="a" href="./registrarNegocio.html" target="_blank">Hazte socio</a></li>
             </ul>
         </div>
 
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./JS/controllers/landing_and_registrarReservas.js"></script>
   
 </body>
 </html>

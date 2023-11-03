@@ -55,6 +55,7 @@ h1 {
 
 #borderNavigator{
   border: 1px solid black;
+  margin: 3px;
 }
 
 /* Estilos dentro del search bar */
@@ -189,6 +190,10 @@ span {
   color: black;
 }
 
+.verMas:hover {
+  color: #4CAF50;
+}
+
 #descripcion{
   display: flex;
   flex-wrap: wrap;
@@ -265,6 +270,7 @@ form {
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 
@@ -276,8 +282,15 @@ form {
   border: 1px solid black;
   border-radius: 2px;
   cursor: pointer;
+  margin-top: 20px;
 }
 #btnContacto:hover{
   background-color: #7e9079;
 }
+
+
+#resenaPuntaUva {
+  font-weight: bold;
+}
+
 

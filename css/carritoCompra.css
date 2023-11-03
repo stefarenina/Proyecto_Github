@@ -1,25 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #A0CCA6;
+}
+
 #carritoCompras{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    margin: 20px 250px;
+    margin: 0 100px;
 }
 
 h3{
     margin-top: 15px;
-    margin-left: 250px;
+    text-align: center;
 }
 
 .imagen{
     width: 160px;
 }
 
-th{
-    border: black;
-    border-style: groove;
-    
-}
 
 td{
     padding: 15px;
@@ -27,6 +29,11 @@ td{
 
 table{
     width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #B9CFB9;
+    border-radius: 20px;
+    text-align: left;
 }
 
 .impuesto{
@@ -97,7 +104,4 @@ input[type=number]{
     padding: 20px;
     overflow-y: auto;
     max-height: calc(100vh - 200px);
-}
-.footer{
-    position: absolute;
 }

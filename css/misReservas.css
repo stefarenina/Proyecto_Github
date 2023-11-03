@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #A0CCA6;
+}
+
 
 body table {
     margin: 10px auto;
@@ -13,7 +20,7 @@ h1{
     text-align: center;
 }
 
-h2{
+.titleh2{
     margin-top: 100px; 
     font-size: 12px;
     text-align: center;

@@ -190,6 +190,10 @@ span {
   color: black;
 }
 
+.verMas:hover {
+  color: #4CAF50;
+}
+
 #descripcion{
   display: flex;
   flex-wrap: wrap;
@@ -278,8 +282,15 @@ form {
   border: 1px solid black;
   border-radius: 2px;
   cursor: pointer;
+  margin-top: 20px;
 }
 #btnContacto:hover{
   background-color: #7e9079;
 }
+
+
+#resenaPuntaUva {
+  font-weight: bold;
+}
+
 

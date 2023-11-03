@@ -118,3 +118,20 @@ td, th{
     font-size: x-small;
     text-align: center;
 }
+
+#informacion{
+    margin-bottom: 90px;
+}
+
+#btnRegistrar{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: white;
+}
+
+#btnRegistrar:hover{
+    cursor: pointer;
+    color: #5D9367;
+}
+

@@ -1,15 +1,10 @@
 'use strict';
 
+
 let correo = document.getElementById('txtEmail');
 let password = document.getElementById('txtPass');
 let buttonSubmit = document.getElementById('btnIniciar');
 
-let modal=document.getElementById('modalInicio');
-let span=document.getElementById('close');
-
-span.onclick =()=>{
-    CerrarModal();
-}
 buttonSubmit.addEventListener('click',obtenerDatos);
 
 const obtenerDatos=()=>{
@@ -46,10 +41,3 @@ const ImprimirMensajeError = (pMensaje) => {
     });
 };
 
-const AbrirModalInicio=()=>{
-        modal.style.display = "block";
-    }
-
-function CerrarModal(){
-    modal.style.display= "none";
-}

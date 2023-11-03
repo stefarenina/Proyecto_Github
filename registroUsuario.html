@@ -21,7 +21,7 @@
         </nav>
     </header>
     <div id="formularioRegistro">
-
+    
         <form class="formulario">
             <h1>Registrase</h1>
             <p>Complete el siguiente formulario para realizar su registro</p><br>
@@ -44,7 +44,7 @@
                         <input type="date" id="txtFechaNacimiento">
                     </div>
                     <div>
-                        <label for="txtedad" id="lbledad">Edad*</label>
+                        <label for="txtedad" id="lbledad">Edad</label>
                         <input type="number" id="txtedad" min="0" max="120">
                     </div>
                 </div>
@@ -53,10 +53,10 @@
                         <label for="sltDocumento">Documento de identificación*</label>
                         <select id="sltDocumento">
                             <option value="">--Seleccione--</option>
-                            <option value="" title="Cedula Nacional">Cédula Fisica</option>
-                            <option value="" title="Pasaporte">Pasaporte</option>
+                            <option value="option1" title="Cedula Nacional">Cédula Fisica</option>
+                            <option value="option2" title="Pasaporte">Pasaporte</option>
                         </select><br>
-                        <input type="text" id="sltDocumento" placeholder="">
+                        <input type="text" placeholder="">
                     </div>
                     <div>
                         <label for="myphoto">Foto de perfil*</label>
@@ -76,7 +76,9 @@
                     </div>
                 </div>
             </div>
-            <input type="button" value="Registrarse" id="btn-registro">
+            <div id="btn-registro">
+                <input type="button" value="Registrarse" id="btn-registro">
+            </div>
         </form>
     </div>
 
@@ -112,6 +114,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/controllers/validacionRegistrarUsuario.js"></script>
+    <script src="./JS/controllers/validarRegUsuarioController.js"></script>
 </body>
 </html>

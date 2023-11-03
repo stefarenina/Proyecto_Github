@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/registroUsuario.css">
+    <link rel="stylesheet" href="./css/NewHeader.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
+    <!-- <link rel="stylesheet" href="./css/headerFooter.css"> -->
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="./landingProducto.html"><img src="./img/ict-logo-2.png" id="logoICT" alt="Logo"></a>
+          <div>
+            <a href="./perfil.html"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
+            <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
+            <input type="button" id="logButton" onclick="AbrirModalInicio()" value="Log in">
+          </div>
+        </nav>
+      </header>
+    <div id="formularioRegistro">
+    
+        <form class="formulario">
+            <h1>Cambie la información de su perfil</h1>
+            <br>
+            <div class="row">
+                <div class="column">
+                    <div>
+                        <label for="txtNombre">Nombre*</label>
+                        <input type="text" id="txtNombre" placeholder="Escriba su nombre">
+                    </div>
+                    <div>
+                        <label for="txtApellido">Primer Apellido*</label>
+                        <input type="text" id="txtApellido" placeholder="Escriba su apellido">
+                    </div>
+                    <div>
+                        <label for="txtCorreo">Correo*</label>
+                        <input type="text" id="txtCorreo" placeholder="Correo Electrónico">
+                    </div>
+                    <div>
+                        <label for="txtFechaNacimiento">Fecha de Nacimiento*</label>
+                        <input type="date" id="txtFechaNacimiento">
+                    </div>
+                    <div>
+                        <label for="txtedad" id="lbledad">Edad</label>
+                        <input type="number" id="txtedad" min="0" max="120">
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <label for="sltDocumento">Documento de identificación*</label>
+                        <select id="sltDocumento">
+                            <option value="">--Seleccione--</option>
+                            <option value="option1" title="Cedula Nacional">Cédula Fisica</option>
+                            <option value="option2" title="Pasaporte">Pasaporte</option>
+                        </select><br>
+                        <input type="text" placeholder="">
+                    </div>
+                    <div>
+                        <label for="myphoto">Foto de perfil*</label>
+                        <input type="file" id="myphoto">
+                    </div>
+                    <div>
+                        <label for="txtPass" id="lblPass">Contraseña*</label>
+                        <input type="password" id="txtPass">
+                    </div>
+                    <div>
+                        <label for="txtPass2" id="lblPass2">Confirmar Contraseña*</label>
+                        <input type="password" id="txtPass2">
+                    </div>
+                    <div>
+                        <label for="txtDireccion">Dirección*</label>
+                        <textarea id="txtDireccion" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="btn-registro">
+                <input type="button" value="Cambiar Información" id="btn-registro">
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h2>Instituto Costarricense de Turismo</h2>
+                <ul>
+                    <img src="img/ictLogoHeaderFooter.png" alt="Logo del ICT" id="logo">
+                    <p id="textoFooter">Telefono: +506 2299-5800</p>
+                    <p id="textoFooter">Horario: Lunes a Viernes de 8:00 a.m. a 4:00 p.m.</p>
+                    <p></p>
+                    <p id="textoFooter">Correo Electrónico: info@visitcostarica.com</p>
+                    <p id="textoFooter">Edificio ICT, Saturno, San José, Uruca, 10107</p>
+                </ul>
+            </div>
+            <div class="link listaRedes">
+                <h2>Redes Sociales</h2>
+                <ul>
+                    <li id="redes"><a href="https://www.facebook.com/InstitutoCostarricensedeTurismoOficial/" target="_blank"><img src="./img/facebookIcon.png" class="icono" ></a></li>
+                    <li id="redes"><a href="https://www.youtube.com/channel/UCf4vVKxVaYpRtmFaStDfQTw" target="_blank"><img src="./img/youtubeIcono.png" class="icono"></a></li>
+                    <li id="redes"><a href="https://www.instagram.com/oficial_ict/" target="_blank"><img src="./img/instagramIcon.png" class="icono"></a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h2>Sitios de interes</h2>
+                <ul>
+                    <li ><a href="./landingProducto.html">Inicio</a></li>
+                    <li ><a href="./registrarNegocio.html">Hazte socio</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/controllers/validarRegUsuarioController.js"></script>
+</body>
+</html>

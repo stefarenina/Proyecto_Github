@@ -75,6 +75,18 @@ section button:hover {
 #modal::backdrop {
     background-color: rgba(0, 0, 0, .55);
 }
+input[type=text],
+textarea,
+input[type=number],
+input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 #modal {
     position: fixed;
     left: 50%;
@@ -86,7 +98,7 @@ section button:hover {
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-#modal input, #modal label ,#modal select{
+#modal input, #modal label{
     font-size: 20px;
     margin: 25px; 
     padding: 5px;

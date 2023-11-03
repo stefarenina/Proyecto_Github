@@ -26,6 +26,7 @@ const ValidarInicio = (pCorreo, pPassword) => {
         ImprimirMensajeError('Digite su contraseña.');
         return false;
     }
+    window.location.href="./landingProducto.html";
     return true;
 
 }

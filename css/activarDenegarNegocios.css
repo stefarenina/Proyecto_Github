@@ -8,11 +8,13 @@ body {
 
 .gestionSolicitudes {
     padding: 15px;
-    margin: 10px auto;
     width: fit-content;
-    margin: auto;
+    margin: 10px auto;
     background-color: #B9CFB9;
     border-radius: 20px;
+    margin-bottom: 80px; 
+    overflow: hidden; 
+    
 }
 
 .gestionSolicitudes div{
@@ -55,4 +57,10 @@ input[type=password] {
 #imgNegocio{
     height: 150px;
     width: 200px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

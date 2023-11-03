@@ -8,7 +8,7 @@ let documento = document.getElementById('sltDocumento');
 let foto = document.getElementById('myphoto');
 let contrasena = document.getElementById('txtPass');
 let contrasena2 = document.getElementById('txtPass2');
-let direccion = document.getElementById('imgNegocio');
+let direccion = document.getElementById('txtDireccion');
 let buttonSubmit = document.getElementById('btn-registro');
 
 

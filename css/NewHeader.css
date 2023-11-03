@@ -88,9 +88,11 @@ CODIGO HTML:
     padding: 50px 0;
     background-color: rgb(20, 20, 20);
     padding-bottom: 1%;
+    position: absolute;
     /* position: absolute; */
     bottom: 0;
     width: 100%;
+
 }
 
 .footer-content{
@@ -184,3 +186,7 @@ li {
 
 </div>
 </footer>*/
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 2ea5316105166de33415436d8e2e8dae56d86202

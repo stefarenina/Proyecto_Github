@@ -98,4 +98,6 @@ input[type=number]{
     overflow-y: auto;
     max-height: calc(100vh - 200px);
 }
-
+.footer{
+    position: absolute;
+}

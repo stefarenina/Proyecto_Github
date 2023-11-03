@@ -79,18 +79,21 @@
 
 
     <div id="modal">
-        <form>
+        <form id="metodoPagoForm">
             <div id="modal-content">
-                <label for="cardNumber">Numero de tarjeta</label>
-                <input type="number" placeholder="Digite su numero de tarjeta" id="cardNumber">
+                <label for="nombre_tarjeta">Nombre en la Tarjeta</label>
+                <input type="text" id="nombre_tarjeta" placeholder="Digite el nombre en la Tarjeta">
 
-                <label for="fechaExipracion">Fecha de Expiracion</label>
-                <input type="number" placeholder="MM/AA" id="fechaExipracion">
+                <label for="numero_tarjeta">Numero de tarjeta</label>
+                <input type="number" placeholder="Digite su numero de tarjeta" id="numero_tarjeta">
+
+                <label for="fecha_vencimiento">Fecha de Expiracion</label>
+                <input type="number" placeholder="MM/AA" id="fecha_vencimiento">
 
                 <label for="cvv">CVV</label>
                 <input type="number" placeholder="Digite su CVV" id="cvv">
 
-                <input type="button" value="Confirmar" id="btnConfirmar" onclick="agregarTarjeta()">
+                <button type="submit" id="agregarPago">Confirmar</button>
             </div>
         </form>
     </div>
@@ -128,6 +131,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./JS/controllers/carritoCompras.js"></script>
+    <script src="./JS/controllers/validacionCarrito.js"></script>
     
 </body>
 </html>

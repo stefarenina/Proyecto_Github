@@ -8,8 +8,6 @@ window.onclick = (event) => {
     }
 };
 
-
-
 function MetodoPagoChange() {
     let selectInput = document.getElementById("metodoPago");
     if (selectInput.value == 'tarjeta') {
@@ -30,11 +28,4 @@ function pagar(){
     });
 }
 
-function agregarTarjeta() {
-    swal.fire({
-        icon: 'success',
-        title: 'Metodo de pago valido',
-        text: 'Procede con el pago ahora'
-    });
-    modal.style.display = "none";
-}
+

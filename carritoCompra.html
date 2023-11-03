@@ -56,18 +56,18 @@
                                 <td> </td>
                                 <td> </td>
                                 <td class="impuesto">Metodo de pago</td>
-                                <td> <select id="select1">
+                                <td> <select id="metodoPago" onchange="MetodoPagoChange()">
                                     <option> -- Seleccionar --</option>
-                                    <option value="anadirTarjeta" id="anadirTarjeta">Tarjeta Credito/Debito</option>
-                                    <option value="opcion2">Anadir metodo de pago</option>
-                                    <option value="opcion3">Tarjeta 1</option>
+                                    <option value="tarjeta">Tarjeta Credito/Debito</option>
+                                    <option value="nuevoMetodo">Anadir metodo de pago</option>
+                                    <option value="">Tarjeta 1</option>
                                     </select> 
                                 </td>
                             </tr>
                             <tr>
                                 <td> </td>
                                 <td> </td>
-                                <td class="impuesto">Total a pagar</td>  
+                                <td class="impuesto">Total a pagar</td>
                                 <td>$90400</td>
                             </tr>
                         </tbody> 
@@ -78,7 +78,7 @@
     </main>
 
 
-    <dialog id="modal">
+    <div id="modal">
         <form>
             <div id="modal-content">
                 <label for="cardNumber">Numero de tarjeta</label>
@@ -90,10 +90,10 @@
                 <label for="cvv">CVV</label>
                 <input type="number" placeholder="Digite su CVV" id="cvv">
 
-                <input type="button" value="Confirmar" id="btnConfirmar">
+                <input type="button" value="Confirmar" id="btnConfirmar" onclick="agregarTarjeta()">
             </div>
         </form>
-    </dialog>
+    </div>
 
     <footer class="footer">
         <div class="footer-content container">

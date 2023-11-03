@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let nombre = document.getElementById('txtNombre');
 let apellido = document.getElementById('txtApellido');

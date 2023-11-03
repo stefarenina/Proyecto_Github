@@ -5,8 +5,6 @@ let correo = document.getElementById('txtEmail');
 let password = document.getElementById('txtPass');
 let buttonSubmit = document.getElementById('btnIniciar');
 
-buttonSubmit.addEventListener('click',obtenerDatos);
-
 const obtenerDatos=()=>{
     let sCorreo = correo.value;
     let sPassword = password.value;
@@ -16,7 +14,7 @@ const obtenerDatos=()=>{
     }
 
 }
-
+buttonSubmit.addEventListener('click',obtenerDatos);
 const ValidarInicio = (pCorreo, pPassword) => {
     
     if (pCorreo == '' || pCorreo == null || pCorreo == undefined){

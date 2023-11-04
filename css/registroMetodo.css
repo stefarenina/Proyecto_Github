@@ -23,6 +23,10 @@ body {
 #registroFormulario input {
     margin-bottom: 15px; 
 }
+#registroFormulario h1 {
+    font-size: 20px;
+    text-align: center; 
+}
 
 input[type=text],
 textarea,
@@ -48,6 +52,4 @@ button {
     cursor: pointer;
 }
 
-.footer{
-    position: absolute;
-}
+ 

@@ -6,7 +6,7 @@ let telefono = document.getElementById('telNumber');
 let imgNegocio = document.getElementById('imgNegocio');
 let direccion = document.getElementById('txtDireccion');
 let radio = document.querySelectorAll('.rbtCategoria');
-let buttonSubmit = document.getElementById('btnRegistrar');
+let buttonSubmit = document.getElementById('btnReg');
 let imagen = document.getElementById('imgNegocio');
 
 

@@ -2,7 +2,8 @@
 body,
 footer {
     font-family: 'Open Sans', sans-serif;
-    background-color: #B9CFB9;
+    /* background-color: #B9CFB9; */
+    background-color: white;
 }
 
 /* Estilos para el cuerpo*/
@@ -178,7 +179,7 @@ input[type=date] {
     color: white;
 }
 #menuDesplegable ul a:hover{
-    color: #7e9079;
+    color: #BFCAD4;
 }
 
 #menuDesplegable li {

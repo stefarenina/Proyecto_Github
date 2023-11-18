@@ -3,11 +3,11 @@
 let nombre = document.getElementById('txtEmpresa');
 let descripcion = document.getElementById('txtDescripcion');
 let telefono = document.getElementById('telNumber');
-let imgNegocio = document.getElementById('imgNegocio');
+let imagen = document.getElementById('negocioFotos');
 let direccion = document.getElementById('txtDireccion');
 let radio = document.querySelectorAll('.rbtCategoria');
 let buttonSubmit = document.getElementById('btnReg');
-let imagen = document.getElementById('imgNegocio');
+
 
 
 
@@ -16,8 +16,8 @@ const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
     let telEmpresa = telefono.value;
     let direccionF = direccion.value;
     let descripcionF = descripcion.value;
-    let imgNegocio = imagen.value;
     let contadorRadio = 0;
+    imagen = document.getElementById('negocioFotos');
     
 
     //Validamos los campos si estan vacios le damos una alerta.
@@ -26,9 +26,9 @@ const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
         ImprimirMensajeError('Todos los campos son obligatorios.');
     } 
 
-    if (imgNegocio == '' || imgNegocio == null || imgNegocio == undefined){
+/*     if (imgNegocio == 'negocioFotos' || imgNegocio == null || imgNegocio == undefined){
         ImprimirMensajeError('Debe de incluir al menos una imagen de su negocio.')
-    }
+    } */
 
     radio.forEach(element => {
         if (element.checked == true) {
@@ -38,6 +38,12 @@ const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
 
     if (contadorRadio < 1) {
         ImprimirMensajeError('Debera elegir al menos 1 opcion');
+        console.log("alt: " + imagen.alt)
+    }
+
+    else{
+        RegistrarNegocio();
+        console.log("jijijiojjk")
     }
 };
 

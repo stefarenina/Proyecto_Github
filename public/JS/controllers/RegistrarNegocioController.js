@@ -1,28 +1,27 @@
 'use strict';
 
-
 let inputNombreNegocio = document.getElementById('txtEmpresa');
 let inputDescripcion = document.getElementById('txtDescripcion');
 let radioCategorias = document.getElementsByName('radios');
 let inputNumeroContacto = document.getElementById('telNumber');
-let inputFotosNegocio = document.getElementById('imgNegocio');
+let inputFotosNegocio = document.getElementById('negocioFotos');
 let inputDireccion = document.getElementById('txtDireccion');
-let buttonSubmit = document.getElementById('btnReg');
+//let buttonSubmit = document.getElementById('btnReg');
+
+
 const RegistrarNegocio = async () => {
     console.log("HUIHIHJ") 
     let nombreNegocio = inputNombreNegocio.value;
     let descripcionNegocio = inputDescripcion.value;
-/*     let categoria = null;
+    let categoria = null;
     for (let i = 0; i < radioCategorias.length; i++) {
         if (radioCategorias[i].checked == true) {
             categoria = radioCategorias[i].value;
             break;
         }
-    } */
-    let categoria = 1;
+    } 
     let numeroContacto = inputNumeroContacto.value;
-    //let fotosNegocio = inputFotosNegocio.files; // Para obtener archivos, en este caso, imágenes
-    let fotosNegocio = "jiji"; // Para obtener archivos, en este caso, imágenes
+    let fotosNegocio = negocioFotos.src
     let direccion = inputDireccion.value;
 
     if (ValidarDatosNegocio(nombreNegocio, descripcionNegocio, numeroContacto, categoria, direccion, fotosNegocio) === false) {
@@ -93,4 +92,4 @@ const ValidarDatosNegocio = (pNombreNegocio, pDescripcion, pNumeroContacto, pCat
 
 
 
-buttonSubmit.addEventListener('click', RegistrarNegocio);
+//buttonSubmit.addEventListener('click', RegistrarNegocio);

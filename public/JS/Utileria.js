@@ -39,6 +39,7 @@ function ImprimirMsjsError(pMsj) {
         title: 'Error',
         text: pMsj
     });
+    console.log(pMsj)
 }
 function ImprimirMsjsSuccess(pMsj) {
     swal.fire({

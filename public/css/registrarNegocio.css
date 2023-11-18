@@ -80,3 +80,8 @@ h1 {
 #imgNegocio {
     border-color: black;
 }
+
+#negocioFotos{
+    max-width: 400px;
+    max-height: 400px;
+}

@@ -10,8 +10,8 @@ const NegocioRoute = require("./NegocioRoute")
 
 
 module.exports = (app) => {
-    app.use("/api", PersonaRoute);
-    //app.use("/api", NegocioRoute)
+    //app.use("/api", PersonaRoute);
+    app.use("/api", NegocioRoute)
 
 
 
@@ -40,7 +40,7 @@ module.exports = (app) => {
 
 
 
-//llamar ruta de Reservas Pendientes
+/* //llamar ruta de Reservas Pendientes
 module.exports = (app) => {
     app.use("/api", ReservaPendienteRoute);
 
@@ -66,4 +66,4 @@ app.use((err, req, res, next) => {
         }
     });
 });
-}
+} */

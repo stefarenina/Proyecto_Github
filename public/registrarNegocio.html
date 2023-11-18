@@ -60,8 +60,15 @@
                     <input type="tel" id="telNumber">
                 </div>
                 <div>
-                    <label for="imgNegocio">Subir Fotos del Negocio</label>
-                    <input type="file" id="imgNegocio">
+                    <label for="imgNegocio">Subir Foto del Negocio</label>
+                    <button type="button" class="btnSubirFoto" onclick="AbrirCloudinary('imgUser')">Subir Foto</button>
+                </div>
+                <div>
+                    <label id="statusImg">No se ha subido ninguna imagen</label>
+                    
+                </div>
+                <div>
+                    <img id="negocioFotos" src="./img/photoPlaceHolder.jpg" alt="defecto">
                 </div>
                 <div>
                     <label for="txtDireccion">Direccion del negocio</label>
@@ -105,10 +112,13 @@
 
         </div>
     </footer>
+
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://upload-widget.cloudinary.com/2.4.17/global/all.js"></script>
         <script src="./JS/controllers/RegistrarNegocioController.js"></script>
         <script src="./JS/services/GeneralService.js"></script>
+        <script src="./JS/services/SubirImagenService.js"></script>
         <script src="./JS/Utileria.js"></script>
-      <!--   <script src="./JS/controllers/validacionRegistrarNegocio.js"></script> -->
+        <script src="./JS/controllers/validacionRegistrarNegocio.js"></script>
 </body>
 </html>

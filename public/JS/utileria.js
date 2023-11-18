@@ -37,7 +37,7 @@ function ImprimirMsjsError(pMsj) {
     swal.fire({
         icon: 'error',
         title: 'Error',
-        text: pMsj
+        text: "Ocurrió un error inesperado"
     });
     console.log(pMsj)
 }

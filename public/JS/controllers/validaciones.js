@@ -26,11 +26,7 @@ if (metodoPagoForm) {
                 text: 'Complete la información requerida o verifique la fecha de vencimiento.'
             });
         } else {
-            swal.fire({
-                icon: 'success',
-                title: 'Success',
-                text: 'Se registró el método de pago con éxito.'
-            });
+            RegistrarMetodo();
         }
     });
 }

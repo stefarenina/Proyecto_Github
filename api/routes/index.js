@@ -7,11 +7,13 @@ const ReservaPendienteRoute = require("./ReservaPendienteRoute");
 
 
 const NegocioRoute = require("./NegocioRoute")
+const MetodoRoute = require("./metodoPagoRoute")
 
 
 module.exports = (app) => {
-    //app.use("/api", PersonaRoute);
-    app.use("/api", NegocioRoute)
+    app.use("/api/persona", PersonaRoute);
+    app.use("/api/negocio", NegocioRoute)
+    app.use("/api/metodo", MetodoRoute);
 
 
 

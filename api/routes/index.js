@@ -2,11 +2,11 @@
 
 // Llamar diferentes routes 
 const PersonaRoute = require("./PersonaRoute");
-
+const NegocioRoute = require("./NegocioRoute")
 
 module.exports = (app) => {
     app.use("/api", PersonaRoute);
-
+    //app.use("/api", NegocioRoute)
 
 //Rutas no encontradas 404
     app.use((req, res) => {

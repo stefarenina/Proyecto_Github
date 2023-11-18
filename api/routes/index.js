@@ -2,12 +2,16 @@
 
 // Llamar diferentes routes 
 const PersonaRoute = require("./PersonaRoute");
+
 const ReservaPendienteRoute = require("./ReservaPendienteRoute");
 
-//llamar ruta de persona
+
+const NegocioRoute = require("./NegocioRoute")
+
+
 module.exports = (app) => {
     app.use("/api", PersonaRoute);
-
+    //app.use("/api", NegocioRoute)
 
 
 
@@ -33,6 +37,7 @@ module.exports = (app) => {
         });
     });
 }
+
 
 
 //llamar ruta de Reservas Pendientes

@@ -11,9 +11,9 @@ const MetodoRoute = require("./metodoPagoRoute")
 
 
 module.exports = (app) => {
-    app.use("/api/persona", PersonaRoute);
-    app.use("/api/negocio", NegocioRoute)
-    app.use("/api/metodo", MetodoRoute);
+    //app.use("/api", PersonaRoute);
+    app.use("/api", NegocioRoute)
+    app.use("/api", MetodoRoute);
 
 
 

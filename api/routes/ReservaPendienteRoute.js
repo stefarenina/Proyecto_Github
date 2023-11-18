@@ -9,7 +9,8 @@ router.post('/RegistrarReserva', (req, res) => {
     let nuevaReserva = new Reserva({
         FechaEntrada: body.FechaEntrada,
         FechaSalida: body.FechaSalida,
-        CantidadHuespedes: body.CantidadHuespedes
+        CantidadHuespedes: body.CantidadHuespedes,
+        Descripcion: body.Descripcion
     });
 
     nuevaReserva.save()

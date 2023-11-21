@@ -3,14 +3,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #A0CCA6;
+    background-color: white;
 }
 
 body form {
     margin: 10px auto;
     max-width: 800px;
     padding: 15px;
-    background-color: #B9CFB9;
+    background-color: white;
+    border: 1px solid #B9CFB9;
     border-radius: 20px;
     text-align: left;
 }

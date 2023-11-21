@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #A0CCA6;
+    background-color: white;
 }
 
 #carritoCompras{
@@ -35,7 +35,8 @@ table{
     width: 100%;
     margin: 10px auto;
     padding: 15px;
-    background-color: #B9CFB9;
+    background-color: white;
+    border: 1px solid #B9CFB9;
     border-radius: 20px;
     text-align: left;
 }

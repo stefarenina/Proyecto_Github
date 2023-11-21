@@ -14,6 +14,7 @@ module.exports = (app) => {
     //app.use("/api", PersonaRoute);
     app.use("/api", NegocioRoute)
     app.use("/api", MetodoRoute);
+    app.use("/api", ReservaPendienteRoute);
 
 
 
@@ -39,33 +40,3 @@ module.exports = (app) => {
         });
     });
 }
-
-
-
-/* //llamar ruta de Reservas Pendientes
-module.exports = (app) => {
-    app.use("/api", ReservaPendienteRoute);
-
-
-//Rutas no encontradas 404
-app.use((req, res) => {
-    res.status(404);
-    res.send({
-        error: {
-            status: 404,
-            message: 'Ruta no encontrada'
-        }
-    });
-});
-
-//Manejar errores
-app.use((err, req, res, next) => {
-    res.status(err.status || 500);
-    res.send({
-        error: {
-            status: err.status || 500,
-            message: err.message
-        }
-    });
-});
-} */

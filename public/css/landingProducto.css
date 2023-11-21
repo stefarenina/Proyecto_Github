@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif; 
-  background-color: #A0CCA6;
+  background-color: white;
 }
 
 #opcionesPrincipales{
@@ -50,7 +50,7 @@ h1 {
 
 .topnav {
   overflow: hidden;
-  background-color: #a0cca6;
+  background-color: white;
 }
 
 #borderNavigator{

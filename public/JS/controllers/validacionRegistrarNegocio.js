@@ -3,11 +3,11 @@
 let nombre = document.getElementById('txtEmpresa');
 let descripcion = document.getElementById('txtDescripcion');
 let telefono = document.getElementById('telNumber');
+let precioValor = document.getElementById('txtPrecio');
 let imagen = document.getElementById('negocioFotos');
 let direccion = document.getElementById('txtDireccion');
 let radio = document.querySelectorAll('.rbtCategoria');
 let buttonSubmit = document.getElementById('btnReg');
-
 
 
 
@@ -18,13 +18,15 @@ const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
     let descripcionF = descripcion.value;
     let contadorRadio = 0;
     imagen = document.getElementById('negocioFotos');
+    let precioF = precioValor.value;
     
 
     //Validamos los campos si estan vacios le damos una alerta.
     if (empresa == '' || empresa == null || empresa == undefined || telEmpresa == '' ||
-        telEmpresa == null || telEmpresa == undefined || direccionF == '' || direccionF == null || direccionF == undefined || descripcionF == '' || descripcionF == null || descripcionF == undefined) {
+        telEmpresa == null || telEmpresa == undefined || direccionF == '' || direccionF == null || direccionF == undefined || descripcionF == '' || descripcionF == null || descripcionF == undefined || precioF == inputPrecio.value)  
+        {
         ImprimirMensajeError('Todos los campos son obligatorios.');
-    } 
+        } 
 
 /*     if (imgNegocio == 'negocioFotos' || imgNegocio == null || imgNegocio == undefined){
         ImprimirMensajeError('Debe de incluir al menos una imagen de su negocio.')
@@ -50,7 +52,7 @@ const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
 
 buttonSubmit.addEventListener('click', ValidarFormulario);
 
-//Aqui estamo generando una funcion que va a generar las alertas, modulamos esta funcion con las demas.
+
 const ImprimirMensajeError = (texto) => {
     Swal.fire({
         icon: 'error',

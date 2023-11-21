@@ -6,6 +6,7 @@ let radioCategorias = document.getElementsByName('radios');
 let inputNumeroContacto = document.getElementById('telNumber');
 let inputFotosNegocio = document.getElementById('negocioFotos');
 let inputDireccion = document.getElementById('txtDireccion');
+let inputPrecio = document.getElementById('txtPrecio');
 //let buttonSubmit = document.getElementById('btnReg');
 
 
@@ -21,8 +22,9 @@ const RegistrarNegocio = async () => {
         }
     } 
     let numeroContacto = inputNumeroContacto.value;
-    let fotosNegocio = negocioFotos.src
+    let fotosNegocio = negocioFotos.src;
     let direccion = inputDireccion.value;
+    let precio = inputPrecio.value;
 
     if (ValidarDatosNegocio(nombreNegocio, descripcionNegocio, numeroContacto, categoria, direccion, fotosNegocio) === false) {
         return;
@@ -34,10 +36,12 @@ const RegistrarNegocio = async () => {
     let dataBody = {
         'NombreNegocio': nombreNegocio,
         'Descripcion': descripcionNegocio,
+        'Precio': precio,
         'NumeroContacto': numeroContacto,
         'Categoria': categoria,
         'Direccion': direccion,
         'FotosNegocio': fotosNegocio
+        
     };
     console.log(dataBody)
     // Se realiza el registro de la persona

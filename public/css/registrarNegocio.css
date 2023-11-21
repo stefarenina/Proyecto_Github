@@ -21,6 +21,7 @@ input[type=text],
 textarea,
 input[type=file],
 input[type=tel],
+input[type=number],
 input[type=radio] {
     width: 100%;
     padding: 12px 20px;

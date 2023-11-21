@@ -10,6 +10,7 @@ router.post('/RegistrarNegocio', (req, res) => {
     let nuevoNegocio = new Negocio({
         NombreNegocio: body.NombreNegocio,
         Descripcion: body.Descripcion,
+        Precio: body.Precio,
         NumeroContacto: body.NumeroContacto,
         Categoria: body.Categoria,
         Direccion: body.Direccion,

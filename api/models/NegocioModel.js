@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const schemaNegocio = mongoose.Schema({
     NombreNegocio: { type: String, required: true, unique: true },
     Descripcion: { type: String, required: true, unique: false },
+    Precio: { type: Number, required: true, unique: false },
     NumeroContacto: { type: Number, required: true, unique: false },
     Categoria: { type: String, required: true, unique: false },
     Direccion: { type: String, required: true, unique: false },

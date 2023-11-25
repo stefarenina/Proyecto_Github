@@ -10,7 +10,6 @@ router.post('/RegistrarReserva', (req, res) => {
         FechaEntrada: body.FechaEntrada,
         FechaSalida: body.FechaSalida,
         CantidadHuespedes: body.CantidadHuespedes,
-        Descripcion: body.Descripcion
     });
 
     nuevaReserva.save()
@@ -25,6 +24,26 @@ router.post('/RegistrarReserva', (req, res) => {
             res.json({
                 resultado: false,
                 msj: 'No se pudo registrar la reserva, ocurrio el siguiente error: ',
+                error
+            });
+        });
+});
+
+router.get('/BuscarReservaId', (req, res) => {
+    let param = req.query;
+
+    Reserva.findOne({ _id: param._id })
+        .then((ReservaBD) => {
+            res.json({
+                resultado: true,
+                msj: 'Los datos se obtuvieron de manera correcta',
+                ReservaBD
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo obtener la lista de personas, ocurrio el siguiente error: ',
                 error
             });
         });

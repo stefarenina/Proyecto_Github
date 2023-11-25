@@ -34,13 +34,13 @@ router.post('/RegistrarNegocio', (req, res) => {
         });
 });
 //Read
-router.get('/ListarPersonas', (req, res) => {
-    Persona.find()
-        .then((ListaPersonasBD) => {
+router.get('/ListarNegocios', (req, res) => {
+    Negocio.find()
+        .then((ListaNegociosBD) => {
             res.json({
                 resultado: true,
                 msj: 'Los datos se obtuvieron de manera correcta',
-                ListaPersonasBD
+                ListaNegociosBD
             });
         })
         .catch((error) => {
@@ -70,15 +70,15 @@ router.get('/BuscarPersonaIdentificacion', (req, res) => {
             });
         });
 });
-router.get('/BuscarPersonaId', (req, res) => {
+router.get('/BuscarNegocioId', (req, res) => {
     let param = req.query;
 
-    Persona.findOne({ _id: param._id })
-        .then((PersonaBD) => {
+    Negocio.findOne({ _id: param._id })
+        .then((NegocioBD) => {
             res.json({
                 resultado: true,
                 msj: 'Los datos se obtuvieron de manera correcta',
-                PersonaBD
+                NegocioBD
             });
         })
         .catch((error) => {

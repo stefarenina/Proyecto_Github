@@ -42,8 +42,9 @@
   <section>
     <div class="container1">
       <div class="opcionesHotel">
-        <a href="./registrarReserva.html">
-        <img id="imagenesPaginaPrincipal" src="./img/conchalWestin.jpg"  alt="Example image"/> 
+        <a href="registrarReserva.html?_id=" id="655c0d8b5843ad733c8855f0">
+        <img class="imagenesPaginaPrincipal" id="imagenesPaginaPrincipal" value="Registrar Reserva'" 
+        src="./img/conchalWestin.jpg"  alt="Example image"/>
         </a>
         <span>
         <div class="rate">
@@ -68,8 +69,8 @@
         </span>
       </div>
       <div class="opcionesHotel">
-        <a href="./registrarReserva.html">
-        <img id="imagenesPaginaPrincipal" src="img/granoDeOro.jpg"  alt="Example image"/> 
+        <a href="registrarReserva.html?_id=" id="655c0e125843ad733c8855f2">
+        <img class="imagenesPaginaPrincipal" id="imagenesPaginaPrincipal" src="img/granoDeOro.jpg"  alt="Example image"/> 
         </a>
         <span>
         <div class="rate">
@@ -264,9 +265,15 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+  <script src="./JS/utileria.js"></script>
+  <script src="./JS/services/GeneralService.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="./JS/controllers/landing_and_registrarReservas.js"></script>
+
   <script src="./JS/controllers/inicioSessionController.js"></script>
+  <script src="./JS/controllers/landingProductoController.js"></script>
   
 </body>
 </html>

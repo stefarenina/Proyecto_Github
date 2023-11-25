@@ -24,7 +24,8 @@
       </header>
 
     <section id="negocio">
-        <h1>Nombre del negocio</h1>
+        <input type="hidden" id="txt_id">
+        <h1 id="NombreNegocio">Nombre del negocio</h1>
         <img src="./img/imgEjemplo.png" alt="Imagen de negocio" id="imgNegocio">
         <div class="contenido">
             <h2>Servicios incluidos</h2>
@@ -82,7 +83,7 @@
             <p id="salir">X</p>
             <p2>Detalles de pago</p2>
             <br>
-            <p3>Precio por noche: $$$</p3>
+            <p3 id="precioNoche">Precio por noche: $$$</p3>
             <br>
             <p3>Cantidad de noches: ## </p3>
             <br>
@@ -135,5 +136,11 @@
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./JS/controllers/landing_and_registrarReservas.js"></script>
+
+    <script src="https://upload-widget.cloudinary.com/2.4.17/global/all.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="js/Utileria.js"></script>
+    <script src="./js/Services/GeneralService.js"></script>
 </body>
 </html>

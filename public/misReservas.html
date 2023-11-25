@@ -28,13 +28,15 @@
                     <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>Fecha</th>
+                            <th>Fecha entrada</th>
+                            <th>Fecha salida</th>
+                            <th>Cantidad de huespedes</th>
                             <th>Descripción</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody id="tbdMisReservas">
+                        <!-- <tr>
                             <td>Hotel Tambor</td>
                             <td>2023-10-28</td>
                             <td>Reserva de hotel</td>
@@ -52,7 +54,7 @@
                             <td>2023-12-15</td>
                             <td>Reserva de Entretenimiento</td>
                             <td> <input type="button" class="btnCancelar" value="Cancelar" onclick="CancelarReserva()"> </td>
-                        </tr>
+                        </tr> -->
                     </tbody>    
                 </table>
             </div>
@@ -113,7 +115,13 @@
     
             </div>
         </footer>
+
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="./JS/controllers/misReservasCancelar.js"></script>
+        
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+            <script src="js/Utileria.js"></script>
+            <script src="./js/Services/GeneralService.js"></script>
 </body>
 </html>

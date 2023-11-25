@@ -35,6 +35,27 @@ const ProcessPOST = async (pRouterName, pData) => {
     }
     return res;
 }
+// otro post para las reservas porque el de arriba llama a la ruta de los negocios
+const ProcessPOSTReservas = async (pRouterName, pData) => {
+    let res = await ProcessAction('POST', pRouterName, pData);
+    if (pRouterName == 'RegistrarReserva') {
+        if (res.resultado == false) {
+            switch (res.code) {
+                case 11000:
+                    res.msj = 'No se pudo registrar la reserva, ya que no existe disponibilidad en las fechas deseadas';
+                    console.log('No se pudo registrar codigo 11000');
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            // aca se va a manejar los pSubDocumentos
+        }
+    }
+    return res;
+}
+
+
 const ProcessPUT = async (pRouterName, pData, pSubDocumentos) => {
     let res = await ProcessAction('PUT', pRouterName, pData);
     if (pRouterName == 'ModificarPersona') {

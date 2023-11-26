@@ -15,6 +15,7 @@ const CargarDatos = (pNegocio) => {
     document.getElementById('imgNegocio').src = pNegocio.FotosNegocio;
     // document.getElementById('DIRECCION').innerHTML = 'Precio por noche: '+pNegocio.Precio;
     document.getElementById('precioNoche').innerHTML = 'Precio por noche: '+pNegocio.Precio;
+    console.log(pNegocio)
     coordenadasObjeto = JSON.parse(pNegocio.Coordenadas);
     crearMarcador();
 

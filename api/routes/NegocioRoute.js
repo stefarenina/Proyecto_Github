@@ -152,11 +152,34 @@ router.put('/ModificarPersona', (req, res) => {
             });
         });
 });
-router.put('/InactivarPersona', (req, res) => {
+router.put('/DesactivarNegocio', (req, res) => {
     let body = req.body;
-    Persona.updateOne({ _id: body._id }, {
+    Negocio.updateOne({ _id: body._id }, {
         $set: {
-            Estado: 0
+            Estado: "desactivado"
+        }
+    })
+        .then((info) => {
+            res.json({
+                resultado: true,
+                msj: 'Los datos se actualizaron de manera correcta',
+                info
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo actualizar a la persona, ocurrio el siguiente error: ',
+                error
+            });
+        });
+});
+
+router.put('/ActivarNegocio', (req, res) => {
+    let body = req.body;
+    Negocio.updateOne({ _id: body._id }, {
+        $set: {
+            Estado: "activado"
         }
     })
         .then((info) => {

@@ -25,6 +25,7 @@ router.get('/ListarReservas', (req, res) => {
 
 router.delete('/EliminarReserva', (req, res) => {
     let body = req.body;
+    console.log(body)
     misReservas.deleteOne({ _id: body._id })
         .then((info) => {
             res.json({

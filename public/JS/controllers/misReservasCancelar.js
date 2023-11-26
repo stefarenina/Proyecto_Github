@@ -54,14 +54,13 @@ const ImprimirDatos = () => {
         let celdaFechaIN = fila.insertCell();
         let celdaFechaOut = fila.insertCell();
         let celdaCantidadHuespedes = fila.insertCell();
-        let celdaDescripccion = fila.insertCell();
         let celdaAcciones = fila.insertCell();
 
         celdaNombre.innerHTML = listaReservas[i].Nombre;
         celdaFechaIN.innerHTML = listaReservas[i].FechaEntrada;
         celdaFechaOut.innerHTML = listaReservas[i].FechaSalida;
         celdaCantidadHuespedes.innerHTML = listaReservas[i].CantidadHuespedes;
-        celdaDescripccion.innerHTML = listaReservas[i].Descripcion;
+
         
         let btnDelete = document.createElement('button');
         btnDelete.type = 'button';

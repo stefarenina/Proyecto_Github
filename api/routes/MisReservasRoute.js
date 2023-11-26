@@ -4,6 +4,32 @@ const express = require('express');
 const router = express.Router();
 const Reserva = require('../models/MisReservasModel');
 
+router.post('/RegistrarMisReservas', (req, res) => {
+    let body = req.body;
+    let nuevaReserva = new Reserva({
+        Nombre: body.Nombre,
+        FechaEntrada: body.FechaEntrada,
+        FechaSalida:body.FechaSalida,
+        CantidadHuespedes: body.CantidadHuespedes,
+        Descripcion: body.Descripcion
+    });
+
+    nuevaReserva.save()
+        .then((resultBD) => {
+            res.json({
+                resultado: true,
+                msj: 'Registrado de manera correcta.',
+                resultBD
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo registrar el negocio, ocurrio el siguiente error: ',
+                error
+            });
+        });
+}); 
 
 router.get('/ListarReservas', (req, res) => {
     Reserva.find()

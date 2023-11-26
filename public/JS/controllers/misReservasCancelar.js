@@ -55,8 +55,9 @@ const ImprimirDatos = () => {
         let celdaFechaOut = fila.insertCell();
         let celdaCantidadHuespedes = fila.insertCell();
         let celdaDescripccion = fila.insertCell();
+        let celdaAcciones = fila.insertCell();
 
-        celdaNombre.innerHTML = ObtenerTipoIdentificacion(listaReservas[i].Nombre);
+        celdaNombre.innerHTML = listaReservas[i].Nombre;
         celdaFechaIN.innerHTML = listaReservas[i].FechaEntrada;
         celdaFechaOut.innerHTML = listaReservas[i].FechaSalida;
         celdaCantidadHuespedes.innerHTML = listaReservas[i].CantidadHuespedes;

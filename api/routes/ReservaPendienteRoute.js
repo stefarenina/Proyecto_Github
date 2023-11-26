@@ -7,9 +7,12 @@ const Reserva = require('../models/ReservasPendientesModel');
 router.post('/RegistrarReserva', (req, res) => {
     let body = req.body;
     let nuevaReserva = new Reserva({
+        Nombre: body.Nombre,
         FechaEntrada: body.FechaEntrada,
         FechaSalida: body.FechaSalida,
         CantidadHuespedes: body.CantidadHuespedes,
+        Descripcion: body.Descripcion,
+        Precio: body.Precio
     });
 
     nuevaReserva.save()

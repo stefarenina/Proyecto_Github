@@ -51,18 +51,18 @@ cerrarmodal.addEventListener("click", () => {
         fechadateIN < currentDate || fechadateOUT < currentDate || fechadateOUT < fechadateIN
     ) {
 
-        swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Complete la información requerida o verifique las fechas.'
-        });
+        // swal.fire({
+        //     icon: 'error',
+        //     title: 'Error',
+        //     text: 'Complete la información requerida o verifique las fechas.'
+        // });
         modal.close();
     } else {
-        swal.fire({
-            icon: 'success',
-            title: 'Success',
-            text: 'Se realizó la reserva con éxito.'
-        });
+        // swal.fire({
+        //     icon: 'success',
+        //     title: 'Success',
+        //     text: 'Se realizó la reserva con éxito.'
+        // });
         modal.close();
     }
 });
@@ -107,7 +107,3 @@ copiarLink.addEventListener("click", function () {
         timer: 1500
     })
 });
-
-
-
-

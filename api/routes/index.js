@@ -4,18 +4,16 @@
 const PersonaRoute = require("./PersonaRoute");
 
 const ReservaPendienteRoute = require("./ReservaPendienteRoute");
-const MisReservas = require("./MisReservasRoute");
-
 const NegocioRoute = require("./NegocioRoute")
 const MetodoRoute = require("./metodoPagoRoute")
-
+const misReservasRoute = require("./MisReservasRoute")
 
 module.exports = (app) => {
-    //app.use("/api", PersonaRoute);
+    app.use("/api", PersonaRoute);
     app.use("/api", NegocioRoute)
     app.use("/api", MetodoRoute);
     app.use("/api", ReservaPendienteRoute);
-    app.use("/api", MisReservas);
+    app.use("/api", misReservasRoute);
 
 
 

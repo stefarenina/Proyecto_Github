@@ -49,115 +49,25 @@
         <h1>Gestión de Usuarios</h1>
         <br>
         <table>
-            <tr>
-                <th>Nombre del Negocio</th>
-                <th>Nombre del Dueño de Negocio</th>
-                <th>Número del Dueño de Negocio</th>
-                <th>Dirección del Negocio</th>
-                <th>Descripción del Negocio</th>
-                <th>Categoría del Negocio</th>
-                <th>Acción</th>
-            </tr>
-            <tr>
-                <td>Nombre 1</td>
-                <td>Dueño 1</td>
-                <td>123-456-7890</td>
-                <td>Dirección 1</td>
-                <td>Descripción 1</td>
-                <td>Categoría 1</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 2</td>
-                <td>Dueño 2</td>
-                <td>987-654-3210</td>
-                <td>Dirección 2</td>
-                <td>Descripción 2</td>
-                <td>Categoría 2</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 4</td>
-                <td>Dueño 4</td>
-                <td>111-222-3333</td>
-                <td>Dirección 4</td>
-                <td>Descripción 4</td>
-                <td>Categoría 4</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 5</td>
-                <td>Dueño 5</td>
-                <td>999-888-7777</td>
-                <td>Dirección 5</td>
-                <td>Descripción 5</td>
-                <td>Categoría 5</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 6</td>
-                <td>Dueño 6</td>
-                <td>444-555-6666</td>
-                <td>Dirección 6</td>
-                <td>Descripción 6</td>
-                <td>Categoría 6</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 7</td>
-                <td>Dueño 7</td>
-                <td>777-666-5555</td>
-                <td>Dirección 7</td>
-                <td>Descripción 7</td>
-                <td>Categoría 7</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 8</td>
-                <td>Dueño 8</td>
-                <td>333-444-2222</td>
-                <td>Dirección 8</td>
-                <td>Descripción 8</td>
-                <td>Categoría 8</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 9</td>
-                <td>Dueño 9</td>
-                <td>666-777-8888</td>
-                <td>Dirección 9</td>
-                <td>Descripción 9</td>
-                <td>Categoría 9</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 10</td>
-                <td>Dueño 10</td>
-                <td>999-999-9999</td>
-                <td>Dirección 10</td>
-                <td>Descripción 10</td>
-                <td>Categoría 10</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 11</td>
-                <td>Dueño 11</td>
-                <td>111-111-1111</td>
-                <td>Dirección 11</td>
-                <td>Descripción 11</td>
-                <td>Categoría 11</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-            <tr>
-                <td>Nombre 12</td>
-                <td>Dueño 12</td>
-                <td>222-222-2222</td>
-                <td>Dirección 12</td>
-                <td>Descripción 12</td>
-                <td>Categoría 12</td>
-                <td><button class="eliminarBoton">Eliminar</button></td>
-            </tr>
-        </table>
+            <table id="tblNegocios">
+                <thead>
+                    <tr>
+                        <th>Nombre Negocio</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Numero</th>
+                        <th>Categoria</th>
+                        <th>Direccion</th>
+                        <!-- <th>Foto</th> -->
+                    </tr>
+                </thead>
+                <tbody id="tbdNegocios">
+    
+                </tbody>
+                <tfoot id="tftNegocios">
+    
+                </tfoot>
+            </table>
         
         </section>
 
@@ -205,6 +115,12 @@
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="./JS/controllers/admins.js"></script>
+
+
+        <script src="js/Utileria.js"></script>
+    
+        <script src="./js/Services/GeneralService.js"></script>
+        <script src="./js/Controllers/NegocioController.js"></script>
 </body>
 
 

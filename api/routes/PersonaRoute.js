@@ -4,7 +4,8 @@ const express = require('express');
 const router = express.Router();
 const Persona = require('../models/PersonaModel');
 
-
+//CRUD
+//Create
 router.post('/RegistrarPersona', (req, res) => {
     let body = req.body;
     let nuevaPersona = new Persona({
@@ -152,7 +153,7 @@ router.put('/ModificarPersona', (req, res) => {
                 error
             });
         });
-});
+}); 
 router.put('/InactivarPersona', (req, res) => {
     let body = req.body;
     Persona.updateOne({ _id: body._id }, {

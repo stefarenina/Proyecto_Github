@@ -26,9 +26,8 @@ footer {
 
 /* IMGs*/
 #negocio img {
-    height: 400px;
-    width: 600px;
-    border-radius: 5px;
+    height: 200px;
+    width: 200px;
 }
 
 #negocio li img {
@@ -68,7 +67,7 @@ section button {
 }
 
 section button:hover {
-    background-color: #45a049;
+    background-color: #7e9079;
 }
 
 
@@ -139,7 +138,7 @@ input[type=date] {
     margin: 10px 0; 
 }
 #modal button:hover{
-    background-color: #45a049;
+    background-color: #7e9079;
 }
 #modal button{
     margin: 10px;

@@ -134,21 +134,6 @@ td, th{
 
 #btnRegistrar:hover{
     cursor: pointer;
-    color: #45a049;
+    color: #5D9367;
 }
 
-    /* Botones creados para eliminar reserva de mongo*/
-.btnsTabla {
-    background-color: #4CAF50;
-    color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 3px 3px;
-  }
-  
-  .btnsTabla:hover {
-    background-color: #45a049;
-    color: white;
-    padding: 4px 4px;
-    cursor: pointer;
-  }

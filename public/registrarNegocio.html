@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/NewHeader.css">
     <link rel="stylesheet" href="./css/registrarNegocio.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -78,6 +79,8 @@
                     <label for="txtDireccion">Direccion del negocio</label>
                     <textarea name="" id="txtDireccion" ></textarea>
                 </div>
+                <label for="txtMapa">Punto en el Mapa</label>
+                <div id="map" style="height: 400px;"></div>
                 <div id="btnReg">
                     <input type="button" id="btnReg" value="Registrar">
                 </div>
@@ -116,7 +119,7 @@
 
         </div>
     </footer>
-
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://upload-widget.cloudinary.com/2.4.17/global/all.js"></script>
         <script src="./JS/controllers/RegistrarNegocioController.js"></script>

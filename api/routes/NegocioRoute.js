@@ -14,7 +14,10 @@ router.post('/RegistrarNegocio', (req, res) => {
         NumeroContacto: body.NumeroContacto,
         Categoria: body.Categoria,
         Direccion: body.Direccion,
-        FotosNegocio: body.FotosNegocio
+        FotosNegocio: body.FotosNegocio,
+        Coordenadas: body.Coordenadas,
+        Estado: body.Estado
+
     });
 
     nuevoNegocio.save()
@@ -33,20 +36,21 @@ router.post('/RegistrarNegocio', (req, res) => {
             });
         });
 });
+
 //Read
 router.get('/ListarNegocios', (req, res) => {
     Negocio.find()
-        .then((ListaNegociosBD) => {
+        .then((listaNegociosBD) => {
             res.json({
                 resultado: true,
                 msj: 'Los datos se obtuvieron de manera correcta',
-                ListaNegociosBD
+                listaNegociosBD
             });
         })
         .catch((error) => {
             res.json({
                 resultado: false,
-                msj: 'No se pudo obtener la lista de personas, ocurrio el siguiente error: ',
+                msj: 'No se pudo obtener la lista de negocios, ocurrio el siguiente error: ',
                 error
             });
         });
@@ -72,9 +76,9 @@ router.get('/BuscarPersonaIdentificacion', (req, res) => {
 });
 router.get('/BuscarNegocioId', (req, res) => {
     let param = req.query;
-
     Negocio.findOne({ _id: param._id })
         .then((NegocioBD) => {
+            console.log("jijiji")
             res.json({
                 resultado: true,
                 msj: 'Los datos se obtuvieron de manera correcta',
@@ -82,6 +86,7 @@ router.get('/BuscarNegocioId', (req, res) => {
             });
         })
         .catch((error) => {
+            console.log("jijojo")
             res.json({
                 resultado: false,
                 msj: 'No se pudo obtener la lista de personas, ocurrio el siguiente error: ',

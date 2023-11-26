@@ -1,4 +1,19 @@
 'use strict';
+
+
+/*  let listaNegocios = [];
+ const GetListaNegocios = async () => {
+     let res = await ProcessGET('ListarNegocios', null);
+     if (res != null && res.resultado == true) {
+         listaNegocios = res.ListaNegociosBD;
+     } else {
+         ImprimirMsjsError(res.msj);
+         return;
+     }
+ };
+ GetListaPersonas(); */
+
+
 const reservar = () => {
     // Obtener todos los elementos con la clase 'imagenesPaginaPrincipal'
     let elementosReserva = document.getElementsByClassName('imagenesPaginaPrincipal');

@@ -2,38 +2,23 @@
 
 'use strict';
 /*Obtener los datos del negocio del landing y mostrar datos*/
-let Nombre;
 let fechaIn = document.getElementById('fechaEntrada');
 let fechaOut = document.getElementById('fechaSalida');
 let cantiHuespedes = document.getElementById('huespedes');
-let Descripcion;
-let Precio;
-
 let botonReservar = document.getElementById('reservar');
 let input_id = document.getElementById('txt_id');
-let dias; 
+let coordenadasObjeto;
 
-const calcularDias = () => {
-    let fechaEntrada = new Date(document.getElementById("fechaEntrada").value);
-    let fechaSalida = new Date(document.getElementById("fechaSalida").value);
-
-    let diffTiempo = fechaSalida - fechaEntrada;
-    dias = Math.ceil(diffTiempo / (1000 * 60 * 60 * 24));
-
-    document.getElementById("cantidadNoches").innerHTML = 'Cantidad de noches: ' + dias;
-};
 
 const CargarDatos = (pNegocio) => {
     document.getElementById('NombreNegocio').innerHTML = pNegocio.NombreNegocio;
     document.getElementById('imgNegocio').src = pNegocio.FotosNegocio;
-    document.getElementById('google-map').src = pNegocio.Direccion;
+    // document.getElementById('DIRECCION').innerHTML = 'Precio por noche: '+pNegocio.Precio;
+    document.getElementById('precioNoche').innerHTML = 'Precio por noche: '+pNegocio.Precio;
+    coordenadasObjeto = JSON.parse(pNegocio.Coordenadas);
+    crearMarcador();
 
-    document.getElementById('precioNoche').innerHTML = 'Precio por noche: ₡'+pNegocio.Precio;
-    Nombre=pNegocio.NombreNegocio;
-    Descripcion=pNegocio.Descripcion;
-    Precio=pNegocio.Precio;
 };
-
 
 let queryString, urlParams, _id;
 const IdentificarAccion = async () => {
@@ -46,8 +31,12 @@ const IdentificarAccion = async () => {
     let Negocio = await ProcessGET('BuscarNegocioId', params);
     if (Negocio != null && Negocio.resultado == true && Negocio.NegocioBD != null) {
         CargarDatos(Negocio.NegocioBD);
+
     } else {
         ImprimirMsjsError(Negocio.msj);
+        console.log("a")
+        console.log(Negocio)
+        console.log(Negocio.NegocioBD)
     }
 
 };
@@ -55,14 +44,13 @@ IdentificarAccion();
 
 
 
+
 /*Registrar reserva a carrito de compra*/
 const RegistrarDatos = async () => {
-    let sNombre=Nombre;
+
     let sfechaIn = fechaIn.value;
     let sfechaOut = fechaOut.value;
     let scantiHuespedes = Number(cantiHuespedes.value);
-    let sDescripcion= Descripcion;
-    let sPrecio= Number(Precio);
 
     //aca seguirian los subdocumentos version 1
 
@@ -75,12 +63,9 @@ const RegistrarDatos = async () => {
     let res = null;
     let dataBody = {
         '_id': s_id,
-        'Nombre':sNombre,
         'FechaEntrada': new Date(sfechaIn),
         'FechaSalida': new Date(sfechaOut),
         'CantidadHuespedes': scantiHuespedes,
-        'Descripcion': sDescripcion,
-        'Precio': sPrecio
     };
 
     res = await ProcessPOSTReservas('RegistrarReserva', dataBody, null);
@@ -123,5 +108,19 @@ const ValidarDatos = (pfechaIn, pfechaOut, pcantiHuespedes) => {
     }
     return true;
 }
+
+let map = L.map('map').setView([9.8, -84], 7); // Centro del mapa y nivel de zoom inicial
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+const crearMarcador = () => {
+    if (coordenadasObjeto) {
+        // Crea el marcador utilizando las coordenadas globales
+        let marker = L.marker([coordenadasObjeto.lat, coordenadasObjeto.lng], { draggable: false }).addTo(map);
+        // Resto del código relacionado con el marcador...
+    }
+};
 
 botonReservar.addEventListener('click', RegistrarDatos);

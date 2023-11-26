@@ -40,15 +40,17 @@ const RegistrarNegocio = async () => {
         'NumeroContacto': numeroContacto,
         'Categoria': categoria,
         'Direccion': direccion,
-        'FotosNegocio': fotosNegocio
-        
+        'FotosNegocio': fotosNegocio,
+        'Coordenadas': coordenadasString,
+        'Estado': "desactivado"
+
     };
     console.log(dataBody)
     // Se realiza el registro de la persona
     res = await ProcessPOST('RegistrarNegocio', dataBody, null);
 
     if (res == null || res == undefined) {
-        ImprimirMsjsError('Ocurrió un error inesperado');
+        ImprimirMsjsError('Ocurrió un error inesperado3');
     } else if (res.resultado == false) {
         ImprimirMsjsError(res.msj);
         console.log(res.error)
@@ -94,6 +96,26 @@ const ValidarDatosNegocio = (pNombreNegocio, pDescripcion, pNumeroContacto, pCat
     return true;
 };
 
+var map = L.map('map').setView([9.8, -84], 7); // Centro del mapa y nivel de zoom inicial
 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+let coordenadasString;
+let marker = L.marker([9.8, -84], { draggable: true }).addTo(map);
+
+let markerPosition = { lat: 0, lng: 0 }; // Variable para almacenar la posición del marcador
+
+marker.on('dragend', function () {
+  updateMarkerPosition(); // Llama a la función para actualizar la posición del marcador
+
+});
+
+function updateMarkerPosition() {
+  markerPosition = marker.getLatLng();
+  console.log("Nueva posición del marcador:", markerPosition);
+  coordenadasString = JSON.stringify(markerPosition);
+  console.log(coordenadasString)
+}
 
 //buttonSubmit.addEventListener('click', RegistrarNegocio);

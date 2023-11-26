@@ -1,67 +1,65 @@
-
 body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+
+.contenedor {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 25PX;
+    overflow: hidden;
+}
+
+.labels, .imagen-container, .botones {
+    width: 30%;
+}
+
+.labels {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: white;
 }
 
-.gestionSolicitudes {
-    padding: 15px;
-    width: fit-content;
-    margin: 10px auto;
-    background-color: white;
-    border-radius: 20px;
-    margin-bottom: 80px; 
-    border: 1px solid #B9CFB9;
+.imagen-container {
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imagen {
+    max-width: 100%;
+    height: auto;
+}
+
+section button {
+    margin-top: 10px;
+    padding: 15px; 
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
-    overflow: hidden; 
-    overflow-y: auto;
-    
+    font-size: 25px;
+    transition: background-color 0.3s ease;
 }
 
-.gestionSolicitudes div{
-    padding:5px
-}
-/* Estilo formulario */
-input[type=text],
-textarea,
-input[type=file],
-input[type=tel],
-input[type=radio] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-input[type=text],
-select,
-input[type=number],
-input[type=date],
-input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+#aprobarBoton {
+    background-color: rgb(204, 255, 238); /* Rojo pastel */
+    color: #000;
 }
 
-.lista-content {
-    margin: 15px;
+#rechazarBoton {
+    background-color: #ffcccc; /* Rojo pastel */
+    color: #000;
 }
 
-.column{
-    float: left;
-    padding: 10px;
+button:hover {
+    background-color: #000000; /* Rojo pastel oscuro en hover */
 }
-
-#imgNegocio{
-    height: 150px;
-    width: 200px;
-}
-

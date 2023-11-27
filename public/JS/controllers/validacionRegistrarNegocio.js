@@ -4,7 +4,7 @@ let nombre = document.getElementById('txtEmpresa');
 let descripcion = document.getElementById('txtDescripcion');
 let telefono = document.getElementById('telNumber');
 let precioValor = document.getElementById('txtPrecio');
-let imagen = document.getElementById('negocioFotos');
+let imagen = document.getElementById('placeFotos');
 let direccion = document.getElementById('txtDireccion');
 let radio = document.querySelectorAll('.rbtCategoria');
 let buttonSubmit = document.getElementById('btnReg');
@@ -17,7 +17,7 @@ const ValidarFormulario = () => { // obtenemos los valores de cada elemento.
     let direccionF = direccion.value;
     let descripcionF = descripcion.value;
     let contadorRadio = 0;
-    imagen = document.getElementById('negocioFotos');
+    imagen = document.getElementById('placeFotos');
     let precioF = precioValor.value;
     
 

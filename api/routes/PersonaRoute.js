@@ -12,12 +12,10 @@ router.post('/RegistrarPersona', (req, res) => {
         TipoIdentificacion: body.TipoIdentificacion,
         Identificacion: body.Identificacion,
         Nombre: body.Nombre,
-        Apellido1: body.Apellido1,
-        Apellido2: body.Apellido2,
+        Apellidos: body.Apellidos,
         Sexo: body.Sexo,
         Nacimiento: body.Nacimiento,
-        Edad: body.Edad,
-        Estado: 1,
+        Estado: body.Estado,
         Email: body.Email,
         Password: body.Password,
         Rol: body.Rol,
@@ -33,10 +31,13 @@ router.post('/RegistrarPersona', (req, res) => {
             });
         })
         .catch((error) => {
+            console.log(error)
+            console.log("naninimnji")
             res.json({
                 resultado: false,
                 msj: 'No se pudo registrar la persona, ocurrio el siguiente error: ',
                 error
+            
             });
         });
 });

@@ -5,7 +5,7 @@ let apellido = document.getElementById('txtApellido');
 let correo = document.getElementById('txtCorreo');
 let fechaNacimiento = document.getElementById('txtFechaNacimiento');
 let documento = document.getElementById('sltDocumento');
-let foto = document.getElementById('myphoto');
+let imagen = document.getElementById('placeFotos');
 let contrasena = document.getElementById('txtPass');
 let contrasena2 = document.getElementById('txtPass2');
 let direccion = document.getElementById('txtDireccion');
@@ -24,6 +24,7 @@ function obtenerDatos(){
     let sContrasena = contrasena.value;
     let sContrasena2 = contrasena2.value;
     let sDireccion = apellido.value;
+    let imagen = document.getElementById('placeFotos');
     
     if(ValidarFormulario(sNombre,sApellido,sCorreo,fechaNac,fechaActual,sDocumento,imgFoto,sContrasena,sContrasena2,sDireccion) == false){
         return;

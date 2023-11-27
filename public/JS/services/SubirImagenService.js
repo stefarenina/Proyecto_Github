@@ -1,7 +1,7 @@
 'use strict';
 
 let label = document.getElementById("statusImg")
-let stringDir = document.getElementById("negocioFotos");
+let stringDir = document.getElementById("placeFotos");
 
 let widgetCloudinary = cloudinary.createUploadWidget({
     cloudName: 'djj1whfh2',

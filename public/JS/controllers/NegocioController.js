@@ -74,7 +74,7 @@ const ImprimirDatos = () => {
                     '_id': listaNegocios[i]._id
                 };
 
-                let result = await ProcessDELETE('EliminarNegocio', data);
+                let result = await ProcessDELETE('EliminarPersona', data);
                 if (result != null && result.resultado == true) {
                     ImprimirMsjsSuccess(result.msj);
                 } else {

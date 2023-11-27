@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar usuario</title>
+    <title>Actualizar Datos</title>
     <link rel="stylesheet" href="./css/registroUsuario.css">
     <link rel="stylesheet" href="./css/NewHeader.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;600;700&display=swap">
@@ -14,75 +14,99 @@
         <nav>
           <a href="./landingProducto.html"><img src="./img/ict-logo-2.png" id="logoICT" alt="Logo"></a>
           <div>
-            <a href="./registrarNegocio.html" id="btnRegistrar">Registrar Negocio</a>
             <a href="./perfil.html"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
             <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
-            <a href="inicioSesion.html"><input type="button" id="logButton"  value="Log in"></a>
+            <button type="button" id="logButton" onclick="CerrarSesion()">Cerrar Sesión</button>
           </div>
         </nav>
       </header>
-    <div id="formularioRegistro">
+      <main>
+        <input type="hidden" id="txt_id">
+        <div id="formularioRegistro">
+        
+            <form class="formulario">
+                <h1>Cambie la información de su perfil</h1>
+                <div class="row">
+                    <div class="column">
+                        <div>
+                            <label for="sltDocumento" id="lbltipoIdentificacion">Documento de identificación*</label>
+                            <select id="sltDocumento">
+                                <option value="">--Seleccione--</option>
+                                <option value="cedula" title="Cedula Nacional">Cédula Fisica</option>
+                                <option value="pasaporte" title="Pasaporte">Pasaporte</option>
+                            </select><br>
+                            <label for="txtidentificacion" id="lblidentificacion">Identificacion*</label>
+                            <input type="text" id="txtidentificacion">
+                        </div>
+                        <div>
+                            <label for="imgNegocio">Subir Foto del Negocio</label>
+                            <div>
+                                <label id="statusImg">No se ha subido ninguna imagen</label>
+                            </div>
+                            <div>
+                                <button type="button" class="btnSubirFoto" onclick="AbrirCloudinary('imgUser')">Subir Foto</button>
+                            </div>    
+                        </div>
+                        <div>
+                            <img id="placeFotos" src="./img/photoPlaceHolder.jpg" alt="defecto">
+                        </div>
+                        <div>
+                            <label for="txtPass" id="lblPass">Contraseña*</label>
+                            <input type="password" id="txtPass">
+                        </div>
+                        <div>
+                            <label for="txtPass2" id="lblPass2">Confirmar Contraseña*</label>
+                            <input type="password" id="txtPass2">
+                        </div>
     
-        <form class="formulario">
-            <h1>Cambie la información de su perfil</h1>
-            <br>
-            <div class="row">
-                <div class="column">
-                    <div>
-                        <label for="txtNombre">Nombre*</label>
-                        <input type="text" id="txtNombre" placeholder="Escriba su nombre">
                     </div>
-                    <div>
-                        <label for="txtApellido">Primer Apellido*</label>
-                        <input type="text" id="txtApellido" placeholder="Escriba su apellido">
-                    </div>
-                    <div>
-                        <label for="txtCorreo">Correo*</label>
-                        <input type="text" id="txtCorreo" placeholder="Correo Electrónico">
-                    </div>
-                    <div>
-                        <label for="txtFechaNacimiento">Fecha de Nacimiento*</label>
-                        <input type="date" id="txtFechaNacimiento">
-                    </div>
-                    <div>
-                        <label for="txtedad" id="lbledad">Edad</label>
-                        <input type="number" id="txtedad" min="0" max="120">
-                    </div>
-                </div>
-                <div class="column">
-                    <div>
-                        <label for="sltDocumento">Documento de identificación*</label>
-                        <select id="sltDocumento">
-                            <option value="">--Seleccione--</option>
-                            <option value="option1" title="Cedula Nacional">Cédula Fisica</option>
-                            <option value="option2" title="Pasaporte">Pasaporte</option>
-                        </select><br>
-                        <input type="text" placeholder="">
-                    </div>
-                    <div>
-                        <label for="myphoto">Foto de perfil*</label>
-                        <input type="file" id="myphoto">
-                    </div>
-                    <div>
-                        <label for="txtPass" id="lblPass">Contraseña*</label>
-                        <input type="password" id="txtPass">
-                    </div>
-                    <div>
-                        <label for="txtPass2" id="lblPass2">Confirmar Contraseña*</label>
-                        <input type="password" id="txtPass2">
-                    </div>
-                    <div>
-                        <label for="txtDireccion">Dirección*</label>
-                        <textarea id="txtDireccion" cols="30" rows="10"></textarea>
+                    <div class="column">
+                        <div>
+                            <label for="txtNombre" id="lblnombre">Nombre*</label>
+                            <input type="text" id="txtNombre" placeholder="Escriba su nombre">
+                        </div>
+                        <div>
+                            <label for="txtApellido" id="lblapellido">Apellidos</label>
+                            <input type="text" id="txtApellido" placeholder="Escriba sus apellidos">
+                        </div>
+                        <div>
+                            <label for="txtCorreo" id="lblEmail">Correo*</label>
+                            <input type="text" id="txtCorreo" placeholder="Correo Electrónico">
+                        </div>
+                        <div>
+                            <label for="txtFechaNacimiento" id="lblnacimiento">Fecha de Nacimiento*</label>
+                            <input type="date" id="txtFechaNacimiento">
+                        </div>
+                        <div>
+                            <label for="txtDireccion" id="lbldireccion">Dirección*</label>
+                            <textarea id="txtDireccion" cols="20" rows="3 "></textarea>
+                        </div>
+                        <div>
+                            <fieldset id="txtsexo">
+                                <legend id="lblSexo">Sexo</legend>
+                                <label for="rbtMasculino" class="container">Masculino
+                                    <input type="radio" id="rbtMasculino" value="Masculino" name="rbtSexo">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label for="rbtFemenino" class="container">Femenino
+                                    <input type="radio" id="rbtFemenino" value="Femenino" name="rbtSexo">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label for="rbtOtro" class="container">Otro
+                                    <input type="radio" id="rbtOtro" value="Otro" name="rbtSexo">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </fieldset>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="btn-registro">
-                <input type="button" value="Cambiar Información" id="btn-registro">
-            </div>
-        </form>
-    </div>
-
+                <div id="btn-registro">
+                    <input type="button" value="Registrarse" id="btn-registro">
+                </div>
+            </form>
+        </div>
+    </main>
+    
     <footer class="footer">
         <div class="footer-content container">
             <div class="link">
@@ -114,7 +138,12 @@
 
         </div>
     </footer>
+    <script src="https://upload-widget.cloudinary.com/2.4.17/global/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./JS/controllers/validarRegUsuarioController.js"></script>
+    <script src="./JS/services/SubirImagenService.js"></script>
+    <script src="./JS/services/GeneralService.js"></script>
+    <script src="./JS/Utileria.js"></script>
+    <script src="./JS/controllers/cambiarUsuarioController.js"></script>
+
 </body>
 </html>

@@ -107,7 +107,3 @@ copiarLink.addEventListener("click", function () {
         timer: 1500
     })
 });
-
-
-
-

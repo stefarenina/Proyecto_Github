@@ -87,18 +87,19 @@
             <p id="salir">X</p>
             <p2>Detalles de pago</p2>
             <br>
-            <p3 id="precioNoche">Precio por noche: $$$</p3>
+            <p3>Precios de restaurantes y servicios de entretenimiento se cancelan en el lugar.</p3>
             <br>
-            <p3>Cantidad de noches: ## </p3>
             <br>
-            <p3>Total a cancelar: $$$</p3>
+            <p3 id="precioNoche">Precio por noche: </p3>
+            <br>
+            <p3 id="cantidadNoches">Cantidad de noches: 0 </p3>
             <br>
             <br>
             <label for="fechaEntrada">Fecha de Entrada:</label>
-            <input type="date" id="fechaEntrada" placeholder="DD/MM/YYYY"><br>
+            <input type="date" id="fechaEntrada" placeholder="DD/MM/YYYY" onchange="calcularDias()"><br>
 
             <label for="fechaSalida">Fecha de Salida:</label>
-            <input type="date" id="fechaSalida" placeholder="DD/MM/YYYY"><br>
+            <input type="date" id="fechaSalida" placeholder="DD/MM/YYYY" onchange="calcularDias()"><br>
 
             <label for="huespedes">Cantidad de Huespedes:</label>
             <input type="number" id="huespedes"><br>
@@ -146,7 +147,8 @@
 
 
     <script src="js/Utileria.js"></script>
-    <script src="./JS/controllers/landing_and_registrarReservas.js"></script>
     <script src="./JS/controllers/registrarReservaController.js"></script>
+    <script src="./JS/controllers/landing_and_registrarReservas.js"></script>
+    
 </body>
 </html>

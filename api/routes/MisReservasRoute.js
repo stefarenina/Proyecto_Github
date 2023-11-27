@@ -2,11 +2,37 @@
 
 const express = require('express');
 const router = express.Router();
-const misReservas = require('../models/MisReservasModel');
+const Reserva = require('../models/MisReservasModel');
 
+router.post('/RegistrarMisReservas', (req, res) => {
+    let body = req.body;
+    let nuevaReserva = new Reserva({
+        Nombre: body.Nombre,
+        FechaEntrada: body.FechaEntrada,
+        FechaSalida:body.FechaSalida,
+        CantidadHuespedes: body.CantidadHuespedes,
+        Descripcion: body.Descripcion
+    });
+
+    nuevaReserva.save()
+        .then((resultBD) => {
+            res.json({
+                resultado: true,
+                msj: 'Registrado de manera correcta.',
+                resultBD
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo registrar el negocio, ocurrio el siguiente error: ',
+                error
+            });
+        });
+}); 
 
 router.get('/ListarReservas', (req, res) => {
-    misReservas.find()
+    Reserva.find()
         .then((ListaReservasBD) => {
             res.json({
                 resultado: true,
@@ -25,8 +51,7 @@ router.get('/ListarReservas', (req, res) => {
 
 router.delete('/EliminarReserva', (req, res) => {
     let body = req.body;
-    console.log(body)
-    misReservas.deleteOne({ _id: body._id })
+    Reserva.deleteOne({ _id: body._id })
         .then((info) => {
             res.json({
                 resultado: true,

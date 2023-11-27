@@ -9,4 +9,4 @@ const schemaMisReservas = mongoose.Schema({
     Descripcion: { type: String, required: false, unique: false }
 });
 
-module.exports = mongoose.model('misReservas', schemaMisReservas, 'Reservas');
+module.exports = mongoose.model('Reservas', schemaMisReservas, 'Reservas');

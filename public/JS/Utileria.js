@@ -1,7 +1,14 @@
 'use strict';
 const apiUrl = 'http://localhost:3000/api/';
 
-
+const ObtenerRol = (pRol) => {
+    switch (pRol) {
+        case 1:
+            return 'Admin';
+        case 2:
+            return 'Client';
+    }
+}
 const ObtenerTipoIdentificacion = (ptipoId) => {
     switch (ptipoId) {
         case 1:

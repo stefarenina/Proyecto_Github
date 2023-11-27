@@ -14,13 +14,75 @@ let contrasena2 = document.getElementById('txtPass2');
 let input_id = document.getElementById('txt_id');
 let buttonSubmit = document.getElementById('btn-registro');
 
+const CargarDatos = (pPersona, pBtn) => {
+    if (pBtn == 'btnCrea') {
+        document.getElementById('ttlInicio').innerHTML = 'Registrar Persona';
+        document.getElementById('btnRegistrar').value = 'Registrar';
+    } else {        
+        document.getElementById('ttlInicio').innerHTML = 'Actualizar Persona';
+        document.getElementById('btnRegistrar').value = 'Actualizar';
+
+        let nacimientoPersona = pPersona.Nacimiento;
+        if (nacimientoPersona != null && nacimientoPersona != undefined) {
+            let [date, time] = formatDate(new Date(nacimientoPersona.replace('Z', ''))).split(' ');
+            inputNacimiento.value = date;
+        }
+        for (let i = 0; i < inputsSexo.length; i++) {
+            if (pPersona.Sexo == inputsSexo[i].value) {
+                inputsSexo[i].checked = true;
+                break;
+            }
+        }
+        let imagen = document.getElementById('placeFotos');
+        let sNombre = nombre.value;
+        let sApellido = apellido.value;
+        let sCorreo = correo.value;
+        let fechaNac = new Date(txtFechaNacimiento.value);
+        let fechaActual = new Date();
+        let sDireccion = direccion.value;
+        let sSexo = inputsSexo.value;
+        let sDocumento = documento.value;
+        let sIdentificacion = inputIdentificacion.value;
+        let imgFoto = imagen.src;
+        let sContrasena = contrasena.value;
+        let sContrasena2 = contrasena2.value;
+
+    }
+};
+
+
+let queryString, urlParams, _id;
+const IdentificarAccion = async () => {
+    queryString = window.location.search;
+    urlParams = new URLSearchParams(queryString);
+
+    _id = urlParams.get('_id');
+    let nombre = urlParams.get('nombre');
+    console.log(nombre);
+
+    if (_id != null && _id != undefined && _id == 'crear') {
+        CargarDatos(null, 'btnCrea');
+    } else {
+        let params = { '_id': _id };
+        let persona = await ProcessGET('BuscarPersonaId', params);
+        if (persona != null && persona.resultado == true && persona.PersonaBD != null) {
+            CargarDatos(persona.PersonaBD, 'btnActualizar');
+        } else {
+            ImprimirMsjsError(persona.msj);
+        }
+    }
+};
+//IdentificarAccion();
+
+
 
 const RegistrarDatos = async () => {
     let imagen = document.getElementById('placeFotos');
     let sNombre = nombre.value;
     let sApellido = apellido.value;
     let sCorreo = correo.value;
-    let fechaNac = txtFechaNacimiento.value;
+    let fechaNac = new Date(txtFechaNacimiento.value);
+    let fechaActual = new Date();
     let sDireccion = direccion.value;
     let sexo = null;
     for (let i = 0; i < inputsSexo.length; i++) {
@@ -36,19 +98,23 @@ const RegistrarDatos = async () => {
     let sContrasena2 = contrasena2.value;
 
 
+
+
+    let s_id = input_id.value;
+
     if (ValidarDatos(sDocumento, sIdentificacion, sNombre, sApellido, sexo, sCorreo, sContrasena, sContrasena2, fechaNac, sDireccion, imgFoto) == false) {
         return;
     }
 
     let res = null;
     let dataBody = {
+        //a'_id': s_id,
         'TipoIdentificacion': sDocumento,
         'Identificacion': sIdentificacion,
         'Nombre': sNombre,
         'Apellidos': sApellido,
         'Sexo': sexo,
         'Nacimiento': new Date(fechaNac),
-        'Direccion': sDireccion,
         'Estado': "Activo",
         'Email': sCorreo,
         'Password': sContrasena,
@@ -56,9 +122,11 @@ const RegistrarDatos = async () => {
         'FotoPerfil': imgFoto
     };
 
-
-    res = await ProcessPOST('RegistrarPersona', dataBody, null);
-  
+    if (s_id != null && s_id != '' && s_id != undefined) {
+        res = await ProcessPUT('ModificarPersona', dataBody, null);
+    } else {
+        res = await ProcessPOST('RegistrarPersona', dataBody, null);
+    }
 
     if (res == null || res == undefined) {
         ImprimirMsjsError('Ocurrio un error inesperado');
@@ -71,7 +139,7 @@ const RegistrarDatos = async () => {
             text: res.msj,
             confirmButtonText: 'Ok'
         }).then(resSwetAlert => {
-            location.href = 'inicioSesion.html';
+            location.href = 'perfil.html';
         });
     }
 };

@@ -125,5 +125,5 @@ const GetSesionActiva = () => {
 
 const CerrarSesion = () => {
     LimpiarSesionActiva();
-    location.href = 'inicioSesion.html';
+    location.href = 'Login.html';
 }

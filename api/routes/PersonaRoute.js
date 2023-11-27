@@ -15,7 +15,6 @@ router.post('/RegistrarPersona', (req, res) => {
         Apellidos: body.Apellidos,
         Sexo: body.Sexo,
         Nacimiento: body.Nacimiento,
-        Direccion: body.Direccion,
         Estado: body.Estado,
         Email: body.Email,
         Password: body.Password,
@@ -145,7 +144,6 @@ router.put('/ModificarPersona', (req, res) => {
         // }
     })
         .then((info) => {
-            console.log(info)
             res.json({
                 resultado: true,
                 msj: 'Los datos se actualizaron de manera correcta',

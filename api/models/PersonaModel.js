@@ -8,7 +8,6 @@ const schemaPersona = mongoose.Schema({
     Apellidos: { type: String, required: true, unique: false },
     Sexo: { type: String, required: true, unique: false },
     Nacimiento: { type: String, required: true, unique: false },
-    Direccion: { type: String, required: true, unique: false },
     Estado: { type: String, required: true, unique: false },
     Email: { type: String, required: true, unique: true },
     Password: { type: String, required: true, unique: false },

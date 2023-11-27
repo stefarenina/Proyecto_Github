@@ -98,18 +98,21 @@ router.get('/BuscarPersonaId', (req, res) => {
         });
 });
 router.get('/AutenticarPersona', function (req, res) {
+    console.log("hjarl")
     let params = req.query;
     Persona.findOne({
         Email: params.Email,
         Password: params.Password
     }).then((PersonaDB) => {
+        console.log("hjasadsarl")
+        console.log(PersonaDB)
         if (PersonaDB == null) {
             res.json({
                 resultado: false,
                 msj: 'Usuario y/o contraseña incorrectos',
                 PersonaDB
             });
-        } else if (Number(PersonaDB.Estado) == 0) {
+        } else if (Number(PersonaDB.Estado) == "inactivo") {
             res.json({
                 resultado: false,
                 msj: 'Usuario inactivo, por favor comuniquese con el administrador',

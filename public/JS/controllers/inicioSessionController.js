@@ -1,42 +1,63 @@
 'use strict';
 
 
-let correo = document.getElementById('txtEmail');
-let password = document.getElementById('txtPass');
-let buttonSubmit = document.getElementById('btnIniciar');
+let inputUser = document.getElementById('txtEmail');
+let inputPass = document.getElementById('txtPass');
 
-const obtenerDatos=()=>{
-    let sCorreo = correo.value;
-    let sPassword = password.value;
 
-    if(ValidarInicio(sCorreo,sPassword)){
+const ValidarInputs = (pUser, pPass) => {
+    if (pUser == null || pUser == undefined || pUser == '') {        
+        swal.fire({
+            icon:'error',
+            title:'Error',
+            text:'Usuario es requerido!'
+        });
+        return false;
+    }
+    if (pPass == null || pPass == undefined || pPass == '') {        
+        swal.fire({
+            icon:'error',
+            title:'Error',
+            text:'Contraseña es requerida!'
+        });
+        return false;
+    }
+    return true;
+};
+
+const  RedireccionarUsuario = (PersonaDB) => {
+
+    let nombreRol = PersonaDB.Rol;
+
+    if (nombreRol == 'Cliente') {
+        location.href = 'landingProducto.html';
+    }
+    if (nombreRol == 'Admin') {
+        location.href = 'reporteriaAdministrativa.html';
+    }
+};
+
+const IniciarSesion = async () => {
+    let user = inputUser.value;
+    let pass = inputPass.value;
+    
+    if (ValidarInputs(user, pass) == false) {
         return;
     }
 
-}
-buttonSubmit.addEventListener('click',obtenerDatos);
-const ValidarInicio = (pCorreo, pPassword) => {
-    
-    if (pCorreo == '' || pCorreo == null || pCorreo == undefined){
-        ImprimirMensajeError('Debe digitar su correo.');
-        return false;
-    }
-        
-    if (pPassword == '' || pPassword == null || pPassword == undefined){
-        ImprimirMensajeError('Digite su contraseña.');
-        return false;
-    }
-    window.location.href="./landingProducto.html";
-    return true;
+    let params = {
+        'Email': user,
+        'Password': pass
+    };
 
-}
+    let res = await ProcessGET('AutenticarPersona', params);
 
-const ImprimirMensajeError = (pMensaje) => {
-    Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: pMensaje,
-        confirmButtonText: 'Ok'
-    });
+    if (res != null && res.resultado == true && res.PersonaDB != null) {
+        RedireccionarUsuario(res.PersonaDB);
+        SetSesionActiva(res.PersonaDB);
+    } else {
+        //console.log("here")
+        ImprimirMsjsError(res.msj);
+    }
 };
 

@@ -139,7 +139,7 @@ const RegistrarDatos = async () => {
             text: res.msj,
             confirmButtonText: 'Ok'
         }).then(resSwetAlert => {
-            location.href = 'AdminPersonas.html'
+            location.href = 'perfil.html';
         });
     }
 };

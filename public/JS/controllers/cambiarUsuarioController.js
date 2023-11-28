@@ -13,7 +13,48 @@ let contrasena = document.getElementById('txtPass');
 let contrasena2 = document.getElementById('txtPass2');
 let input_id = document.getElementById('txt_id');
 let buttonSubmit = document.getElementById('btn-registro');
+let _id;
 
+
+const CargarDatos = (pPersona) => {
+
+        nombre.value = pPersona.Nombre;
+        apellido.value = pPersona.Apellidos;
+        correo.value = pPersona.Email;
+
+        let nacimientoPersona = pPersona.Nacimiento;
+        if (nacimientoPersona != null && nacimientoPersona != undefined) {
+            let [date, time] = formatDate(new Date(nacimientoPersona.replace('Z', ''))).split(' ');
+            fechaNacimiento.value = date;
+        }
+
+
+
+        direccion.value = pPersona.Direccion;
+        correo.value = pPersona.Email
+        documento.value = pPersona.TipoIdentificacion;
+        inputIdentificacion.value = pPersona.Identificacion;
+
+        contrasena.value = pPersona.Password;
+        contrasena2.value = pPersona.Password;
+        imagen.src = pPersona.FotoPerfil;
+        for (let i = 0; i < inputsSexo.length; i++) {
+            if (pPersona.Sexo == inputsSexo[i].value) {
+                inputsSexo[i].checked = true;
+                break;
+            }
+        }
+    };
+
+const GetData = async () => {   
+let sesion = GetSesionActiva();
+_id = sesion._id
+let params = { '_id': _id }
+let persona = await ProcessGET('BuscarPersonaId', params)
+CargarDatos(persona.PersonaBD)
+};
+
+GetData();
 
 const RegistrarDatos = async () => {
     let imagen = document.getElementById('placeFotos');
@@ -36,12 +77,15 @@ const RegistrarDatos = async () => {
     let sContrasena2 = contrasena2.value;
 
 
+    let s_id = input_id.value;
+
     if (ValidarDatos(sDocumento, sIdentificacion, sNombre, sApellido, sexo, sCorreo, sContrasena, sContrasena2, fechaNac, sDireccion, imgFoto) == false) {
         return;
     }
 
     let res = null;
     let dataBody = {
+        '_id': _id,
         'TipoIdentificacion': sDocumento,
         'Identificacion': sIdentificacion,
         'Nombre': sNombre,
@@ -56,9 +100,7 @@ const RegistrarDatos = async () => {
         'FotoPerfil': imgFoto
     };
 
-
-    res = await ProcessPOST('RegistrarPersona', dataBody, null);
-  
+    res = await ProcessPUT('ModificarPersona', dataBody, null);
 
     if (res == null || res == undefined) {
         ImprimirMsjsError('Ocurrio un error inesperado');
@@ -71,7 +113,7 @@ const RegistrarDatos = async () => {
             text: res.msj,
             confirmButtonText: 'Ok'
         }).then(resSwetAlert => {
-            location.href = 'inicioSesion.html';
+            location.href = 'perfil.html';
         });
     }
 };
@@ -139,7 +181,7 @@ const ValidarDatos = (pTipoIdentificacion, pIdentificacion, pNombre, pApellido, 
         return false;
     }
     if (pDireccion == null || pDireccion == undefined) {
-        ImprimirMsjsError('Estimado usuario  la direccion es requerido');
+        ImprimirMsjsError('Estimado usuario  la direccion es requerida');
         resaltarLabelInvalido('lbldireccion');
         resaltarInputInvalido('lbldireccion');
         return false;

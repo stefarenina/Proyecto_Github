@@ -198,9 +198,9 @@ router.put('/ActivarNegocio', (req, res) => {
         });
 });
 //Delete
-router.delete('/EliminarPersona', (req, res) => {
+router.delete('/EliminarNegocio', (req, res) => {
     let body = req.body;
-    Persona.deleteOne({ _id: body._id })
+    Negocio.deleteOne({ _id: body._id })
         .then((info) => {
             res.json({
                 resultado: true,

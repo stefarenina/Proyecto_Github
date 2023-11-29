@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const Negocio = require('../models/NegocioModel');
 
-
+//Create
 router.post('/RegistrarNegocio', (req, res) => {
     let body = req.body;
     let nuevoNegocio = new Negocio({
@@ -24,7 +24,7 @@ router.post('/RegistrarNegocio', (req, res) => {
         .then((resultBD) => {
             res.json({
                 resultado: true,
-                msj: 'Registrado de manera correcta.',
+                msj: 'Negocio registrado de manera correcta.',
                 resultBD
             });
         })
@@ -55,25 +55,6 @@ router.get('/ListarNegocios', (req, res) => {
             });
         });
 });
-router.get('/BuscarPersonaIdentificacion', (req, res) => {
-    let param = req.query;
-
-    Persona.findOne({ Identificacion: param.Identificacion })
-        .then((PersonaBD) => {
-            res.json({
-                resultado: true,
-                msj: 'Los datos se obtuvieron de manera correcta',
-                PersonaBD
-            });
-        })
-        .catch((error) => {
-            res.json({
-                resultado: false,
-                msj: 'No se pudo obtener la lista de personas, ocurrio el siguiente error: ',
-                error
-            });
-        });
-});
 router.get('/BuscarNegocioId', (req, res) => {
     let param = req.query;
     Negocio.findOne({ _id: param._id })
@@ -89,48 +70,16 @@ router.get('/BuscarNegocioId', (req, res) => {
             console.log("jijojo")
             res.json({
                 resultado: false,
-                msj: 'No se pudo obtener la lista de personas, ocurrio el siguiente error: ',
+                msj: 'No se pudo obtener el negocio, ocurrio el siguiente error: ',
                 error
             });
         });
 });
-router.get('/AutenticarPersona', function (req, res) {
-    let params = req.query;
-    Persona.findOne({
-        Email: params.Email,
-        Password: params.Password
-    }).then((PersonaDB) => {
-        if (PersonaDB == null) {
-            res.json({
-                resultado: false,
-                msj: 'Usuario y/o contraseña incorrectos',
-                PersonaDB
-            });
-        } else if (Number(PersonaDB.Estado) == 0) {
-            res.json({
-                resultado: false,
-                msj: 'Usuario inactivo, por favor comuniquese con el administrador',
-                PersonaDB
-            });
-        } else {
-            res.json({
-                resultado: true,
-                msj: 'Persona autenticada correctamente',
-                PersonaDB
-            });
-        }
-    }).catch((error) => {
-        res.json({
-            resultado: false,
-            msj: 'No se pudo obtener a la persona',
-            error
-        });
-    });
-});
+
 //Update
-router.put('/ModificarPersona', (req, res) => {
+router.put('/ModificarNegocio', (req, res) => {
     let body = req.body;
-    Persona.updateOne({ _id: body._id }, {
+    Negocio.updateOne({ _id: body._id }, {
         $set: body
         // $set: {
         //     Nombre: body.Nombre,
@@ -174,7 +123,6 @@ router.put('/DesactivarNegocio', (req, res) => {
             });
         });
 });
-
 router.put('/ActivarNegocio', (req, res) => {
     let body = req.body;
     Negocio.updateOne({ _id: body._id }, {
@@ -197,6 +145,7 @@ router.put('/ActivarNegocio', (req, res) => {
             });
         });
 });
+
 //Delete
 router.delete('/EliminarNegocio', (req, res) => {
     let body = req.body;
@@ -216,4 +165,5 @@ router.delete('/EliminarNegocio', (req, res) => {
             });
         });
 });
+
 module.exports = router;

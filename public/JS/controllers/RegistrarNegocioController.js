@@ -4,7 +4,7 @@ let inputNombreNegocio = document.getElementById('txtEmpresa');
 let inputDescripcion = document.getElementById('txtDescripcion');
 let radioCategorias = document.getElementsByName('radios');
 let inputNumeroContacto = document.getElementById('telNumber');
-let inputFotosNegocio = document.getElementById('negocioFotos');
+let inputFotosNegocio = document.getElementById('placeFotos');
 let inputDireccion = document.getElementById('txtDireccion');
 let inputPrecio = document.getElementById('txtPrecio');
 //let buttonSubmit = document.getElementById('btnReg');
@@ -22,7 +22,7 @@ const RegistrarNegocio = async () => {
         }
     } 
     let numeroContacto = inputNumeroContacto.value;
-    let fotosNegocio = negocioFotos.src;
+    let fotosNegocio = inputFotosNegocio.src;
     let direccion = inputDireccion.value;
     let precio = inputPrecio.value;
 

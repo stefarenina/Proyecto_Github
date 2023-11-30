@@ -9,7 +9,7 @@ router.post('/RegistrarMisReservas', (req, res) => {
     let nuevaReserva = new Reserva({
         Nombre: body.Nombre,
         FechaEntrada: body.FechaEntrada,
-        FechaSalida:body.FechaSalida,
+        FechaSalida: body.FechaSalida,
         CantidadHuespedes: body.CantidadHuespedes,
         Descripcion: body.Descripcion
     });
@@ -29,7 +29,7 @@ router.post('/RegistrarMisReservas', (req, res) => {
                 error
             });
         });
-}); 
+});
 
 router.get('/ListarReservas', (req, res) => {
     Reserva.find()
@@ -49,9 +49,35 @@ router.get('/ListarReservas', (req, res) => {
         });
 });
 
+router.get('/BuscarReservaId', (req, res) => {
+    let param = req.query;
+    
+    Reserva.findOne({
+            _id: param._id
+        })
+        .then((Reserva_testDB) => {
+            console.log("jijiji reserva")
+            res.json({
+                resultado: true,
+                msj: 'Los datos se obtuvieron de manera correcta1',
+                Reserva_testDB
+            });
+        })
+        .catch((error) => {
+            console.log("jijojo")
+            res.json({
+                resultado: false,
+                msj: 'No se pudo obtener la reserva, ocurrio el siguiente error: ',
+                error
+            });
+        });
+});
+
 router.delete('/EliminarReserva', (req, res) => {
     let body = req.body;
-    Reserva.deleteOne({ _id: body._id })
+    Reserva.deleteOne({
+            _id: body._id
+        })
         .then((info) => {
             res.json({
                 resultado: true,
@@ -67,4 +93,5 @@ router.delete('/EliminarReserva', (req, res) => {
             });
         });
 });
+
 module.exports = router;

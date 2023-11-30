@@ -10,4 +10,4 @@ const schemaMisReservas = mongoose.Schema({
     inCart: { type: Boolean, default: false }
 });
 
-module.exports = mongoose.model('Reservas', schemaMisReservas, 'Reservas');
+module.exports = mongoose.model('Reserva-test', schemaMisReservas, 'Reservas');

@@ -57,7 +57,10 @@ router.get('/ListarNegocios', (req, res) => {
 });
 router.get('/BuscarNegocioId', (req, res) => {
     let param = req.query;
-    Negocio.findOne({ _id: param._id })
+
+    Negocio.findOne({
+            _id: param._id
+        })
         .then((NegocioBD) => {
             console.log("jijiji")
             res.json({
@@ -67,7 +70,7 @@ router.get('/BuscarNegocioId', (req, res) => {
             });
         })
         .catch((error) => {
-            console.log("jijojo")
+            console.log("No sirve")
             res.json({
                 resultado: false,
                 msj: 'No se pudo obtener el negocio, ocurrio el siguiente error: ',
@@ -79,13 +82,15 @@ router.get('/BuscarNegocioId', (req, res) => {
 //Update
 router.put('/ModificarNegocio', (req, res) => {
     let body = req.body;
-    Negocio.updateOne({ _id: body._id }, {
-        $set: body
-        // $set: {
-        //     Nombre: body.Nombre,
-        //     Edad: body.Edad
-        // }
-    })
+    Negocio.updateOne({
+            _id: body._id
+        }, {
+            $set: body
+            // $set: {
+            //     Nombre: body.Nombre,
+            //     Edad: body.Edad
+            // }
+        })
         .then((info) => {
             res.json({
                 resultado: true,
@@ -103,11 +108,13 @@ router.put('/ModificarNegocio', (req, res) => {
 });
 router.put('/DesactivarNegocio', (req, res) => {
     let body = req.body;
-    Negocio.updateOne({ _id: body._id }, {
-        $set: {
-            Estado: "desactivado"
-        }
-    })
+    Negocio.updateOne({
+            _id: body._id
+        }, {
+            $set: {
+                Estado: "desactivado"
+            }
+        })
         .then((info) => {
             res.json({
                 resultado: true,
@@ -125,11 +132,13 @@ router.put('/DesactivarNegocio', (req, res) => {
 });
 router.put('/ActivarNegocio', (req, res) => {
     let body = req.body;
-    Negocio.updateOne({ _id: body._id }, {
-        $set: {
-            Estado: "activado"
-        }
-    })
+    Negocio.updateOne({
+            _id: body._id
+        }, {
+            $set: {
+                Estado: "activado"
+            }
+        })
         .then((info) => {
             res.json({
                 resultado: true,
@@ -149,7 +158,9 @@ router.put('/ActivarNegocio', (req, res) => {
 //Delete
 router.delete('/EliminarNegocio', (req, res) => {
     let body = req.body;
-    Negocio.deleteOne({ _id: body._id })
+    Negocio.deleteOne({
+            _id: body._id
+        })
         .then((info) => {
             res.json({
                 resultado: true,

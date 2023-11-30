@@ -11,7 +11,7 @@ let coordenadasObjeto;
 let Nombre;
 let Descripcion;
 let Precio;
-let dias; 
+let dias;
 
 const calcularDias = () => {
     let fechaEntrada = new Date(document.getElementById("fechaEntrada").value);
@@ -31,7 +31,7 @@ const CargarDatos = (pNegocio) => {
     document.getElementById('precioNoche').innerHTML = 'Precio por noche: ₡'+pNegocio.Precio;
     Nombre=pNegocio.NombreNegocio;
     Descripcion=pNegocio.Descripcion;
-    Precio=pNegocio.Precio;
+    Precio=pNegocio.Precio * cantiHuespedes;
     console.log(pNegocio)
     coordenadasObjeto = JSON.parse(pNegocio.Coordenadas);
     crearMarcador();
@@ -67,7 +67,7 @@ const RegistrarDatos = async () => {
     let sNombre=Nombre;
     let sfechaIn = fechaIn.value;
     let sfechaOut = fechaOut.value;
-    let scantiHuespedes = Number(cantiHuespedes.value);
+    let sCantidadHuespedes = Number(cantiHuespedes.value);
     let sDescripcion= Descripcion;
     let sPrecio= Number(Precio);
 
@@ -75,9 +75,7 @@ const RegistrarDatos = async () => {
 
     let s_id = input_id.value;
 
-    ProcessPUT('AgregarReservaCart', s_id);
-
-    if (ValidarDatos(sfechaIn, sfechaOut, scantiHuespedes) == false) {
+    if (ValidarDatos(sfechaIn, sfechaOut, sCantidadHuespedes) == false) {
         return;
     }
 
@@ -87,7 +85,7 @@ const RegistrarDatos = async () => {
         'Nombre':sNombre,
         'FechaEntrada': new Date(sfechaIn),
         'FechaSalida': new Date(sfechaOut),
-        'CantidadHuespedes': scantiHuespedes,
+        'CantidadHuespedes': sCantidadHuespedes,
         'Descripcion': sDescripcion,
         'Precio': sPrecio
     };
@@ -108,6 +106,8 @@ const RegistrarDatos = async () => {
             location.href = 'landingProducto.html'
         });
     }
+
+    //ProcessPUT('AgregarReservaCart', s_id);
 };
 /*Validar datos*/
 const ValidarDatos = (pfechaIn, pfechaOut, pcantiHuespedes) => {

@@ -1,10 +1,10 @@
 'use strict';
 
 let listaReserva = [];
-const GetListaNegocios = async () => {
+const GetListaReservas = async () => {
     let res = await ProcessGET('ListarReservas', null);
     if (res != null && res.resultado == true) {
-        listaReserva = res.listaNegociosBD;
+        listaReserva = res.ListaReservasBD;
 
         ImprimirDatosCart();
     } else {
@@ -12,12 +12,12 @@ const GetListaNegocios = async () => {
         return;
     }
 };
-GetListaNegocios();
+GetListaReservas();
 
 const ImprimirDatosCart = () =>{
 
-    for (let i = 0; i < listaNegocios.length; i++) {
-        if (listaNegocios[i].inCart === true) {
+    for (let i = 0; i < listaReserva.length; i++) {
+        if (listaReserva[i].inCart === true) {
 
         }
         

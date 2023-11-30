@@ -32,7 +32,7 @@ router.post('/RegistrarReserva', (req, res) => {
         });
 });
 
-router.get('/BuscarReservaId', (req, res) => {
+router.get('/BuscarReservaPendienteId', (req, res) => {
     let param = req.query;
 
     Reserva.findOne({ _id: param._id })

@@ -2,11 +2,11 @@
 
 // Llamar diferentes routes 
 const PersonaRoute = require("./PersonaRoute");
-
 const ReservaPendienteRoute = require("./ReservaPendienteRoute");
 const NegocioRoute = require("./NegocioRoute")
 const MetodoRoute = require("./metodoPagoRoute")
 const misReservasRoute = require("./MisReservasRoute")
+const AgregarReservaCart = require("./inCartRoute");
 
 module.exports = (app) => {
     app.use("/api", PersonaRoute);
@@ -14,6 +14,7 @@ module.exports = (app) => {
     app.use("/api", MetodoRoute);
     app.use("/api", ReservaPendienteRoute);
     app.use("/api", misReservasRoute);
+    app.use("/api", AgregarReservaCart);
 
 
 

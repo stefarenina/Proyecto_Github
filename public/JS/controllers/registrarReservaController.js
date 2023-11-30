@@ -75,6 +75,8 @@ const RegistrarDatos = async () => {
 
     let s_id = input_id.value;
 
+    ProcessPUT('AgregarReservaCart', s_id);
+
     if (ValidarDatos(sfechaIn, sfechaOut, scantiHuespedes) == false) {
         return;
     }

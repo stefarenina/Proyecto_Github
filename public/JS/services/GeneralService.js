@@ -56,7 +56,6 @@ const ProcessPOSTReservas = async (pRouterName, pData) => {
     return res;
 }
 
-
 const ProcessPUT = async (pRouterName, pData, pSubDocumentos) => {
     let res = await ProcessAction('PUT', pRouterName, pData);
     if (pRouterName == 'ModificarPersona') {
@@ -80,6 +79,7 @@ const ProcessDELETE = async (pRouterName, pData) => {
     let res = await ProcessAction('DELETE', pRouterName, pData);
     return res;
 }
+
 const ProcessAction = async (pMethod, pRouterName, pData) => {
     let result = null;
     let headersOptionsFetch = new Headers();
@@ -101,7 +101,6 @@ const ProcessAction = async (pMethod, pRouterName, pData) => {
         });
     return result;
 }
-
 
 const SetSesionActiva = (pDatosPerfil) => {
     localStorage.setItem('DatosSesionActiva', JSON.stringify(pDatosPerfil));

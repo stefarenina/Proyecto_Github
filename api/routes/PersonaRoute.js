@@ -38,7 +38,7 @@ router.post('/RegistrarPersona', (req, res) => {
                 resultado: false,
                 msj: 'No se pudo registrar la persona, ocurrio el siguiente error: ',
                 error
-            
+
             });
         });
 });
@@ -63,7 +63,9 @@ router.get('/ListarPersonas', (req, res) => {
 router.get('/BuscarPersonaIdentificacion', (req, res) => {
     let param = req.query;
 
-    Persona.findOne({ Identificacion: param.Identificacion })
+    Persona.findOne({
+            Identificacion: param.Identificacion
+        })
         .then((PersonaBD) => {
             res.json({
                 resultado: true,
@@ -82,7 +84,9 @@ router.get('/BuscarPersonaIdentificacion', (req, res) => {
 router.get('/BuscarPersonaId', (req, res) => {
     let param = req.query;
 
-    Persona.findOne({ _id: param._id })
+    Persona.findOne({
+            _id: param._id
+        })
         .then((PersonaBD) => {
             res.json({
                 resultado: true,
@@ -113,7 +117,7 @@ router.get('/AutenticarPersona', function (req, res) {
                 msj: 'Usuario y/o contraseña incorrectos',
                 PersonaDB
             });
-        } else if (Number(PersonaDB.Estado) == "inactivo") {
+        } else if (Number(PersonaDB.Estado) == 0) {
             res.json({
                 resultado: false,
                 msj: 'Usuario inactivo, por favor comuniquese con el administrador',
@@ -137,13 +141,15 @@ router.get('/AutenticarPersona', function (req, res) {
 //Update
 router.put('/ModificarPersona', (req, res) => {
     let body = req.body;
-    Persona.updateOne({ _id: body._id }, {
-        $set: body
-        // $set: {
-        //     Nombre: body.Nombre,
-        //     Edad: body.Edad
-        // }
-    })
+    Persona.updateOne({
+            _id: body._id
+        }, {
+            $set: body
+            // $set: {
+            //     Nombre: body.Nombre,
+            //     Edad: body.Edad
+            // }
+        })
         .then((info) => {
             console.log(info)
             res.json({
@@ -159,14 +165,16 @@ router.put('/ModificarPersona', (req, res) => {
                 error
             });
         });
-}); 
+});
 router.put('/InactivarPersona', (req, res) => {
     let body = req.body;
-    Persona.updateOne({ _id: body._id }, {
-        $set: {
-            Estado: 0
-        }
-    })
+    Persona.updateOne({
+            _id: body._id
+        }, {
+            $set: {
+                Estado: 0
+            }
+        })
         .then((info) => {
             res.json({
                 resultado: true,
@@ -182,10 +190,37 @@ router.put('/InactivarPersona', (req, res) => {
             });
         });
 });
+router.put('/ActivarPersona', (req, res) => {
+    let body = req.body;
+    Persona.updateOne({
+            _id: body._id
+        }, {
+            $set: {
+                Estado: 1
+            }
+        })
+        .then((info) => {
+            res.json({
+                resultado: true,
+                msj: 'Los datos se actualizaron de manera correcta',
+                info
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo actualizar a la persona, ocurrio el siguiente error: ',
+                error
+            });
+        });
+
+});
 //Delete
 router.delete('/EliminarPersona', (req, res) => {
     let body = req.body;
-    Persona.deleteOne({ _id: body._id })
+    Persona.deleteOne({
+            _id: body._id
+        })
         .then((info) => {
             res.json({
                 resultado: true,

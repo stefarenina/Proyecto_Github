@@ -41,8 +41,8 @@ const ImprimirMsjsSuccess = (pMsj) => {
     });
 }
 const resaltarLabelInvalido = (plabelID) => {
-    var obj = document.getElementById(plabelID);
-    var orig = obj.style;
+    let obj = document.getElementById(plabelID);
+    let orig = obj.style;
     obj.style = 'color:red;'
 
     setTimeout(() => {
@@ -50,8 +50,8 @@ const resaltarLabelInvalido = (plabelID) => {
     }, 5000);
 }
 const resaltarInputInvalido = (pinputID) => {
-    var obj = document.getElementById(pinputID);
-    var orig = obj.style;
+    let obj = document.getElementById(pinputID);
+    let orig = obj.style;
     obj.style = 'border: 1px solid red;'
 
     setTimeout(() => {

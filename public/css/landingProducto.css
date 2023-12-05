@@ -23,7 +23,7 @@ body {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #4CAF50;
 }
 
 .tituloPrincipalContent {
@@ -70,6 +70,24 @@ h1 {
   font-size: 17px;
   background-color: #4CAF50;
   border-radius: 2px;
+}
+
+#btnBuscar{
+  float: left;
+  display: flex;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: #4CAF50;
+  border-radius: 2px;
+
+}
+
+#btnBuscar:hover {
+  background-color: #7e9079;
 }
 
 .topnav #borderNavigator:hover {

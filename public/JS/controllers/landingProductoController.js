@@ -11,7 +11,7 @@
          return;
      }
  };
- GetListaPersonas(); */
+ GetListaPersonas(); */ 
 
 
 const reservar = () => {
@@ -32,4 +32,9 @@ const reservar = () => {
     }
 };
 
+//Search controller function 
+//  let BuscadorPalabra = document.getElementById()
+const BuscadorAction = () => {
+    location.href = 'landingHospedaje.html';
+};
 reservar();

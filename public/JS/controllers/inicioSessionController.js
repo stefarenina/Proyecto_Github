@@ -27,8 +27,7 @@ const ValidarInputs = (pUser, pPass) => {
 
 const  RedireccionarUsuario = (PersonaDB) => {
 
-    let nombreRol = PersonaDB.Rol;
-
+    let nombreRol = obtenerRol(PersonaDB.Rol);
     if (nombreRol == 'Cliente') {
         location.href = 'landingProducto.html';
     }

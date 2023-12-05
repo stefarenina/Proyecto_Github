@@ -17,6 +17,16 @@ const ObtenerTipoIdentificacion = (ptipoId) => {
             return 'Sin identificacion';
     }
 }
+const obtenerRol = (pRol) => {
+    switch (pRol) {
+        case 1:
+            return 'Admin';
+        case 2:
+            return 'Cliente';
+        case 3:
+            return 'Negocio';
+    }
+}
 const ObtenerEstado = (pEstado) => {
     switch (pEstado) {
         case 1:
@@ -58,9 +68,6 @@ const resaltarInputInvalido = (pinputID) => {
         obj.style = orig;
     }, 5000);
 }
-
-
-
 function formatDate(date) {
     return (
         [

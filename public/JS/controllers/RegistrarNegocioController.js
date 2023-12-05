@@ -42,7 +42,7 @@ const RegistrarNegocio = async () => {
         'Direccion': direccion,
         'FotosNegocio': fotosNegocio,
         'Coordenadas': coordenadasString,
-        'Estado': "desactivado"
+        'Estado': "desactivado",
 
     };
     console.log(dataBody)
@@ -118,4 +118,4 @@ function updateMarkerPosition() {
   console.log(coordenadasString)
 }
 
-//buttonSubmit.addEventListener('click', RegistrarNegocio);
+buttonSubmit.addEventListener('click', RegistrarNegocio);

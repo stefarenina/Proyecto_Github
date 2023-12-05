@@ -29,3 +29,5 @@ router.put('/AgregarReservaCart', (req, res) => {
             });
         });
 });
+
+module.exports = router;

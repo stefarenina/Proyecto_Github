@@ -87,10 +87,16 @@ const RegistrarDatos = async () => {
         'FechaSalida': new Date(sfechaOut),
         'CantidadHuespedes': sCantidadHuespedes,
         'Descripcion': sDescripcion,
-        'Precio': sPrecio
+        'Precio': sPrecio,
     };
 
-    res = await ProcessPOSTReservas('RegistrarReserva', dataBody, null);
+    queryString = window.location.search;
+    urlParams = new URLSearchParams(queryString);
+    _id = urlParams.get('_id');
+
+    let params = { '_id': _id };
+
+    res = await ProcessPOSTReservas('RegistrarMisReservas', dataBody, null);
 
     if (res == null || res == undefined) {
         ImprimirMsjsError('Ocurrio un error inesperado');
@@ -107,7 +113,7 @@ const RegistrarDatos = async () => {
         });
     }
 
-    //ProcessPUT('AgregarReservaCart', s_id);
+    await ProcessPUT('AgregarReservaCart', params);
 };
 /*Validar datos*/
 const ValidarDatos = (pfechaIn, pfechaOut, pcantiHuespedes) => {

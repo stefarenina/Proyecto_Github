@@ -30,47 +30,13 @@
                             <tr>
                                 <th>Foto</th>
                                 <th>Nombre</th>
-                                <th>Descripción</th>
+                                <th>Categoria</th>
                                 <th>Precio</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td> <img src="./img/hotelCibelesResort.jpg" alt="imagen" class="imagen"> </td>
-                                <td>Cibeles Resort</td>
-                                <td>El Hotel Cibeles Resort se encuentra en Heredia, a 44 km del parque nacional de Poas, y ofrece alojamiento con piscina al aire libre, aparcamiento privado gratuito y jardín.</td>
-                                <td> $80000 </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td class="impuesto">Impuesto del 13% (IVA)</td>  
-                                <td>$10400</td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td class="impuesto">Vale de descuento</td>  
-                                <td> <input type="text" id="txtDescuento"></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td class="impuesto">Método de pago</td>
-                                <td> <select id="metodoPago" onchange="MetodoPagoChange()">
-                                    <option> -- Seleccionar --</option>
-                                    <option value="tarjeta">Tarjeta Crédito/Débito</option>
-                                    <option value="nuevoMetodo">Añadir método de pago</option>
-                                    <option value="">Tarjeta 1</option>
-                                    </select> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td class="impuesto">Total a pagar</td>
-                                <td>$90400</td>
-                            </tr>
+                        <tbody id="tbdReservas">
+                            <td><img src="./img/imgEjemplo.png" alt="Imagen de negocio" id="imgNegocio"></td>
+                            
                         </tbody> 
                 </table>
                 <button type="button" id="btnPagar" onclick="pagar()">Proceder con pago</button>
@@ -130,9 +96,13 @@
 
         </div>
     </footer>
+    <script src="https://upload-widget.cloudinary.com/2.4.17/global/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/utileria.js"></script>
     <script src="./JS/controllers/carritoCompras.js"></script>
     <script src="./JS/controllers/validacionCarrito.js"></script>
+    <script src="./JS/services/GeneralService.js"></script>
+    <script src="./JS/controllers/GetReservasCartController.js"></script>
     
 </body>
 </html>

@@ -11,7 +11,9 @@ router.post('/RegistrarMisReservas', (req, res) => {
         FechaEntrada: body.FechaEntrada,
         FechaSalida: body.FechaSalida,
         CantidadHuespedes: body.CantidadHuespedes,
-        Descripcion: body.Descripcion
+        Descripcion: body.Descripcion,
+        FotoNegocio: body.FotoNegocio,
+        inCart: body.inCart
     });
 
     nuevaReserva.save()

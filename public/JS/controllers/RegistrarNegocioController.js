@@ -96,7 +96,7 @@ const ValidarDatosNegocio = (pNombreNegocio, pDescripcion, pNumeroContacto, pCat
     return true;
 };
 
-var map = L.map('map').setView([9.8, -84], 7); // Centro del mapa y nivel de zoom inicial
+let map = L.map('map').setView([9.8, -84], 7); // Centro del mapa y nivel de zoom inicial
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'

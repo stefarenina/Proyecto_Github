@@ -31,7 +31,7 @@ const CargarDatos = (pNegocio) => {
     document.getElementById('precioNoche').innerHTML = 'Precio por noche: ₡'+pNegocio.Precio;
     Nombre=pNegocio.NombreNegocio;
     Descripcion=pNegocio.Descripcion;
-    Precio=pNegocio.Precio * cantiHuespedes;
+    Precio=pNegocio.Precio;
     console.log(pNegocio)
     coordenadasObjeto = JSON.parse(pNegocio.Coordenadas);
     crearMarcador();

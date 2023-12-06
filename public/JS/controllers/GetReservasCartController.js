@@ -17,6 +17,7 @@ GetListaReservasInCart();
 const ImprimirDatosCart = () => {
     let tbody = document.getElementById('tbdReservas');
     tbody.innerHTML = '';
+    
 
     for (let i = 0; i < listaNegocio.length; i++) {
         if (listaNegocio[i].inCart === true) {
@@ -28,10 +29,12 @@ const ImprimirDatosCart = () => {
             let celdaPrecio = fila.insertCell();
             
 
-            celdaFoto.innerHTML = listaNegocio[i].FotosNegocio;
+            celdaFoto.innerHTML = `<td><img src="${listaNegocio[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
             celdaNombre.innerHTML = listaNegocio[i].NombreNegocio;
             celdaCategoria.innerHTML = listaNegocio[i].Categoria;
             celdaPrecio.innerHTML = listaNegocio[i].Precio;
+
+            tbody.appendChild(fila);
         }
 
 

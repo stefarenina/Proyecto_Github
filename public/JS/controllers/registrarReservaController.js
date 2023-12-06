@@ -111,7 +111,6 @@ const RegistrarDatos = async () => {
             text: res.msj,
             confirmButtonText: 'Ok'
         }).then(resSwetAlert => {
-            actualizarContador();
             location.href = 'landingProducto.html'
         });
     }

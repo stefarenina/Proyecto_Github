@@ -69,8 +69,8 @@ let btnLimpiarCarrito = document.getElementById('btnVaciar');
 btnLimpiarCarrito.addEventListener('click', async () =>{
     let res = await ProcessPUT('LimpiarCart');
 
-    if (res == null || res == undefined) {
-        ImprimirMsjsError('Ocurrio un error inesperado');
+    if (res.info.modifiedCount === 0) {
+        ImprimirMsjsError('No hay datos en el carrito que eliminar, agrege algo al carrito.');
     } else if (res.resultado == false) {
         ImprimirMsjsError(res.msj);
     } else {
@@ -79,4 +79,5 @@ btnLimpiarCarrito.addEventListener('click', async () =>{
             title: 'Se limpio el carrito de manera correcta',
         })
     }
+    GetListaReservasInCart();
 })

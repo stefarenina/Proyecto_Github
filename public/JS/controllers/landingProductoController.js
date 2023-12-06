@@ -1,5 +1,43 @@
 'use strict';
 
+let correo = document.getElementById('Correo').value;
+
+const Contactarnos = () => {
+    let names = document.getElementById('Nombre').value;
+    let correo = document.getElementById('Correo').value;
+    let mensaje = document.getElementById('Mensaje').value;
+
+    if (names == '' || names == 'null' || names == 'undefined'){
+        swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor escriba su nombre.'
+        });
+    } else if (correo == '' || correo == 'null' || correo == 'undefined'){
+        swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor escriba su correo.'
+        });
+    } else if (mensaje == '' || mensaje == 'null' || mensaje == 'undefined'){
+        swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor escriba el mensaje que desea enviarnos.'
+        });
+    }
+    else {
+        swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'El mensaje ha sido enviado con éxito.'
+        });
+    }
+}
+
+
+
+
 
 /*  let listaNegocios = [];
  const GetListaNegocios = async () => {

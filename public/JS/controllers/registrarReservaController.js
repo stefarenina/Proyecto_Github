@@ -7,11 +7,13 @@ let fechaOut = document.getElementById('fechaSalida');
 let cantiHuespedes = document.getElementById('huespedes');
 let botonReservar = document.getElementById('reservar');
 let input_id = document.getElementById('txt_id');
+
 let coordenadasObjeto;
 let Nombre;
 let Descripcion;
 let Precio;
 let dias;
+
 
 const calcularDias = () => {
     let fechaEntrada = new Date(document.getElementById("fechaEntrada").value);
@@ -60,8 +62,6 @@ const IdentificarAccion = async () => {
 IdentificarAccion();
 
 
-
-
 /*Registrar reserva a carrito de compra*/
 const RegistrarDatos = async () => {
     let sNombre=Nombre;
@@ -70,6 +70,7 @@ const RegistrarDatos = async () => {
     let sCantidadHuespedes = Number(cantiHuespedes.value);
     let sDescripcion= Descripcion;
     let sPrecio= Number(Precio);
+    
 
     //aca seguirian los subdocumentos version 1
 
@@ -96,6 +97,7 @@ const RegistrarDatos = async () => {
 
     let params = { '_id': _id };
 
+
     res = await ProcessPOSTReservas('RegistrarMisReservas', dataBody, null);
 
     if (res == null || res == undefined) {
@@ -109,12 +111,15 @@ const RegistrarDatos = async () => {
             text: res.msj,
             confirmButtonText: 'Ok'
         }).then(resSwetAlert => {
+            actualizarContador();
             location.href = 'landingProducto.html'
         });
     }
 
     await ProcessPUT('AgregarReservaCart', params);
+    await ProcessPUT('AumentarNumeroCart', params);
 };
+
 /*Validar datos*/
 const ValidarDatos = (pfechaIn, pfechaOut, pcantiHuespedes) => {
     if (pfechaIn == '' || pfechaIn == null || pfechaIn == undefined || new Date(pfechaIn) < new Date()) {

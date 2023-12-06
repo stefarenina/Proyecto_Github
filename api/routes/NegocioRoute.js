@@ -16,7 +16,8 @@ router.post('/RegistrarNegocio', (req, res) => {
         Direccion: body.Direccion,
         FotosNegocio: body.FotosNegocio,
         Coordenadas: body.Coordenadas,
-        Estado: body.Estado
+        Estado: body.Estado,
+        Cantidad: 0
 
     });
 

@@ -11,7 +11,8 @@ const schemaNegocio = mongoose.Schema({
     FotosNegocio: { type: String, required: false, unique: false },
     Coordenadas: { type: String, required: true, unique: false },
     Estado: { type: String, required: true, unique: false },
-    inCart: { type: Boolean, default: false }
+    inCart: { type: Boolean, default: false },
+    Cantidad: { type: Number, required: false, unique: false, default: 0}
 });
 
 module.exports = mongoose.model('Negocio', schemaNegocio, 'Negocios');

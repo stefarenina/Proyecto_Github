@@ -61,7 +61,22 @@ table{
 #btnPagar:hover{
     cursor: pointer;
     background-color: #45a049
+}
 
+#btnVaciar{
+    width: 15%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 25px;
+    border: none;
+    border-radius: 4px;
+    float:left
+}
+
+#btnVaciar:hover{
+    cursor: pointer;
+    background-color: #45a049
 }
 
 
@@ -127,4 +142,11 @@ input[type=text]{
 
 td{
     text-align: center;
+    border-bottom: solid black;
+      
+}
+
+.totalCarrito{
+    display: flex;
+    justify-content: end;
 }

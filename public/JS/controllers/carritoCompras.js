@@ -10,7 +10,6 @@ cerrarModal.addEventListener('click', () => {
 
 function MetodoPagoChange() {
     let selectInput = document.getElementById("select1");
-    let selectValue = selectInput.value;
     if (selectInput.value == 'opcion1') {
         modal.style.display = "block";
     }else if (selectInput.value == 'opcion2') {

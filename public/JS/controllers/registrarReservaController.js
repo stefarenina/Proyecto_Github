@@ -8,11 +8,15 @@ let cantiHuespedes = document.getElementById('huespedes');
 let botonReservar = document.getElementById('reservar');
 let input_id = document.getElementById('txt_id');
 
+let FotoNegocio;
 let coordenadasObjeto;
 let Nombre;
 let Descripcion;
 let Precio;
 let dias;
+let categoria;
+let sesion;
+let Personaid;
 
 
 const calcularDias = () => {
@@ -46,36 +50,74 @@ const IdentificarAccion = async () => {
     _id = urlParams.get('_id');
 
     let params = { '_id': _id };
-    console.log("ah i am de the browser")
+    
     let Negocio = await ProcessGET('BuscarNegocioId', params);
     if (Negocio != null && Negocio.resultado == true && Negocio.NegocioBD != null) {
         CargarDatos(Negocio.NegocioBD);
 
     } else {
         ImprimirMsjsError(Negocio.msj);
-        console.log("a")
-        console.log(Negocio)
-        console.log(Negocio.NegocioBD)
+
     }
 
 };
 IdentificarAccion();
 
+const IdentificarAccionCart = async () => {
+    queryString = window.location.search;
+    urlParams = new URLSearchParams(queryString);
+    _id = urlParams.get('_id');
+
+    let params = { '_id': _id };
+    
+    let Negocio = await ProcessGET('BuscarNegocioId', params);
+    if (Negocio != null && Negocio.resultado == true && Negocio.NegocioBD != null) {
+        CargarDatosCart(Negocio.NegocioBD);
+    } else {
+        ImprimirMsjsError(Negocio.msj);
+
+    }
+
+};
+
+const CargarDatosCart = (pNegocio) => {
+    FotoNegocio = pNegocio.FotosNegocio;
+    Nombre = pNegocio.NombreNegocio;
+    Descripcion = pNegocio.Descripcion;
+    Precio = pNegocio.Precio;
+    categoria = pNegocio.Categoria;
+
+};
+
+
+//let buttonSubmit = document.getElementById('btnReg');
+const GetData = async () => {   
+
+    sesion = GetSesionActiva();
+    console.log(sesion);
+    PersonaID = sesion._id;
+
+    };
+
+GetData();  
 
 /*Registrar reserva a carrito de compra*/
 const RegistrarDatos = async () => {
-    let sNombre=Nombre;
+    IdentificarAccionCart();
+
+    let sNombre = Nombre;
     let sfechaIn = fechaIn.value;
     let sfechaOut = fechaOut.value;
     let sCantidadHuespedes = Number(cantiHuespedes.value);
     let sDescripcion= Descripcion;
     let sPrecio= Number(Precio);
     let sEstado=false;
+    let sFoto = FotoNegocio;
+    let sCategoria = categoria;
+
     
 
     //aca seguirian los subdocumentos version 1
-
-    let s_id = input_id.value;
 
     if (ValidarDatos(sfechaIn, sfechaOut, sCantidadHuespedes) == false) {
         return;
@@ -83,7 +125,6 @@ const RegistrarDatos = async () => {
 
     let res = null;
     let dataBody = {
-        '_id': s_id,
         'Nombre':sNombre,
         'FechaEntrada': sfechaIn,
         'FechaSalida': sfechaOut,
@@ -91,6 +132,10 @@ const RegistrarDatos = async () => {
         'Descripcion': sDescripcion,
         'Precio': sPrecio,
         'Estado': sEstado,
+        'FotosNegocio': sFoto,
+        'Categoria': sCategoria,
+        'PersonaID' : PersonaID
+
     };
 
     queryString = window.location.search;
@@ -100,7 +145,7 @@ const RegistrarDatos = async () => {
     let params = { '_id': _id };
 
 
-    res = await ProcessPOSTReservas('RegistrarMisReservas', dataBody, null);
+    res = await ProcessPOSTReservas('RegistrarReservaPendiente', dataBody, null);
 
     if (res == null || res == undefined) {
         ImprimirMsjsError('Ocurrio un error inesperado');

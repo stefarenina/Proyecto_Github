@@ -58,6 +58,7 @@ function ImprimirDatosCart() {
     </td>
     </div>
     `;
+    tbody.appendChild(filaMetodo);
 
     let filaTotal = tbody.insertRow();
     let celdaTotal = filaTotal.insertCell();
@@ -67,7 +68,6 @@ function ImprimirDatosCart() {
     celdaTotalPrecio.innerHTML = `<strong>${total}</strong>`;
     tbody.appendChild(filaTotal);
 }
-
 
 let btnLimpiarCarrito = document.getElementById('btnVaciar');
 

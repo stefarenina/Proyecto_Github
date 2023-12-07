@@ -227,13 +227,13 @@
     <h2>Contacto</h2>
     <p>¡Contáctanos para obtener más información sobre nuestros servicios!</p>
     <form>
-        <input type="text" placeholder="Nombre y apellido" id="Nombre">
-        <input type="email" placeholder="Correo Electrónico" id="Correo">
-        <textarea placeholder="Mensaje" id="Mensaje"></textarea>
+        <input type="text" placeholder="Nombre y apellido" id="nombreContacto">
+        <input type="email" placeholder="Correo Electrónico" id="correoContacto">
+        <textarea placeholder="Mensaje" id="descripcionContacto"></textarea>
     </form>
-    <button type="button" onclick="Contactarnos()" id="btnContacto">Enviar</button>
+    <button type="button" id="btnContacto" value="Registrar">Enviar</button>
   </section>
-
+  <!-- onclick="Contactarnos()" -->
   <footer class="footer">
     <div class="footer-content container">
         <div class="link">
@@ -271,14 +271,15 @@
   
   <script src="./JS/utileria.js"></script>
   <script src="./JS/services/GeneralService.js"></script>
+  <script src="./JS/services/GeneralServiceContacto.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+  <script src="./JS/controllers/GestionarPersonaContactoController.js"></script>
   <script src="./JS/controllers/inicioSessionController.js"></script>
   <script src="./JS/controllers/landingProductoController.js"></script>
  
 
-  <script src="./js/Controllers/GestionarPersonaController.js"></script>
+  <!-- <script src="./js/Controllers/GestionarPersonaController.js"></script> -->
 
 
 </body>

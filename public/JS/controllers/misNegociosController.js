@@ -15,7 +15,7 @@ const GetListaNegocios = async () => {
     }
 };
 GetListaNegocios();
-const GetData = async () => {   
+const GetData = async () => {
 
     sesion = GetSesionActiva();
     _id = sesion._id;

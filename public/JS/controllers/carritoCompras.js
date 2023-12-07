@@ -3,6 +3,7 @@
 let modal = document.querySelector("#modal");
 let cerrarModal = document.getElementById('closeModal');
 
+
 cerrarModal.addEventListener('click', () => {
     modal.style.display = "none";
 })
@@ -18,14 +19,34 @@ function MetodoPagoChange() {
     }
 }
 
-function pagar(){
+let btnPagar= document.getElementById('btnPagar');
+
+const ModificarDatosReserva = async () => {
+    let sEstado = true;
+
+    let res = null;
+    let dataBody = {
+        'Estado': sEstado,
+    };
+
+    res = await ProcessPUTReservas('ModificarReserva', dataBody, null);
+
     swal.fire({
         icon: 'success',
-        title: 'Pago Realizado',
-        text: 'Se le enviara un correo electronico con la factura'
+        title: 'Excelente!',
+        text: res.msj,
+        confirmButtonText: 'Ok'
+    }).then(resSwetAlert => {
+        location.href = 'misReservas.html'
+
+        limpiarCarrito();
     });
+};
+
+
+const limpiarCarrito = async () => {
+    await ProcessPUT('LimpiarCart');
 }
 
 
-
-
+btnPagar.addEventListener('click', ModificarDatosReserva);

@@ -14,12 +14,12 @@ salir.addEventListener("click", () => {
 });
 
 
-function CancelarReserva(){
+function CancelarReserva() {
     modal.showModal();
 };
 
 
-function ConfirmarCancelacion(){
+function ConfirmarCancelacion() {
     swal.fire({
         icon: 'success',
         title: 'Realizado',
@@ -43,25 +43,27 @@ const GetListaReservas = async () => {
 
 GetListaReservas();
 
-const ImprimirDatos = () => {
-    let tbody = document.getElementById('tbdMisReservas');
-    tbody.innerHTML = '';
+const ImprimirDatos = () => {  
+        let tbody = document.getElementById('tbdMisReservas');
+        tbody.innerHTML = '';
 
-    for (let i = 0; i < listaReservas.length; i++) {
+        for (let i = 0; i < listaReservas.length; i++) {
+            if (listaReservas[i].Estado === true){
 
-        let fila = tbody.insertRow();
-        let celdaNombre = fila.insertCell();
-        let celdaFechaIN = fila.insertCell();
-        let celdaFechaOut = fila.insertCell();
-        let celdaCantidadHuespedes = fila.insertCell();
-        let celdaAcciones = fila.insertCell();
+            let fila = tbody.insertRow();
+            let celdaNombre = fila.insertCell();
+            let celdaFechaIN = fila.insertCell();
+            let celdaFechaOut = fila.insertCell();
+            let celdaCantidadHuespedes = fila.insertCell();
+            let celdaAcciones = fila.insertCell();
 
-        celdaNombre.innerHTML = listaReservas[i].Nombre;
-        celdaFechaIN.innerHTML = listaReservas[i].FechaEntrada;
-        celdaFechaOut.innerHTML = listaReservas[i].FechaSalida;
-        celdaCantidadHuespedes.innerHTML = listaReservas[i].CantidadHuespedes;
-
+            celdaNombre.innerHTML = listaReservas[i].Nombre;
+            celdaFechaIN.innerHTML = listaReservas[i].FechaEntrada;
+            celdaFechaOut.innerHTML = listaReservas[i].FechaSalida;
+            celdaCantidadHuespedes.innerHTML = listaReservas[i].CantidadHuespedes;
         
+
+
         let btnDelete = document.createElement('button');
         btnDelete.type = 'button';
         btnDelete.innerText = 'Cancelar';
@@ -75,7 +77,7 @@ const ImprimirDatos = () => {
                 confirmButtonText: 'Confirmar',
                 denyButtonText: 'Cancelar',
                 showDenyButton: true
-            }).then((res) =>{
+            }).then((res) => {
                 confirmacion = res.isConfirmed;
             });
 
@@ -98,5 +100,6 @@ const ImprimirDatos = () => {
         divBtns.appendChild(btnDelete);
 
         celdaAcciones.appendChild(divBtns);
+        }
     }
 };

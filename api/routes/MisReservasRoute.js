@@ -10,7 +10,8 @@ router.post('/RegistrarMisReservas', (req, res) => {
         Nombre: body.Nombre,
         FechaEntrada: body.FechaEntrada,
         FechaSalida: body.FechaSalida,
-        CantidadHuespedes: body.CantidadHuespedes
+        CantidadHuespedes: body.CantidadHuespedes,
+        Estado: body.Estado
     });
 
     nuevaReserva.save()
@@ -88,6 +89,26 @@ router.delete('/EliminarReserva', (req, res) => {
             res.json({
                 resultado: false,
                 msj: 'No se pudo eliminar la reserva, ocurrio el siguiente error: ',
+                error
+            });
+        });
+});
+
+router.put('/ModificarReserva', (req, res) => {
+    let body = req.body;
+    Reserva.updateMany({}, { $set: body })
+        .then((info) => {
+            console.log(info);
+            res.json({
+                resultado: true,
+                msj: 'Se realizó el pago correctamente',
+                info
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo actualizar a la persona, ocurrió el siguiente error: ',
                 error
             });
         });

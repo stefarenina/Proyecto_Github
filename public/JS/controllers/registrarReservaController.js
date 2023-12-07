@@ -111,9 +111,10 @@ const RegistrarDatos = async () => {
     let sCantidadHuespedes = Number(cantiHuespedes.value);
     let sDescripcion= Descripcion;
     let sPrecio= Number(Precio);
+    let sEstado=false;
     let sFoto = FotoNegocio;
     let sCategoria = categoria;
-    let sPersonaID = PersonaID;
+    
     
 
     //aca seguirian los subdocumentos version 1
@@ -125,14 +126,15 @@ const RegistrarDatos = async () => {
     let res = null;
     let dataBody = {
         'Nombre':sNombre,
-        'FechaEntrada': new Date(sfechaIn),
-        'FechaSalida': new Date(sfechaOut),
+        'FechaEntrada': sfechaIn,
+        'FechaSalida': sfechaOut,
         'CantidadHuespedes': sCantidadHuespedes,
         'Descripcion': sDescripcion,
         'Precio': sPrecio,
+        'Estado': sEstado,
         'FotosNegocio': sFoto,
         'Categoria': sCategoria,
-        'PersonaID' : sPersonaID
+        'PersonaID' : PersonaID
     };
 
     res = await ProcessPOSTReservas('RegistrarReservaPendiente', dataBody, null);

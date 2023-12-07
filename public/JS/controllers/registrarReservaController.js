@@ -70,6 +70,7 @@ const RegistrarDatos = async () => {
     let sCantidadHuespedes = Number(cantiHuespedes.value);
     let sDescripcion= Descripcion;
     let sPrecio= Number(Precio);
+    let sEstado=false;
     
 
     //aca seguirian los subdocumentos version 1
@@ -84,11 +85,12 @@ const RegistrarDatos = async () => {
     let dataBody = {
         '_id': s_id,
         'Nombre':sNombre,
-        'FechaEntrada': new Date(sfechaIn),
-        'FechaSalida': new Date(sfechaOut),
+        'FechaEntrada': sfechaIn,
+        'FechaSalida': sfechaOut,
         'CantidadHuespedes': sCantidadHuespedes,
         'Descripcion': sDescripcion,
         'Precio': sPrecio,
+        'Estado': sEstado,
     };
 
     queryString = window.location.search;

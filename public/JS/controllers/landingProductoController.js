@@ -1,6 +1,6 @@
 'use strict';
 
-let correo = document.getElementById('Correo').value;
+// let correo = document.getElementById('Correo').value;
 
 const Contactarnos = () => {
     let names = document.getElementById('Nombre').value;

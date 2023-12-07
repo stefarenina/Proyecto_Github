@@ -26,9 +26,10 @@ const ValidarInputs = (pUser, pPass) => {
 };
 
 const  RedireccionarUsuario = (PersonaDB) => {
-
+    
     let nombreRol = obtenerRol(PersonaDB.Rol);
     if (nombreRol == 'Cliente') {
+        console.log("hashdashd")
         location.href = 'landingProducto.html';
     }
     if (nombreRol == 'Admin') {
@@ -39,7 +40,7 @@ const  RedireccionarUsuario = (PersonaDB) => {
 const IniciarSesion = async () => {
     let user = inputUser.value;
     let pass = inputPass.value;
-    
+
     if (ValidarInputs(user, pass) == false) {
         return;
     }
@@ -52,6 +53,7 @@ const IniciarSesion = async () => {
     let res = await ProcessGET('AutenticarPersona', params);
 
     if (res != null && res.resultado == true && res.PersonaDB != null) {
+        
         RedireccionarUsuario(res.PersonaDB);
         SetSesionActiva(res.PersonaDB);
     } else {

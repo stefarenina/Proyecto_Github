@@ -55,7 +55,7 @@ router.get('/BuscarReservaId', (req, res) => {
             _id: param._id
         })
         .then((Reserva_testDB) => {
-            console.log("jijiji reserva")
+
             res.json({
                 resultado: true,
                 msj: 'Los datos se obtuvieron de manera correcta1',
@@ -63,7 +63,7 @@ router.get('/BuscarReservaId', (req, res) => {
             });
         })
         .catch((error) => {
-            console.log("jijojo")
+
             res.json({
                 resultado: false,
                 msj: 'No se pudo obtener la reserva, ocurrio el siguiente error: ',

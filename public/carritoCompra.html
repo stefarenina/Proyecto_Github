@@ -15,7 +15,7 @@
           <div>
             <a href="./registrarNegocio.html" id="btnRegistrar">Registrar Negocio</a>
             <a href="./perfil.html"><img src="./img/userPlaceholder.png" alt="Imagen de usuario" id="userimg"></a>
-            <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"><span id="cuentaCarrito">0</span></a>
+            <a href="./carritoCompra.html"><img src="./img/shopping-bag-regular-24.png" alt="Carrito de compras"></a>
             <button type="button" id="logButton" onclick="CerrarSesion()">Cerrar Sesión</button>
           </div>
         </nav>
@@ -35,12 +35,6 @@
                             </tr>
                         </thead>
                         <tbody id="tbdReservas">
-                            <tr>
-                                <td>" "</td>
-                                <td>" "</td>
-                                <td>Total a Pagar</td>
-                                <td id="totalPagar"></td>
-                            </tr>
                         </tbody> 
                 </table>
                 <button type="submit" id="btnVaciar">Limpiar Carrito</button>
@@ -53,6 +47,7 @@
     <div id="modal">
         <form id="metodoPagoForm">
             <div id="modal-content">
+                <p id="closeModal">X</p>
                 <label for="nombre_tarjeta">Nombre en la Tarjeta</label>
                 <input type="text" id="nombre_tarjeta" placeholder="Digite el nombre en la Tarjeta">
 

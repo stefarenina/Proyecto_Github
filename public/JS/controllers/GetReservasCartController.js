@@ -1,27 +1,31 @@
 'use strict';
 
-let listaNegocio = [];
-const GetListaReservasInCart = async () => {
+let listaNegocios = [];
+const GetListaReservasInCarts = async () => {
     let res = await ProcessGET('ListarNegocios', null);
     if (res != null && res.resultado == true) {
-        listaNegocio = res.listaNegociosBD;
+        listaNegocios = res.listaNegociosBD;
 
         ImprimirDatosCart();
+        AumentarCarrito();
     } else {
         ImprimirMsjsError(res.msj);
         return;
     }
 };
-GetListaReservasInCart();
+GetListaReservasInCarts();
 
-const ImprimirDatosCart = () => {
+
+
+function ImprimirDatosCart (){
     let tbody = document.getElementById('tbdReservas');
     tbody.innerHTML = '';
     let total = 0;
+
     
 
-    for (let i = 0; i < listaNegocio.length; i++) {
-        if (listaNegocio[i].inCart === true) {
+    for (let i = 0; i < listaNegocios.length; i++) {
+        if (listaNegocios[i].inCart === true) {
 
             let fila = tbody.insertRow();
             let celdaFoto = fila.insertCell();
@@ -29,10 +33,10 @@ const ImprimirDatosCart = () => {
             let celdaCategoria = fila.insertCell();
             let celdaPrecio = fila.insertCell();
 
-            celdaFoto.innerHTML = `<td><img src="${listaNegocio[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
-            celdaNombre.innerHTML = listaNegocio[i].NombreNegocio;
-            celdaCategoria.innerHTML = listaNegocio[i].Categoria;
-            celdaPrecio.innerHTML = listaNegocio[i].Precio;
+            celdaFoto.innerHTML = `<td><img src="${listaNegocios[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
+            celdaNombre.innerHTML = listaNegocios[i].NombreNegocio;
+            celdaCategoria.innerHTML = listaNegocios[i].Categoria;
+            celdaPrecio.innerHTML = listaNegocios[i].Precio;
 
             tbody.appendChild(fila);
 
@@ -50,18 +54,7 @@ const ImprimirDatosCart = () => {
 }
 
 
-let contadorCarrito = 0;
-let span = document.getElementById('cuentaCarrito').value;
 
-const actualizarContador = () => {
-    for (let i = 0; i < listaNegocio.length; i++) {
-        if (listaNegocio[i].Cantidad === 1) {
-            contadorCarrito = contadorCarrito + 1;
-            span.test
-        }
-    }
-
-};
 
 
 let btnLimpiarCarrito = document.getElementById('btnVaciar');

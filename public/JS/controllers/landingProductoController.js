@@ -36,20 +36,19 @@ const Contactarnos = () => {
 }
 
 
-
-
-
-/*  let listaNegocios = [];
+ /*let listaNegocios = [];
  const GetListaNegocios = async () => {
+    console.log('GetListaNegocios');
      let res = await ProcessGET('ListarNegocios', null);
      if (res != null && res.resultado == true) {
-         listaNegocios = res.ListaNegociosBD;
+         listaNegocios = res.listaNegociosBD;
+         document.getElementById('cuentaCarrito').innerHTML = listaNegocios.length;
      } else {
          ImprimirMsjsError(res.msj);
          return;
      }
  };
- GetListaPersonas(); */ 
+ GetListaNegocios();  */
 
 
 const reservar = () => {

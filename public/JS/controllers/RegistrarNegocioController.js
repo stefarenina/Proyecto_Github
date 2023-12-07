@@ -7,11 +7,19 @@ let inputNumeroContacto = document.getElementById('telNumber');
 let inputFotosNegocio = document.getElementById('placeFotos');
 let inputDireccion = document.getElementById('txtDireccion');
 let inputPrecio = document.getElementById('txtPrecio');
+let sesion;
+let _id;
 //let buttonSubmit = document.getElementById('btnReg');
 
+const GetData = async () => {   
 
+    sesion = GetSesionActiva();
+    _id = sesion._id;
+
+    };
+
+GetData();   
 const RegistrarNegocio = async () => {
-    console.log("HUIHIHJ") 
     let nombreNegocio = inputNombreNegocio.value;
     let descripcionNegocio = inputDescripcion.value;
     let categoria = null;
@@ -29,9 +37,7 @@ const RegistrarNegocio = async () => {
     if (ValidarDatosNegocio(nombreNegocio, descripcionNegocio, numeroContacto, categoria, direccion, fotosNegocio) === false) {
         return;
     }
-    
-
-
+ 
     let res = null;
     let dataBody = {
         'NombreNegocio': nombreNegocio,
@@ -42,6 +48,7 @@ const RegistrarNegocio = async () => {
         'Direccion': direccion,
         'FotosNegocio': fotosNegocio,
         'Coordenadas': coordenadasString,
+        'Dueño': _id,
         'Estado': "desactivado",
 
     };

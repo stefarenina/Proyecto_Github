@@ -33,7 +33,6 @@ router.post('/RegistrarPersona', (req, res) => {
         })
         .catch((error) => {
             console.log(error)
-            console.log("naninimnji")
             res.json({
                 resultado: false,
                 msj: 'No se pudo registrar la persona, ocurrio el siguiente error: ',
@@ -103,13 +102,12 @@ router.get('/BuscarPersonaId', (req, res) => {
         });
 });
 router.get('/AutenticarPersona', function (req, res) {
-    console.log("hjarl")
     let params = req.query;
     Persona.findOne({
         Email: params.Email,
         Password: params.Password
     }).then((PersonaDB) => {
-        console.log("hjasadsarl")
+
         console.log(PersonaDB)
         if (PersonaDB == null) {
             res.json({

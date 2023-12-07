@@ -10,6 +10,7 @@ const schemaNegocio = mongoose.Schema({
     Direccion: { type: String, required: true, unique: false },
     FotosNegocio: { type: String, required: false, unique: false },
     Coordenadas: { type: String, required: true, unique: false },
+    Dueño: { type: String, required: true, unique: false },
     Estado: { type: String, required: true, unique: false },
     inCart: { type: Boolean, default: false },
     Cantidad: { type: Number, required: false, unique: false, default: 0}

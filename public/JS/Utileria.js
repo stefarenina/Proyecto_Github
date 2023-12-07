@@ -18,14 +18,7 @@ const ObtenerTipoIdentificacion = (ptipoId) => {
     }
 }
 const obtenerRol = (pRol) => {
-    switch (pRol) {
-        case 1:
-            return 'Admin';
-        case 2:
-            return 'Cliente';
-        case 3:
-            return 'Negocio';
-    }
+    return pRol
 }
 const ObtenerEstado = (pEstado) => {
     switch (pEstado) {

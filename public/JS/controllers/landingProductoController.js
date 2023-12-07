@@ -1,39 +1,39 @@
 'use strict';
 
-let correo = document.getElementById('Correo').value;
+// let correo = document.getElementById('Correo').value;
 
-const Contactarnos = () => {
-    let names = document.getElementById('Nombre').value;
-    let correo = document.getElementById('Correo').value;
-    let mensaje = document.getElementById('Mensaje').value;
+// const Contactarnos = () => {
+//     let names = document.getElementById('nombreContacto').value;
+//     let correo = document.getElementById('correoContacto').value;
+//     let mensaje = document.getElementById('descripcionContacto').value;
 
-    if (names == '' || names == 'null' || names == 'undefined'){
-        swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Por favor escriba su nombre.'
-        });
-    } else if (correo == '' || correo == 'null' || correo == 'undefined'){
-        swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Por favor escriba su correo.'
-        });
-    } else if (mensaje == '' || mensaje == 'null' || mensaje == 'undefined'){
-        swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Por favor escriba el mensaje que desea enviarnos.'
-        });
-    }
-    else {
-        swal.fire({
-            icon: 'success',
-            title: 'Success',
-            text: 'El mensaje ha sido enviado con éxito.'
-        });
-    }
-}
+//     if (names == '' || names == 'null' || names == 'undefined'){
+//         swal.fire({
+//             icon: 'error',
+//             title: 'Error',
+//             text: 'Por favor escriba su nombre.'
+//         });
+//     } else if (correo == '' || correo == 'null' || correo == 'undefined'){
+//         swal.fire({
+//             icon: 'error',
+//             title: 'Error',
+//             text: 'Por favor escriba su correo.'
+//         });
+//     } else if (mensaje == '' || mensaje == 'null' || mensaje == 'undefined'){
+//         swal.fire({
+//             icon: 'error',
+//             title: 'Error',
+//             text: 'Por favor escriba el mensaje que desea enviarnos.'
+//         });
+//     }
+//     else {
+//         swal.fire({
+//             icon: 'success',
+//             title: 'Success',
+//             text: 'El mensaje ha sido enviado con éxito.'
+//         });
+//     }
+// }
 
 
  /*let listaNegocios = [];
@@ -70,8 +70,25 @@ const reservar = () => {
 };
 
 //Search controller function 
-//  let BuscadorPalabra = document.getElementById()
+
 const BuscadorAction = () => {
-    location.href = 'landingHospedaje.html';
+    let palabra = document.getElementById('servicioBusqueda').value;
+    if (palabra == '' || palabra == 'null' || palabra == 'undefined'){
+        swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor escriba un servicio a buscar como: hospedaje, restaurantes o entretenimiento.'
+        });
+    }
+    return palabra;
 };
+
+// const Redireccionador = () => {
+//     if (BuscadorPalabra == 'hospedaje', 'hotel') {
+//         location.href = 'landingHospedaje.html';
+//     } else if (BuscadorPalabra == 'restaurantes', 'comida') {
+//         location.href = 'landingRestaurantes.html';
+//     }
+// };
+
 reservar();

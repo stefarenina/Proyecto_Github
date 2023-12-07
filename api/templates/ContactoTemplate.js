@@ -3,7 +3,7 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-this.EnviarEmail = (pCorreo) => {
+this.EnviarEmail = (pNombreCompleto, pCorreoContacto) => {
     //paso1
     let transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -16,20 +16,26 @@ this.EnviarEmail = (pCorreo) => {
     //paso 2
     let mailOptions = {
         from: process.env.MAIL_USER,
-        to: pCorreo,
-        subject: 'Gracias por contactarnos!',
+        to: pCorreoContacto,
+        subject: 'Bienvenido a la aplicacion de reservas',
         html: `
         <table border="0" cellpadding="0" cellspacing="0" width="600px" background-color="#2d3436" bgcolor="#2d3436">
             <tr height="200px">
                 <td>
                     <h1 style="color:#fff; text-align:center">
-                        Bienvenido a la aplicación de reservas, en unas horas habiles un representante se pondra en contacto con usted.
+                        Bienvenido
                     </h1>
+                    <p style="color:#fff; text-align:center">
+                        <span style:"color:#e84343">
+                            ${pNombreCompleto}
+                        </span>
+                        a la aplicación
+                    </p>
                 </td>
             </tr>
             <tr bgcolor="#fff">
                 <td style="text-align:center;">
-                    <p style="color: #000;">Una plataforma de reservas a su disposición!</p>
+                    <p style="color: #000;">Un Mundo de servicios a su disposición!</p>
                 </td>
             </tr>
         </table>

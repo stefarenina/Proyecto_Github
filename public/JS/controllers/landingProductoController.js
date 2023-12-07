@@ -71,8 +71,25 @@ const reservar = () => {
 };
 
 //Search controller function 
-//  let BuscadorPalabra = document.getElementById()
+
 const BuscadorAction = () => {
-    location.href = 'landingHospedaje.html';
+    let palabra = document.getElementById('servicioBusqueda').value;
+    if (palabra == '' || palabra == 'null' || palabra == 'undefined'){
+        swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor escriba un servicio a buscar como: hospedaje, restaurantes o entretenimiento.'
+        });
+    }
+    return palabra;
 };
+
+// const Redireccionador = () => {
+//     if (BuscadorPalabra == 'hospedaje', 'hotel') {
+//         location.href = 'landingHospedaje.html';
+//     } else if (BuscadorPalabra == 'restaurantes', 'comida') {
+//         location.href = 'landingRestaurantes.html';
+//     }
+// };
+
 reservar();

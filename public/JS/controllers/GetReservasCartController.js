@@ -1,28 +1,27 @@
 'use strict';
 
 let listaNegocios = [];
-const GetListaReservasInCarts = async () => {
+const GetListaReservasInCart = async () => {
     let res = await ProcessGET('ListarNegocios', null);
     if (res != null && res.resultado == true) {
         listaNegocios = res.listaNegociosBD;
 
         ImprimirDatosCart();
-        AumentarCarrito();
     } else {
         ImprimirMsjsError(res.msj);
         return;
     }
 };
-GetListaReservasInCarts();
+GetListaReservasInCart();
 
 
 
-function ImprimirDatosCart (){
+function ImprimirDatosCart() {
     let tbody = document.getElementById('tbdReservas');
     tbody.innerHTML = '';
     let total = 0;
 
-    
+
 
     for (let i = 0; i < listaNegocios.length; i++) {
         if (listaNegocios[i].inCart === true) {
@@ -44,6 +43,22 @@ function ImprimirDatosCart (){
         }
     }
 
+    let filaMetodo = tbody.insertRow();
+    let celdaMetodo = filaMetodo.insertCell();
+    celdaMetodo.colSpan = 4;
+    celdaMetodo.innerHTML = `
+    <div class="impuesto">
+    <td>Metodo de pago</td>
+    <td><select id="select1" onchange="MetodoPagoChange()">
+    <option> -- Seleccionar --</option>
+    <option value="opcion1" id="anadirTarjeta">Tarjeta Credito/Debito</option>
+    <option value="opcion2">Anadir metodo de pago</option>
+    <option value="opcion3">Tarjeta 1</option>
+    </select> 
+    </td>
+    </div>
+    `;
+
     let filaTotal = tbody.insertRow();
     let celdaTotal = filaTotal.insertCell();
     celdaTotal.colSpan = 3;
@@ -54,12 +69,9 @@ function ImprimirDatosCart (){
 }
 
 
-
-
-
 let btnLimpiarCarrito = document.getElementById('btnVaciar');
 
-btnLimpiarCarrito.addEventListener('click', async () =>{
+btnLimpiarCarrito.addEventListener('click', async () => {
     let res = await ProcessPUT('LimpiarCart');
 
     if (res.info.modifiedCount === 0) {

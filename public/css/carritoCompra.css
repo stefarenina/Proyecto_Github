@@ -42,9 +42,11 @@ table{
 }
 
 .impuesto{
-    border-top: solid #5D9367;
+    display: flex;
+    justify-content: end;
     text-align: end;
     width: auto;
+    padding-right: 10px;
 }
 
 #btnPagar{
@@ -149,4 +151,24 @@ td{
 .totalCarrito{
     display: flex;
     justify-content: end;
+}
+
+#select1{
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#modal-content p{
+    font-size: 20px;
+    color: #B9CFB9;
+    text-align: right;
+    display: flex;
+    float: inline-end;
+}
+#modal-content p:hover{
+    font-size: 20px;
+    text-align: right;
+    color: black;
+    cursor: pointer;
 }

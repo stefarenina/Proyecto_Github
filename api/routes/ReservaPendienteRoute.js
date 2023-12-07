@@ -55,7 +55,7 @@ router.get('/ListarReservasPendientes', (req, res) => {
 router.get('/BuscarReservaPendienteId', (req, res) => {
     let param = req.query;
 
-    Reserva.findOne({ _id: param._id })
+    ReservaPendiente.find({ PersonaID: param.PersonaID })
         .then((ReservaBD) => {
             res.json({
                 resultado: true,

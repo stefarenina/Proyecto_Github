@@ -14,9 +14,8 @@ let Nombre;
 let Descripcion;
 let Precio;
 let dias;
-let categoria;
 let sesion;
-let Personaid;
+let PersonaID;
 
 
 const calcularDias = () => {
@@ -80,6 +79,8 @@ const IdentificarAccionCart = async () => {
 
 };
 
+let categoria;
+
 const CargarDatosCart = (pNegocio) => {
     FotoNegocio = pNegocio.FotosNegocio;
     Nombre = pNegocio.NombreNegocio;
@@ -94,7 +95,6 @@ const CargarDatosCart = (pNegocio) => {
 const GetData = async () => {   
 
     sesion = GetSesionActiva();
-    console.log(sesion);
     PersonaID = sesion._id;
 
     };
@@ -113,6 +113,7 @@ const RegistrarDatos = async () => {
     let sPrecio= Number(Precio);
     let sFoto = FotoNegocio;
     let sCategoria = categoria;
+    let sPersonaID = PersonaID;
     
 
     //aca seguirian los subdocumentos version 1
@@ -131,15 +132,8 @@ const RegistrarDatos = async () => {
         'Precio': sPrecio,
         'FotosNegocio': sFoto,
         'Categoria': sCategoria,
-        'PersonaID' : PersonaID
+        'PersonaID' : sPersonaID
     };
-
-    queryString = window.location.search;
-    urlParams = new URLSearchParams(queryString);
-    _id = urlParams.get('_id');
-
-    let params = { '_id': _id };
-
 
     res = await ProcessPOSTReservas('RegistrarReservaPendiente', dataBody, null);
 
@@ -157,9 +151,6 @@ const RegistrarDatos = async () => {
             location.href = 'landingProducto.html'
         });
     }
-
-    await ProcessPUT('AgregarReservaCart', params);
-    await ProcessPUT('AumentarNumeroCart', params);
 };
 
 /*Validar datos*/

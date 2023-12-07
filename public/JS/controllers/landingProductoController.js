@@ -79,16 +79,18 @@ const BuscadorAction = () => {
             title: 'Error',
             text: 'Por favor escriba un servicio a buscar como: hospedaje, restaurantes o entretenimiento.'
         });
+    } if (palabra == 'hospedaje') {
+        location.href = 'landingHospedaje.html';
+    } else if (palabra == 'restaurantes') {
+        location.href = 'landingRestaurantes.html';
+    } else if (palabra == 'entretenimiento') {
+        location.href = 'landingEntretenimiento.html';
     }
     return palabra;
 };
 
-// const Redireccionador = () => {
-//     if (BuscadorPalabra == 'hospedaje', 'hotel') {
-//         location.href = 'landingHospedaje.html';
-//     } else if (BuscadorPalabra == 'restaurantes', 'comida') {
-//         location.href = 'landingRestaurantes.html';
-//     }
-// };
+
+
+
 
 reservar();

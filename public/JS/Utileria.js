@@ -80,3 +80,26 @@ function padTo2Digits(num) {
     return num.toString().padStart(2, '0');
 }
 
+let listaNegocio = [];
+const GetListaReservasInCart = async () => {
+    let res = await ProcessGET('ListarNegocios', null);
+    if (res != null && res.resultado == true) {
+        listaNegocio = res.listaNegociosBD;
+
+        //ImprimirDatosCart();
+    } else {
+        ImprimirMsjsError(res.msj);
+        return;
+    }
+};
+
+const AumentarCarrito = () => {
+    let contador = 0;
+    let btnCarrito = document.getElementById('cuentaCarrito');
+    for (let i = 0; i < listaNegocio.length; i++) {
+        if (listaNegocio[i].Cantidad === 1) {
+            contador++;
+            btnCarrito.innerHTML = contador;
+        }
+    }
+};

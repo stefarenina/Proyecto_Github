@@ -16,7 +16,8 @@ router.post('/RegistrarReservaPendiente', (req, res) => {
         FotosNegocio: body.FotosNegocio,
         Categoria: body.Categoria,
         PersonaID: body.PersonaID,
-        Dias: body.Dias
+        Dias: body.Dias,
+        Estado:body.Estado
     });
 
     nuevaReserva.save()
@@ -74,8 +75,8 @@ router.get('/BuscarReservaPendienteId', (req, res) => {
 });
 router.delete('/EliminarReservasPendientes', (req, res) => {
     let body = req.body;
-    ReservaPendiente.deleteMany({
-            PersonaID: body.PersonaID
+    ReservaPendiente.deleteOne({
+            _id: body._id
         })
         .then((info) => {
             res.json({
@@ -87,7 +88,28 @@ router.delete('/EliminarReservasPendientes', (req, res) => {
         .catch((error) => {
             res.json({
                 resultado: false,
-                msj: 'No se pudo eliminar a la persona, ocurrio el siguiente error: ',
+                msj: 'No se pudo eliminar la reserva, ocurrió el siguiente error: ',
+                error
+            });
+        });
+});
+
+
+router.put('/ModificarReserva', (req, res) => {
+    let body = req.body;
+    ReservaPendiente.updateMany({}, { $set: body })
+        .then((info) => {
+            console.log(info);
+            res.json({
+                resultado: true,
+                msj: 'Se realizó el pago correctamente',
+                info
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo actualizar a la persona, ocurrió el siguiente error: ',
                 error
             });
         });

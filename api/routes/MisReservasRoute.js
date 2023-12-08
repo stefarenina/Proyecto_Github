@@ -94,24 +94,6 @@ router.delete('/EliminarReserva', (req, res) => {
         });
 });
 
-router.put('/ModificarReserva', (req, res) => {
-    let body = req.body;
-    Reserva.updateMany({}, { $set: body })
-        .then((info) => {
-            console.log(info);
-            res.json({
-                resultado: true,
-                msj: 'Se realizó el pago correctamente',
-                info
-            });
-        })
-        .catch((error) => {
-            res.json({
-                resultado: false,
-                msj: 'No se pudo actualizar a la persona, ocurrió el siguiente error: ',
-                error
-            });
-        });
-});
+
 
 module.exports = router;

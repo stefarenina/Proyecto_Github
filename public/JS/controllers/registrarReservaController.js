@@ -8,6 +8,7 @@ let cantiHuespedes = document.getElementById('huespedes');
 let botonReservar = document.getElementById('reservar');
 let input_id = document.getElementById('txt_id');
 
+let Nombre;
 var FotoNegocio;
 let coordenadasObjeto;
 let Descripcion;
@@ -39,6 +40,7 @@ const CargarDatos = (pNegocio) => {
     console.log(pNegocio)
     coordenadasObjeto = JSON.parse(pNegocio.Coordenadas);
     crearMarcador();
+    
 };
 
 let queryString, urlParams, _id;
@@ -93,13 +95,17 @@ GetData();
 /*Registrar reserva a carrito de compra*/
 const RegistrarDatos = async () => {
     let NegocioInfo = await IdentificarAccionCart();
-
+    let sNombre=Nombre;
     let sfechaIn = fechaIn.value;
     let sfechaOut = fechaOut.value;
     let sCantidadHuespedes = Number(cantiHuespedes.value);
+
+    let sEstado=false;
     
 
     //aca seguirian los subdocumentos version 1
+
+    let s_id = input_id.value;
 
     if (ValidarDatos(sfechaIn, sfechaOut, sCantidadHuespedes) == false) {
         return;
@@ -107,7 +113,9 @@ const RegistrarDatos = async () => {
 
     
     let dataBody = {
-        'Nombre':NegocioInfo.NombreNegocio,
+        // 'Nombre':NegocioInfo.NombreNegocio,
+        '_id': s_id,
+        'Nombre':sNombre,
         'FechaEntrada': sfechaIn,
         'FechaSalida': sfechaOut,
         'CantidadHuespedes': sCantidadHuespedes,
@@ -116,8 +124,15 @@ const RegistrarDatos = async () => {
         'FotosNegocio': NegocioInfo.FotosNegocio,
         'Categoria': NegocioInfo.Categoria,
         'PersonaID' : PersonaID,
-        'Dias': dias
+        'Dias': dias,
+        'Estado':sEstado,
     };
+
+    queryString = window.location.search;
+    urlParams = new URLSearchParams(queryString);
+    _id = urlParams.get('_id');
+
+    let params = { '_id': _id };
 
     let res = await ProcessPOSTReservas('RegistrarReservaPendiente', dataBody, null);
 

@@ -32,6 +32,7 @@ function ImprimirDatosCart() {
     let tbody = document.getElementById('tbdReservas');
     tbody.innerHTML = '';
     let total = 0;
+    let impuesto = 0;
 
 
 
@@ -40,17 +41,18 @@ function ImprimirDatosCart() {
             let fila = tbody.insertRow();
             let celdaFoto = fila.insertCell();
             let celdaNombre = fila.insertCell();
-            let celdaDias = fila.insertCell();
+            let celdaCategoria = fila.insertCell();
             let celdaPrecio = fila.insertCell();
     
-            //celdaFoto.innerHTML = `<td><img src="${listaReservasPendientes[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
+            celdaFoto.innerHTML = `<td><img src="${listaReservasPendientes[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
             celdaNombre.innerHTML = listaReservasPendientes[i].Nombre;
-            celdaDias.innerHTML = listaReservasPendientes[i].FechaEntrada;
+            celdaCategoria.innerHTML = listaReservasPendientes[i].Categoria;
             celdaPrecio.innerHTML = (listaReservasPendientes[i].Precio * listaReservasPendientes[i].Dias) * listaReservasPendientes[i].CantidadHuespedes;
     
             tbody.appendChild(fila);
     
             total += Number(celdaPrecio.innerHTML);
+            impuesto = total * 0.13;
             
         }
 
@@ -74,12 +76,19 @@ function ImprimirDatosCart() {
     `;
     tbody.appendChild(filaMetodo);
 
+    let filaImpuesto = tbody.insertRow();
+    let celdaImpuesto = filaImpuesto.insertCell();
+    celdaImpuesto.colSpan = 3;
+    celdaImpuesto.innerHTML = `<strong class="totalCarrito">Impuesto:</strong>`;
+    let celdaImpuestoTotal = filaImpuesto.insertCell();
+    celdaImpuestoTotal.innerHTML = `<strong>${impuesto}</strong>`;
+
     let filaTotal = tbody.insertRow();
     let celdaTotal = filaTotal.insertCell();
     celdaTotal.colSpan = 3;
     celdaTotal.innerHTML = `<strong class="totalCarrito">Total:</strong>`;
     let celdaTotalPrecio = filaTotal.insertCell();
-    celdaTotalPrecio.innerHTML = `<strong>${total}</strong>`;
+    celdaTotalPrecio.innerHTML = `<strong>${total + impuesto}</strong>`;
     tbody.appendChild(filaTotal);
 }
 

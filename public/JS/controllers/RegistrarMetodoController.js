@@ -6,7 +6,17 @@ let inputFechaVencimiento = document.getElementById('fecha_vencimiento');
 let Cvv = document.getElementById('cvv');
 
 
+let sesion;
+let _id;
 
+
+const GetData = async () => {
+    sesion = GetSesionActiva();
+    _id = sesion._id;
+
+};
+
+GetData();
 const RegistrarMetodo = async () => {
     console.log("HUIHIHJ") 
     let nombreTarjeta = inputNombreTarjeta.value;
@@ -21,7 +31,8 @@ const RegistrarMetodo = async () => {
         'NombreTarjeta': nombreTarjeta,
         'NumeroTarjeta': numeroTarjeta,
         'FechaVencimiento': fechaVencimiento,
-        'Cvv': cvv
+        'Cvv': cvv,
+        'Dueño': _id
     };
     console.log(dataBody)
     // Se realiza el registro de la persona

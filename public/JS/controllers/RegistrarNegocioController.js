@@ -11,14 +11,13 @@ let sesion;
 let _id;
 //let buttonSubmit = document.getElementById('btnReg');
 
-const GetData = async () => {   
-
+const GetData = async () => {
     sesion = GetSesionActiva();
     _id = sesion._id;
 
-    };
+};
 
-GetData();   
+GetData();
 const RegistrarNegocio = async () => {
     let nombreNegocio = inputNombreNegocio.value;
     let descripcionNegocio = inputDescripcion.value;
@@ -28,7 +27,7 @@ const RegistrarNegocio = async () => {
             categoria = radioCategorias[i].value;
             break;
         }
-    } 
+    }
     let numeroContacto = inputNumeroContacto.value;
     let fotosNegocio = inputFotosNegocio.src;
     let direccion = inputDireccion.value;
@@ -37,7 +36,7 @@ const RegistrarNegocio = async () => {
     if (ValidarDatosNegocio(nombreNegocio, descripcionNegocio, numeroContacto, categoria, direccion, fotosNegocio) === false) {
         return;
     }
- 
+
     let res = null;
     let dataBody = {
         'NombreNegocio': nombreNegocio,
@@ -106,23 +105,28 @@ const ValidarDatosNegocio = (pNombreNegocio, pDescripcion, pNumeroContacto, pCat
 let map = L.map('map').setView([9.8, -84], 7); // Centro del mapa y nivel de zoom inicial
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
+    attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 let coordenadasString;
-let marker = L.marker([9.8, -84], { draggable: true }).addTo(map);
+let marker = L.marker([9.8, -84], {
+    draggable: true
+}).addTo(map);
 
-let markerPosition = { lat: 0, lng: 0 }; // Variable para almacenar la posición del marcador
+let markerPosition = {
+    lat: 0,
+    lng: 0
+}; // Variable para almacenar la posición del marcador
 
 marker.on('dragend', function () {
-  updateMarkerPosition(); // Llama a la función para actualizar la posición del marcador
+    updateMarkerPosition(); // Llama a la función para actualizar la posición del marcador
 
 });
 
 function updateMarkerPosition() {
-  markerPosition = marker.getLatLng();
-  console.log("Nueva posición del marcador:", markerPosition);
-  coordenadasString = JSON.stringify(markerPosition);
-  console.log(coordenadasString)
+    markerPosition = marker.getLatLng();
+    console.log("Nueva posición del marcador:", markerPosition);
+    coordenadasString = JSON.stringify(markerPosition);
+    console.log(coordenadasString)
 }
 
 buttonSubmit.addEventListener('click', RegistrarNegocio);

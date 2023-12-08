@@ -39,7 +39,7 @@ const ProcessPOST = async (pRouterName, pData) => {
 // otro post para las reservas porque el de arriba llama a la ruta de los negocios
 const ProcessPOSTReservas = async (pRouterName, pData) => {
     let res = await ProcessAction('POST', pRouterName, pData);
-    if (pRouterName == 'RegistrarMisReservas') {
+    if (pRouterName == 'RegistrarReservaPendiente') {
         if (res.resultado == false) {
             switch (res.code) {
                 case 11000:

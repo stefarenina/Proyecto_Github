@@ -87,7 +87,6 @@ const CargarDatosCart = (pNegocio) => {
     Descripcion = pNegocio.Descripcion;
     Precio = pNegocio.Precio;
     categoria = pNegocio.Categoria;
-
 };
 
 
@@ -99,7 +98,7 @@ const GetData = async () => {
 
     };
 
-GetData();  
+GetData();
 
 /*Registrar reserva a carrito de compra*/
 const RegistrarDatos = async () => {

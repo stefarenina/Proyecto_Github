@@ -8,9 +8,8 @@ let cantiHuespedes = document.getElementById('huespedes');
 let botonReservar = document.getElementById('reservar');
 let input_id = document.getElementById('txt_id');
 
-let FotoNegocio;
+var FotoNegocio;
 let coordenadasObjeto;
-let Nombre;
 let Descripcion;
 let Precio;
 let dias;
@@ -71,22 +70,13 @@ const IdentificarAccionCart = async () => {
     
     let Negocio = await ProcessGET('BuscarNegocioId', params);
     if (Negocio != null && Negocio.resultado == true && Negocio.NegocioBD != null) {
-        CargarDatosCart(Negocio.NegocioBD);
+        //CargarDatosCart(Negocio.NegocioBD);
+        return Negocio.NegocioBD;
     } else {
         ImprimirMsjsError(Negocio.msj);
 
     }
 
-};
-
-let categoria;
-
-const CargarDatosCart = (pNegocio) => {
-    FotoNegocio = pNegocio.FotosNegocio;
-    Nombre = pNegocio.NombreNegocio;
-    Descripcion = pNegocio.Descripcion;
-    Precio = pNegocio.Precio;
-    categoria = pNegocio.Categoria;
 };
 
 
@@ -102,18 +92,11 @@ GetData();
 
 /*Registrar reserva a carrito de compra*/
 const RegistrarDatos = async () => {
-    IdentificarAccionCart();
+    let NegocioInfo = await IdentificarAccionCart();
 
-    let sNombre = Nombre;
     let sfechaIn = fechaIn.value;
     let sfechaOut = fechaOut.value;
     let sCantidadHuespedes = Number(cantiHuespedes.value);
-    let sDescripcion= Descripcion;
-    let sPrecio= Number(Precio);
-    let sFoto = FotoNegocio;
-    let sCategoria = categoria;
-    let sDias = dias;
-    
     
 
     //aca seguirian los subdocumentos version 1
@@ -122,21 +105,21 @@ const RegistrarDatos = async () => {
         return;
     }
 
-    let res = null;
+    
     let dataBody = {
-        'Nombre':sNombre,
+        'Nombre':NegocioInfo.NombreNegocio,
         'FechaEntrada': sfechaIn,
         'FechaSalida': sfechaOut,
         'CantidadHuespedes': sCantidadHuespedes,
-        'Descripcion': sDescripcion,
-        'Precio': sPrecio,
-        'FotosNegocio': sFoto,
-        'Categoria': sCategoria,
+        'Descripcion': NegocioInfo.Descripcion,
+        'Precio': NegocioInfo.Precio,
+        'FotosNegocio': NegocioInfo.FotosNegocio,
+        'Categoria': NegocioInfo.Categoria,
         'PersonaID' : PersonaID,
-        'Dias': sDias
+        'Dias': dias
     };
 
-    res = await ProcessPOSTReservas('RegistrarReservaPendiente', dataBody, null);
+    let res = await ProcessPOSTReservas('RegistrarReservaPendiente', dataBody, null);
 
     if (res == null || res == undefined) {
         ImprimirMsjsError('Ocurrio un error inesperado');

@@ -3,6 +3,7 @@
 let modal = document.querySelector("#modal");
 let salir = document.getElementById("btnAtras");
 
+
 window.onclick = (event) => {
     if (event.target == modal) {
         modal.close();
@@ -27,13 +28,37 @@ function ConfirmarCancelacion() {
     });
     modal.close();
 }
+// let sesion;
+// let PersonaID;
 
+// const GetData = async () => {   
+//     sesion = GetSesionActiva();
+//     PersonaID = sesion._id;
+// };
+// let dataBody={
+//     'PersonaID':PersonaID
+// }
+// GetData();
 //Mostrar reservas de mongo
 let listaReservas = [];
+
+// const GetListaReservas = async () => {
+//     let res = await ProcessGET('BuscarReservaPendienteId', dataBody);
+//     if (res != null && res.resultado == true) {
+//         if (res.ListaReservasBD && res.ListaReservasBD.length > 0) {
+//             listaReservas = res.ListaReservasBD;
+//             ImprimirDatos();
+//         }
+//     } else {
+//         ImprimirMsjsError(res.msj);
+//         return;
+//     }
+// };
+
 const GetListaReservas = async () => {
-    let res = await ProcessGET('ListarReservas', null);
+    let res = await ProcessGET('ListarReservasPendientes', null);
     if (res != null && res.resultado == true) {
-        listaReservas = res.ListaReservasBD;
+        listaReservas = res.listaReservasPendientesBD;
         ImprimirDatos();
     } else {
         ImprimirMsjsError(res.msj);
@@ -42,6 +67,8 @@ const GetListaReservas = async () => {
 };
 
 GetListaReservas();
+
+
 
 const ImprimirDatos = () => {  
         let tbody = document.getElementById('tbdMisReservas');
@@ -86,7 +113,7 @@ const ImprimirDatos = () => {
                     '_id': listaReservas[i]._id
                 };
 
-                let result = await ProcessDELETE('EliminarReserva', data);
+                let result = await ProcessDELETE('EliminarReservasPendientes', data);
                 if (result != null && result.resultado == true) {
                     ImprimirMsjsSuccess(result.msj);
                 } else {

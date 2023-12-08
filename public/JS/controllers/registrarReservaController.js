@@ -112,6 +112,7 @@ const RegistrarDatos = async () => {
     let sPrecio= Number(Precio);
     let sFoto = FotoNegocio;
     let sCategoria = categoria;
+    let sDias = dias;
     
     
 
@@ -131,7 +132,8 @@ const RegistrarDatos = async () => {
         'Precio': sPrecio,
         'FotosNegocio': sFoto,
         'Categoria': sCategoria,
-        'PersonaID' : PersonaID
+        'PersonaID' : PersonaID,
+        'Dias': sDias
     };
 
     res = await ProcessPOSTReservas('RegistrarReservaPendiente', dataBody, null);

@@ -15,7 +15,8 @@ router.post('/RegistrarReservaPendiente', (req, res) => {
         Precio: body.Precio,
         FotosNegocio: body.FotosNegocio,
         Categoria: body.Categoria,
-        PersonaID: body.PersonaID
+        PersonaID: body.PersonaID,
+        Dias: body.Dias
     });
 
     nuevaReserva.save()
@@ -56,17 +57,37 @@ router.get('/BuscarReservaPendienteId', (req, res) => {
     let param = req.query;
 
     ReservaPendiente.find({ PersonaID: param.PersonaID })
-        .then((ReservaBD) => {
+        .then((ReservaPendienteBD) => {
             res.json({
                 resultado: true,
                 msj: 'Los datos se obtuvieron de manera correcta',
-                ReservaBD
+                ReservaPendienteBD
             });
         })
         .catch((error) => {
             res.json({
                 resultado: false,
                 msj: 'No se pudo obtener la lista de personas, ocurrio el siguiente error: ',
+                error
+            });
+        });
+});
+router.delete('/EliminarReservasPendientes', (req, res) => {
+    let body = req.body;
+    ReservaPendiente.deleteMany({
+            PersonaID: body.PersonaID
+        })
+        .then((info) => {
+            res.json({
+                resultado: true,
+                msj: 'Los datos se eliminaron de manera correcta',
+                info
+            });
+        })
+        .catch((error) => {
+            res.json({
+                resultado: false,
+                msj: 'No se pudo eliminar a la persona, ocurrio el siguiente error: ',
                 error
             });
         });

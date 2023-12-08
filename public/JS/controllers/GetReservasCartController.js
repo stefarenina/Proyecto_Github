@@ -1,10 +1,22 @@
 'use strict';
 
-let listaNegocios = [];
+let sesion;
+let PersonaIDInfo;
+
+const GetData = async () => {   
+
+    sesion = GetSesionActiva();
+    PersonaIDInfo = sesion._id;
+
+    };
+
+GetData();
+
+let listaReservasPendientes = [];
 const GetListaReservasInCart = async () => {
-    let res = await ProcessGET('ListarNegocios', null);
+    let res = await ProcessGET('ListarReservasPendientes', null);
     if (res != null && res.resultado == true) {
-        listaNegocios = res.listaNegociosBD;
+        listaReservasPendientes = res.listaReservasPendientesBD;
 
         ImprimirDatosCart();
     } else {
@@ -23,24 +35,26 @@ function ImprimirDatosCart() {
 
 
 
-    for (let i = 0; i < listaNegocios.length; i++) {
-        if (listaNegocios[i].inCart === true) {
-
+    for (let i = 0; i < listaReservasPendientes.length; i++) {
+        if (listaReservasPendientes[i].PersonaID === PersonaIDInfo) {
             let fila = tbody.insertRow();
             let celdaFoto = fila.insertCell();
             let celdaNombre = fila.insertCell();
-            let celdaCategoria = fila.insertCell();
+            let celdaDias = fila.insertCell();
             let celdaPrecio = fila.insertCell();
-
-            celdaFoto.innerHTML = `<td><img src="${listaNegocios[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
-            celdaNombre.innerHTML = listaNegocios[i].NombreNegocio;
-            celdaCategoria.innerHTML = listaNegocios[i].Categoria;
-            celdaPrecio.innerHTML = listaNegocios[i].Precio;
-
+    
+            //celdaFoto.innerHTML = `<td><img src="${listaReservasPendientes[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
+            celdaNombre.innerHTML = listaReservasPendientes[i].Nombre;
+            celdaDias.innerHTML = listaReservasPendientes[i].FechaEntrada;
+            celdaPrecio.innerHTML = (listaReservasPendientes[i].Precio * listaReservasPendientes[i].Dias) * listaReservasPendientes[i].CantidadHuespedes;
+    
             tbody.appendChild(fila);
-
+    
             total += Number(celdaPrecio.innerHTML);
+            
         }
+
+
     }
 
     let filaMetodo = tbody.insertRow();
@@ -72,7 +86,7 @@ function ImprimirDatosCart() {
 let btnLimpiarCarrito = document.getElementById('btnVaciar');
 
 btnLimpiarCarrito.addEventListener('click', async () => {
-    let res = await ProcessPUT('LimpiarCart');
+    let res = await ProcessDELETE('EliminarReservasPendientes');
 
     if (res.info.modifiedCount === 0) {
         ImprimirMsjsError('No hay datos en el carrito que eliminar, agrege algo al carrito.');

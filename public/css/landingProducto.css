@@ -217,6 +217,7 @@ span {
   flex-wrap: wrap;
   margin-top:10px;
   font-size: 20px;
+  font-weight: bold;
 }
 
 /* Estilo pagina hospedaje */

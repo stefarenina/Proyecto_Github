@@ -12,6 +12,7 @@ router.post('/RegistrarMetodo', (req, res) => {
         NumeroTarjeta: body.NumeroTarjeta,
         FechaVencimiento: body.FechaVencimiento,
         Cvv: body.Cvv,
+        Dueño: body.Dueño
     });
 
     nuevoMetodo.save()

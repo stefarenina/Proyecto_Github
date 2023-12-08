@@ -110,7 +110,6 @@ const RegistrarDatos = async () => {
     let sCantidadHuespedes = Number(cantiHuespedes.value);
     let sDescripcion= Descripcion;
     let sPrecio= Number(Precio);
-    let sEstado=false;
     let sFoto = FotoNegocio;
     let sCategoria = categoria;
     
@@ -130,7 +129,6 @@ const RegistrarDatos = async () => {
         'CantidadHuespedes': sCantidadHuespedes,
         'Descripcion': sDescripcion,
         'Precio': sPrecio,
-        'Estado': sEstado,
         'FotosNegocio': sFoto,
         'Categoria': sCategoria,
         'PersonaID' : PersonaID

@@ -9,8 +9,8 @@ const schemaReservasPendientes = mongoose.Schema({
     Descripcion: { type: String, required: false, unique: false },
     Precio: { type: Number, required: true, unique: false },
     FotosNegocio: { type: String, required: false, unique: false },
-    Categoria: { type: String, required: true, unique: false },
-    PersonaID: { type: String, required: true, unique: true }
+    Categoria: { type: String, required: false, unique: false },
+    PersonaID: { type: String, required: true, unique: false }
 });
 
 module.exports = mongoose.model('Reserva', schemaReservasPendientes, 'ReservasPendientes');

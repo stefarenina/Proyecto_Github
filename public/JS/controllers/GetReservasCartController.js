@@ -3,12 +3,12 @@
 let sesion;
 let PersonaIDInfo;
 
-const GetData = async () => {   
+const GetData = async () => {
 
     sesion = GetSesionActiva();
     PersonaIDInfo = sesion._id;
 
-    };
+};
 
 GetData();
 
@@ -43,17 +43,17 @@ function ImprimirDatosCart() {
             let celdaNombre = fila.insertCell();
             let celdaCategoria = fila.insertCell();
             let celdaPrecio = fila.insertCell();
-    
+
             celdaFoto.innerHTML = `<td><img src="${listaReservasPendientes[i].FotosNegocio}" alt="Imagen" class="fotoCarrito"></td>`;
             celdaNombre.innerHTML = listaReservasPendientes[i].Nombre;
             celdaCategoria.innerHTML = listaReservasPendientes[i].Categoria;
             celdaPrecio.innerHTML = (listaReservasPendientes[i].Precio * listaReservasPendientes[i].Dias) * listaReservasPendientes[i].CantidadHuespedes;
-    
+
             tbody.appendChild(fila);
-    
+
             total += Number(celdaPrecio.innerHTML);
             impuesto = total * 0.13;
-            
+
         }
 
 
@@ -93,11 +93,14 @@ function ImprimirDatosCart() {
 }
 
 let btnLimpiarCarrito = document.getElementById('btnVaciar');
+let databody = {
+    'PersonaID': PersonaIDInfo
+};
 
 btnLimpiarCarrito.addEventListener('click', async () => {
-    let res = await ProcessDELETE('EliminarReservasPendientes');
+    let res = await ProcessDELETE('EliminarReservasPendientes', databody);
 
-    if (res.info.modifiedCount === 0) {
+    if (res.info.deletedCount === 0) {
         ImprimirMsjsError('No hay datos en el carrito que eliminar, agrege algo al carrito.');
     } else if (res.resultado == false) {
         ImprimirMsjsError(res.msj);

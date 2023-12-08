@@ -13,4 +13,4 @@ const schemaReservasPendientes = mongoose.Schema({
     PersonaID: { type: String, required: true, unique: false }
 });
 
-module.exports = mongoose.model('Reserva', schemaReservasPendientes, 'ReservasPendientes');
+module.exports = mongoose.model('ReservaPendiente', schemaReservasPendientes, 'ReservasPendientes');
